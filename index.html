@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Phase 2 Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root{
+    --dark:#141413; --light:#faf9f5; --mid:#b0aea5; --lgray:#e8e6dc;
+    --orange:#d97757; --blue:#6a9bcc; --green:#788c5d;
+    --red:#c0563f; --card:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--light); color:var(--dark);
+    font-family:'Lora',Georgia,serif;
+    line-height:1.55; -webkit-font-smoothing:antialiased;
+    padding:24px 16px 64px;
+  }
+  .wrap{max-width:1080px;margin:0 auto;}
+  h1,h2,h3,.num,.tag,.ticker,.stat-val,.stat-lbl,th,.pill,.benchname{font-family:'Poppins',Arial,sans-serif;}
+  /* Header */
+  header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px;margin-bottom:20px;}
+  h1{font-size:26px;font-weight:600;letter-spacing:-.01em;}
+  .sub{color:#6b6a63;font-size:14px;margin-top:2px;}
+  .status-line{font-size:12.5px;color:#6b6a63;font-family:'Poppins',Arial,sans-serif;text-align:right;}
+  .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:middle;}
+  .dot.live{background:var(--green);} .dot.stale{background:var(--orange);}
+  /* Headline hero */
+  .hero{
+    background:var(--dark);color:var(--light);border-radius:18px;
+    padding:28px 28px 24px;margin-bottom:18px;
+    display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:8px;
+  }
+  .hero .big .stat-val{font-size:46px;font-weight:700;letter-spacing:-.02em;line-height:1;}
+  .hero .stat-val{font-size:26px;font-weight:600;line-height:1.1;}
+  .hero .stat-lbl{font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--mid);margin-top:8px;}
+  .hero .stat-sub{font-size:12.5px;color:var(--mid);margin-top:3px;font-family:'Lora',serif;}
+  .pos{color:#9cc27e;} .neg{color:#e8917a;}
+  .posdark{color:var(--green);} .negdark{color:var(--red);}
+  /* Bench row */
+  .bench-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:18px;}
+  .bench{background:var(--card);border:1px solid var(--lgray);border-radius:14px;padding:14px 16px;}
+  .benchname{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#6b6a63;}
+  .bench .v{font-size:22px;font-weight:600;font-family:'Poppins',sans-serif;margin-top:4px;}
+  .bench .d{font-size:12.5px;color:#6b6a63;margin-top:2px;}
+  /* Section */
+  section{margin-top:28px;}
+  h2{font-size:18px;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+  h2 .bar{width:4px;height:18px;border-radius:2px;background:var(--orange);display:inline-block;}
+  /* Chart */
+  .chart-card{background:var(--card);border:1px solid var(--lgray);border-radius:16px;padding:18px;}
+  .chart-box{position:relative;height:300px;}
+  /* Position cards */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:12px;}
+  .card{background:var(--card);border:1px solid var(--lgray);border-radius:14px;padding:16px;position:relative;overflow:hidden;}
+  .card .accent{position:absolute;top:0;left:0;width:100%;height:4px;}
+  .card .ticker{font-size:18px;font-weight:600;}
+  .card .theme{font-size:11.5px;color:#6b6a63;margin-top:1px;min-height:30px;}
+  .card .price{font-size:24px;font-weight:600;font-family:'Poppins',sans-serif;margin-top:8px;}
+  .card .ret{font-size:14px;font-weight:500;font-family:'Poppins',sans-serif;margin-top:2px;}
+  .card .meta{font-size:11.5px;color:#6b6a63;margin-top:8px;border-top:1px solid var(--lgray);padding-top:8px;}
+  .pill{font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;padding:3px 8px;border-radius:20px;display:inline-block;margin-top:10px;}
+  .pill.intact{background:#e6efe0;color:#4f6138;}
+  .pill.pressured{background:#fbeae3;color:#a8462e;}
+  .pill.broken{background:#f4d5cd;color:#8f2d1a;}
+  /* Thesis grid */
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--lgray);border-radius:14px;overflow:hidden;font-size:13px;}
+  th{background:var(--dark);color:var(--light);font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;padding:10px 12px;text-align:left;font-weight:500;}
+  td{padding:9px 12px;border-top:1px solid var(--lgray);font-family:'Poppins',sans-serif;font-size:12.5px;}
+  td.note{font-family:'Lora',serif;color:#4a4944;font-size:12.5px;}
+  .s-intact{color:var(--green);font-weight:600;} .s-pressured{color:var(--orange);font-weight:600;} .s-broken{color:var(--red);font-weight:700;}
+  /* Lessons */
+  .lessons{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;}
+  .lesson{background:var(--card);border:1px solid var(--lgray);border-radius:14px;padding:16px;border-left:4px solid var(--blue);}
+  .lesson.carry{border-left-color:var(--mid);} .lesson.lesson-t{border-left-color:var(--orange);} .lesson.concept{border-left-color:var(--blue);}
+  .lesson .tag{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#6b6a63;font-weight:600;}
+  .lesson .ltitle{font-size:15px;font-weight:600;font-family:'Poppins',sans-serif;margin:4px 0 6px;}
+  .lesson .lbody{font-size:13px;color:#4a4944;}
+  .lesson .wk{font-size:11px;color:var(--mid);font-family:'Poppins',sans-serif;margin-top:8px;}
+  footer{margin-top:36px;text-align:center;font-size:11.5px;color:var(--mid);font-family:'Poppins',sans-serif;line-height:1.7;}
+  .err{background:#fbeae3;color:#a8462e;border:1px solid #f0c9bd;border-radius:10px;padding:10px 14px;font-size:12.5px;font-family:'Poppins',sans-serif;margin-bottom:14px;display:none;}
+  @media(max-width:720px){
+    .hero{grid-template-columns:1fr 1fr;}.hero .big{grid-column:1/-1;}
+    .hero .big .stat-val{font-size:40px;}
+    .bench-row{grid-template-columns:1fr;}
+    .status-line{text-align:left;}
+    table{display:block;overflow-x:auto;white-space:nowrap;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <h1>Phase 2 Portfolio</h1>
+      <div class="sub">Thematic stock-picking experiment &middot; Opened May 11, 2026 &middot; $499.99 invested</div>
+    </div>
+    <div class="status-line" id="statusLine"><span class="dot stale"></span>Loading prices&hellip;</div>
+  </header>
+
+  <div class="err" id="errBox"></div>
+
+  <!-- HERO: performance vs benchmarks -->
+  <div class="hero">
+    <div class="big">
+      <div class="stat-val" id="hTotalRet">&mdash;</div>
+      <div class="stat-lbl">Total Return (incl. dividends)</div>
+      <div class="stat-sub" id="hPL">&mdash;</div>
+    </div>
+    <div>
+      <div class="stat-val" id="hVsSpy">&mdash;</div>
+      <div class="stat-lbl">vs. SPY</div>
+      <div class="stat-sub">S&amp;P 500</div>
+    </div>
+    <div>
+      <div class="stat-val" id="hVsQqq">&mdash;</div>
+      <div class="stat-lbl">vs. QQQ</div>
+      <div class="stat-sub">Nasdaq 100</div>
+    </div>
+  </div>
+
+  <div class="bench-row">
+    <div class="bench"><div class="benchname">Portfolio Value</div><div class="v" id="bVal">&mdash;</div><div class="d" id="bValD">from $499.99</div></div>
+    <div class="bench"><div class="benchname">SPY Return</div><div class="v" id="bSpy">&mdash;</div><div class="d">since May 11, 2026</div></div>
+    <div class="bench"><div class="benchname">QQQ Return</div><div class="v" id="bQqq">&mdash;</div><div class="d">since May 11, 2026</div></div>
+  </div>
+
+  <!-- CHART -->
+  <section>
+    <h2><span class="bar"></span>Cumulative Return vs. Benchmarks</h2>
+    <div class="chart-card"><div class="chart-box"><canvas id="chart"></canvas></div></div>
+  </section>
+
+  <!-- POSITION SCORECARDS -->
+  <section>
+    <h2><span class="bar"></span>Positions</h2>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <!-- THESIS GRID -->
+  <section>
+    <h2><span class="bar"></span>Thesis Status &mdash; Latest (W5, June 12)</h2>
+    <table>
+      <thead><tr><th>Position</th><th>Status</th><th>Driver</th></tr></thead>
+      <tbody id="thesisBody"></tbody>
+    </table>
+    <div style="font-size:11.5px;color:#6b6a63;margin-top:8px;font-family:'Poppins',sans-serif;">
+      Status reflects thesis-break criteria, <em>not</em> price. <span class="s-intact">Intact</span> = thesis holds &middot; <span class="s-pressured">Pressured</span> = yellow flag, no criteria broken &middot; <span class="s-broken">Broken</span> = a break criterion triggered.
+    </div>
+  </section>
+
+  <!-- LESSONS -->
+  <section>
+    <h2><span class="bar"></span>Concepts &amp; Lessons</h2>
+    <div class="lessons" id="lessons"></div>
+  </section>
+
+  <footer>
+    Live prices via Finnhub &middot; static thesis &amp; lesson data from weekly tracker (W5, June 12 2026)<br>
+    Not financial advice &middot; $500 learning experiment &middot; <span id="updated"></span>
+  </footer>
+
+</div>
+
+<script>
+/* ============================================================
+   CONFIG — paste your free Finnhub API key between the quotes.
+   Get one at https://finnhub.io/register  (takes ~2 minutes)
+   ============================================================ */
+const FINNHUB_KEY = "d8nach9r01qvvn94s0lgd8nach9r01qvvn94s0m0";
+
+/* ---- Static experiment data (source: Phase2 tracker) ---- */
+const ENTRY_DATE = "May 11, 2026";
+const TOTAL_INVESTED = 499.99;
+
+const POS = [
+  {t:"MU",  theme:"AI / Semi — memory",        shares:0.12617, entry:792.53, color:"var(--orange)"},
+  {t:"LLY", theme:"Healthcare / GLP-1",         shares:0.10583, entry:944.90, color:"var(--blue)"},
+  {t:"CEG", theme:"Energy / AI power (nuclear)", shares:0.31744, entry:315.02, color:"var(--green)"},
+  {t:"LMT", theme:"Defense / quality value",     shares:0.19849, entry:503.78, color:"var(--mid)"},
+  {t:"MA",  theme:"Fintech / payments",          shares:0.20202, entry:495.00, color:"var(--dark)"},
+];
+const SPY_ENTRY = 739.30, QQQ_ENTRY = 713.29;
+
+// cumulative dividends earned to date (Phase2 Dividend Ledger)
+const CUM_DIVIDENDS = 1.00;
+
+/* ---- Fallback prices = last saved (W5, June 12 2026) ---- */
+const FALLBACK = {MU:981.61, LLY:1134.80, CEG:253.76, LMT:540.33, MA:489.13, SPY:742.45, QQQ:717.12};
+
+/* ---- Weekly history for the chart (% total return from entry) ---- */
+const WEEKS = ["W0","W1","W2","W3","W4","W5"];
+const WK_DATES = ["May 11","May 15","May 23","May 30","Jun 5","Jun 12"];
+const HIST = {
+  port: [0.00, -0.92, 1.14, 7.06, 2.76, 6.31],
+  spy:  [0.00, -0.02, 0.87, 2.32, -0.24, 0.43],
+  qqq:  [0.00, -0.46, 0.60, 3.13, -1.15, 0.54],
+};
+
+/* ---- Thesis grid (W5) ---- */
+const THESIS = [
+  {t:"MU",  s:"Intact",    d:"Re-rating to secular AI play; full round-trip to new high. June 24 earnings = first proof point."},
+  {t:"LLY", s:"Intact",    d:"New all-time high $1,182.73 intraday. The true diversifier (low beta)."},
+  {t:"CEG", s:"Pressured", d:"FERC waiver GRANTED (thesis-positive) but price still near lows on dilution + rates."},
+  {t:"LMT", s:"Intact",    d:"New portfolio high. Held green on red days — quality value working."},
+  {t:"MA",  s:"Intact",    d:"Swipe-fee settlement preliminarily approved. Flat overall."},
+];
+
+/* ---- Lessons (Concepts & Lessons ledger) ---- */
+const LESSONS = [
+  {type:"carry",  tag:"Lesson Carried Forward", wk:"Phase 1", title:"Sizing matters more than picking", body:"Phase 1's smallest allocation (AMD) was the biggest winner; the largest (NVDA) the smallest gainer. Equal-weighting in Phase 2 removes sizing as a variable."},
+  {type:"carry",  tag:"Lesson Carried Forward", wk:"Phase 1", title:"One stock can mask a bad portfolio", body:"Phase 1 returned +16.5% — strip out AMD and the rest returned ~3%. Watch for one theme carrying everything (MU already drove most of W3)."},
+  {type:"concept",tag:"Concept", wk:"W2", title:"Selling on Good News", body:"Stocks can fall on earnings beats when expectations were set higher than delivered. Ask: did the business underperform, or did the price underperform expectations?"},
+  {type:"concept",tag:"Concept", wk:"W3", title:"The Multiple Re-Rating", body:"MU surged 29% in a week as analysts repriced it from cyclical (8–15x) to secular AI (30–50x). Re-ratings can reverse violently — is the new profile durable?"},
+  {type:"concept",tag:"Concept", wk:"W4", title:"Correlation Hiding Inside Diversification", body:"MU and CEG both cratered on the June 5 rate spike — both valued on long-dated cash flows. Test diversification: what single macro event makes both fall at once?"},
+  {type:"concept",tag:"Concept", wk:"W5", title:"Catalyst Resolves Right, Stock Doesn't Move", body:"CEG's FERC waiver resolved in our favor yet the stock stayed down ~19%, outweighed by dilution + rates. Separate 'was I right?' from 'did it go up?'"},
+];
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+const $ = id => document.getElementById(id);
+const fmtPct = x => (x>=0?"+":"") + x.toFixed(2) + "%";
+const fmtPP  = x => (x>=0?"+":"") + x.toFixed(2) + " pp";
+const fmt$   = x => "$" + x.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+const cls    = x => x>=0?"pos":"neg";
+const clsD   = x => x>=0?"posdark":"negdark";
+
+function compute(prices){
+  let value = 0;
+  const rows = POS.map(p=>{
+    const px = prices[p.t];
+    const ret = (px/p.entry - 1)*100;
+    const val = px * p.shares;
+    value += val;
+    return {...p, px, ret, val};
+  });
+  const priceVal = value;
+  const totalVal = value + CUM_DIVIDENDS;
+  const priceRet = (priceVal/TOTAL_INVESTED - 1)*100;
+  const totalRet = (totalVal/TOTAL_INVESTED - 1)*100;
+  const pl = totalVal - TOTAL_INVESTED;
+  const spyRet = (prices.SPY/SPY_ENTRY - 1)*100;
+  const qqqRet = (prices.QQQ/QQQ_ENTRY - 1)*100;
+  return {rows, totalVal, totalRet, priceRet, pl, spyRet, qqqRet,
+          vsSpy: totalRet - spyRet, vsQqq: totalRet - qqqRet};
+}
+
+function render(prices, live){
+  const r = compute(prices);
+
+  // Hero
+  $("hTotalRet").innerHTML = `<span class="${cls(r.totalRet)}">${fmtPct(r.totalRet)}</span>`;
+  $("hPL").textContent = `${fmt$(r.pl)} on $499.99 · value ${fmt$(r.totalVal)}`;
+  $("hVsSpy").innerHTML = `<span class="${cls(r.vsSpy)}">${fmtPP(r.vsSpy)}</span>`;
+  $("hVsQqq").innerHTML = `<span class="${cls(r.vsQqq)}">${fmtPP(r.vsQqq)}</span>`;
+
+  // Bench row
+  $("bVal").textContent = fmt$(r.totalVal);
+  $("bValD").textContent = `from $499.99 · ${fmtPct(r.totalRet)}`;
+  $("bSpy").innerHTML = `<span class="${clsD(r.spyRet)}">${fmtPct(r.spyRet)}</span>`;
+  $("bQqq").innerHTML = `<span class="${clsD(r.qqqRet)}">${fmtPct(r.qqqRet)}</span>`;
+
+  // Position cards
+  $("cards").innerHTML = r.rows.map(p=>{
+    const th = THESIS.find(x=>x.t===p.t);
+    const pillClass = th ? th.s.toLowerCase() : "intact";
+    return `<div class="card">
+      <div class="accent" style="background:${p.color}"></div>
+      <div class="ticker">${p.t}</div>
+      <div class="theme">${p.theme}</div>
+      <div class="price">${fmt$(p.px)}</div>
+      <div class="ret ${clsD(p.ret)}">${fmtPct(p.ret)}</div>
+      <div class="meta">${p.shares.toFixed(5)} sh · ${fmt$(p.val)} · entry ${fmt$(p.entry)}</div>
+      <span class="pill ${pillClass}">${th?th.s:""}</span>
+    </div>`;
+  }).join("");
+
+  // Thesis grid
+  $("thesisBody").innerHTML = THESIS.map(x=>{
+    const sc = "s-"+x.s.toLowerCase();
+    return `<tr><td><strong>${x.t}</strong></td><td class="${sc}">${x.s}</td><td class="note">${x.d}</td></tr>`;
+  }).join("");
+
+  // Lessons
+  $("lessons").innerHTML = LESSONS.map(l=>`
+    <div class="lesson ${l.type==='carry'?'carry':l.type==='concept'?'concept':'lesson-t'}">
+      <div class="tag">${l.tag}</div>
+      <div class="ltitle">${l.title}</div>
+      <div class="lbody">${l.body}</div>
+      <div class="wk">${l.wk}</div>
+    </div>`).join("");
+
+  // Status line
+  const now = new Date();
+  if(live){
+    $("statusLine").innerHTML = `<span class="dot live"></span>Live prices · ${now.toLocaleString()}`;
+  } else {
+    $("statusLine").innerHTML = `<span class="dot stale"></span>Last-saved data (W5, Jun 12)`;
+  }
+  $("updated").textContent = "Rendered " + now.toLocaleString();
+
+  // Chart — append a "now" point reflecting current live total return
+  drawChart(r.totalRet, r.spyRet, r.qqqRet, live);
+}
+
+let chartInstance = null;
+function drawChart(curPort, curSpy, curQqq, live){
+  const labels = [...WK_DATES];
+  const port = [...HIST.port];
+  const spy  = [...HIST.spy];
+  const qqq  = [...HIST.qqq];
+  if(live){
+    labels.push("Now");
+    port.push(+curPort.toFixed(2));
+    spy.push(+curSpy.toFixed(2));
+    qqq.push(+curQqq.toFixed(2));
+  }
+  const ctx = document.getElementById("chart").getContext("2d");
+  if(chartInstance) chartInstance.destroy();
+  const mk = (label,data,color,width)=>({
+    label, data, borderColor:color, backgroundColor:color,
+    borderWidth:width, tension:.3, pointRadius:3, pointHoverRadius:5, fill:false
+  });
+  chartInstance = new Chart(ctx,{
+    type:"line",
+    data:{labels, datasets:[
+      mk("Portfolio", port, "#d97757", 3),
+      mk("SPY", spy, "#6a9bcc", 2),
+      mk("QQQ", qqq, "#788c5d", 2),
+    ]},
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      interaction:{mode:"index",intersect:false},
+      plugins:{
+        legend:{labels:{font:{family:"Poppins",size:12},color:"#141413",usePointStyle:true,pointStyle:"circle"}},
+        tooltip:{callbacks:{label:c=>`${c.dataset.label}: ${c.parsed.y>=0?"+":""}${c.parsed.y.toFixed(2)}%`},
+          titleFont:{family:"Poppins"},bodyFont:{family:"Poppins"}}
+      },
+      scales:{
+        y:{ticks:{font:{family:"Poppins",size:11},callback:v=>v+"%",color:"#6b6a63"},
+           grid:{color:"#e8e6dc"},
+           title:{display:true,text:"Total return from May 11",font:{family:"Poppins",size:11},color:"#6b6a63"}},
+        x:{ticks:{font:{family:"Poppins",size:11},color:"#6b6a63"},grid:{display:false}}
+      }
+    }
+  });
+}
+
+/* ---- Fetch live prices, fall back gracefully ---- */
+async function fetchPrices(){
+  const tickers = ["MU","LLY","CEG","LMT","MA","SPY","QQQ"];
+  if(!FINNHUB_KEY || FINNHUB_KEY==="PASTE_YOUR_FINNHUB_KEY_HERE"){
+    showErr("No API key set — showing last-saved prices (W5, Jun 12). Add a free Finnhub key in the file to enable live prices.");
+    render(FALLBACK,false); return;
+  }
+  try{
+    const results = await Promise.all(tickers.map(async t=>{
+      const res = await fetch(`https://finnhub.io/api/v1/quote?symbol=${t}&token=${FINNHUB_KEY}`);
+      if(!res.ok) throw new Error(t+" "+res.status);
+      const j = await res.json();
+      if(!j.c || j.c===0) throw new Error(t+" no price");
+      return [t, j.c];
+    }));
+    const prices = Object.fromEntries(results);
+    render(prices, true);
+  }catch(e){
+    showErr("Live fetch failed ("+e.message+") — showing last-saved prices (W5, Jun 12).");
+    render(FALLBACK,false);
+  }
+}
+function showErr(msg){ const b=$("errBox"); b.textContent=msg; b.style.display="block"; }
+
+fetchPrices();
+</script>
+</body>
+</html>
