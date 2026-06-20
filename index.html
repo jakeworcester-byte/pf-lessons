@@ -146,7 +146,7 @@
 
   <!-- THESIS GRID -->
   <section>
-    <h2><span class="bar"></span>Thesis Status &mdash; Latest (W5, June 12)</h2>
+    <h2><span class="bar"></span>Thesis Status &mdash; Latest (W6, June 19)</h2>
     <table>
       <thead><tr><th>Position</th><th>Status</th><th>Driver</th></tr></thead>
       <tbody id="thesisBody"></tbody>
@@ -163,7 +163,7 @@
   </section>
 
   <footer>
-    Live prices via Finnhub &middot; static thesis &amp; lesson data from weekly tracker (W5, June 12 2026)<br>
+    Live prices via Finnhub &middot; static thesis &amp; lesson data from weekly tracker (W6, June 19 2026)<br>
     Not financial advice &middot; $500 learning experiment &middot; <span id="updated"></span>
   </footer>
 
@@ -192,35 +192,36 @@ const SPY_ENTRY = 739.30, QQQ_ENTRY = 713.29;
 // cumulative dividends earned to date (Phase2 Dividend Ledger)
 const CUM_DIVIDENDS = 1.00;
 
-/* ---- Fallback prices = last saved (W5, June 12 2026) ---- */
-const FALLBACK = {MU:981.61, LLY:1134.80, CEG:253.76, LMT:540.33, MA:489.13, SPY:742.45, QQQ:717.12};
+/* ---- Fallback prices = last saved (W6, June 19 2026) ---- */
+const FALLBACK = {MU:1151.80, LLY:1098.78, CEG:274.06, LMT:511.05, MA:489.79, SPY:746.93, QQQ:740.62};
 
 /* ---- Weekly history for the chart (% total return from entry) ---- */
-const WEEKS = ["W0","W1","W2","W3","W4","W5"];
-const WK_DATES = ["May 11","May 15","May 23","May 30","Jun 5","Jun 12"];
+const WEEKS = ["W0","W1","W2","W3","W4","W5","W6"];
+const WK_DATES = ["May 11","May 15","May 23","May 30","Jun 5","Jun 12","Jun 19"];
 const HIST = {
-  port: [0.00, -0.92, 1.14, 7.06, 2.76, 6.31],
-  spy:  [0.00, -0.02, 0.87, 2.32, -0.24, 0.43],
-  qqq:  [0.00, -0.46, 0.60, 3.13, -1.15, 0.54],
+  port: [0.00, -0.92, 1.14, 7.06, 2.76, 6.32, 10.00],
+  spy:  [0.00, -0.02, 0.87, 2.32, -0.24, 0.43, 1.03],
+  qqq:  [0.00, -0.46, 0.60, 3.13, -1.15, 0.54, 3.83],
 };
 
-/* ---- Thesis grid (W5) ---- */
+/* ---- Thesis grid (W6) ---- */
 const THESIS = [
-  {t:"MU",  s:"Intact",    d:"Re-rating to secular AI play; full round-trip to new high. June 24 earnings = first proof point."},
-  {t:"LLY", s:"Intact",    d:"New all-time high $1,182.73 intraday. The true diversifier (low beta)."},
-  {t:"CEG", s:"Pressured", d:"FERC waiver GRANTED (thesis-positive) but price still near lows on dilution + rates."},
-  {t:"LMT", s:"Intact",    d:"New portfolio high. Held green on red days — quality value working."},
-  {t:"MA",  s:"Intact",    d:"Swipe-fee settlement preliminarily approved. Flat overall."},
+  {t:"MU",  s:"Intact",    d:"All-time high into June 24 earnings. Analyst PTs doubled+; Goldman cautious. Priced for perfection — the most important near-term event in Phase 2."},
+  {t:"LLY", s:"Intact",    d:"Cooled from $1,166 ATH to $1,098. Pipeline catalysts landing. Still the true diversifier (low beta, healthcare-specific drivers)."},
+  {t:"CEG", s:"Pressured", d:"Bouncing off lows (+2.58% June 19). FERC win + dilution digesting. Mean analyst target ~$366 vs ~$274 — thesis intact, recovering."},
+  {t:"LMT", s:"Intact",    d:"-4% on US-Iran peace deal. Geopolitical de-escalation ≠ thesis break (explicitly excluded in criteria). Backlog and budgets unchanged."},
+  {t:"MA",  s:"Intact",    d:"Interchange settlement ($38B) received prelim approval June 9, lifting a long-standing overhang. Still flat near 52-week lows — quality compounder out of favor."},
 ];
 
 /* ---- Lessons (Concepts & Lessons ledger) ---- */
 const LESSONS = [
   {type:"carry",  tag:"Lesson Carried Forward", wk:"Phase 1", title:"Sizing matters more than picking", body:"Phase 1's smallest allocation (AMD) was the biggest winner; the largest (NVDA) the smallest gainer. Equal-weighting in Phase 2 removes sizing as a variable."},
-  {type:"carry",  tag:"Lesson Carried Forward", wk:"Phase 1", title:"One stock can mask a bad portfolio", body:"Phase 1 returned +16.5% — strip out AMD and the rest returned ~3%. Watch for one theme carrying everything (MU already drove most of W3)."},
+  {type:"carry",  tag:"Lesson Carried Forward", wk:"Phase 1", title:"One stock can mask a bad portfolio", body:"Phase 1 returned +16.5% — strip out AMD and the rest returned ~3%. Watch for one theme carrying everything (MU now ~91% of W6 total gains)."},
   {type:"concept",tag:"Concept", wk:"W2", title:"Selling on Good News", body:"Stocks can fall on earnings beats when expectations were set higher than delivered. Ask: did the business underperform, or did the price underperform expectations?"},
   {type:"concept",tag:"Concept", wk:"W3", title:"The Multiple Re-Rating", body:"MU surged 29% in a week as analysts repriced it from cyclical (8–15x) to secular AI (30–50x). Re-ratings can reverse violently — is the new profile durable?"},
   {type:"concept",tag:"Concept", wk:"W4", title:"Correlation Hiding Inside Diversification", body:"MU and CEG both cratered on the June 5 rate spike — both valued on long-dated cash flows. Test diversification: what single macro event makes both fall at once?"},
   {type:"concept",tag:"Concept", wk:"W5", title:"Catalyst Resolves Right, Stock Doesn't Move", body:"CEG's FERC waiver resolved in our favor yet the stock stayed down ~19%, outweighed by dilution + rates. Separate 'was I right?' from 'did it go up?'"},
+  {type:"concept",tag:"Concept", wk:"W6", title:"Beta Cuts Both Ways", body:"LMT fell 4% on a market-up day because the rally's cause — a US-Iran peace deal — softens defense sentiment. 'Defensive' is relative to a specific risk factor. Before calling anything defensive, finish the sentence: defensive against what?"},
 ];
 
 /* ============================================================
@@ -303,7 +304,7 @@ function render(prices, live){
   if(live){
     $("statusLine").innerHTML = `<span class="dot live"></span>Live prices · ${now.toLocaleString()}`;
   } else {
-    $("statusLine").innerHTML = `<span class="dot stale"></span>Last-saved data (W5, Jun 12)`;
+    $("statusLine").innerHTML = `<span class="dot stale"></span>Last-saved data (W6, Jun 19)`;
   }
   $("updated").textContent = "Rendered " + now.toLocaleString();
 
@@ -358,7 +359,7 @@ function drawChart(curPort, curSpy, curQqq, live){
 async function fetchPrices(){
   const tickers = ["MU","LLY","CEG","LMT","MA","SPY","QQQ"];
   if(!FINNHUB_KEY || FINNHUB_KEY==="PASTE_YOUR_FINNHUB_KEY_HERE"){
-    showErr("No API key set — showing last-saved prices (W5, Jun 12). Add a free Finnhub key in the file to enable live prices.");
+    showErr("No API key set — showing last-saved prices (W6, Jun 19). Add a free Finnhub key in the file to enable live prices.");
     render(FALLBACK,false); return;
   }
   try{
@@ -372,7 +373,7 @@ async function fetchPrices(){
     const prices = Object.fromEntries(results);
     render(prices, true);
   }catch(e){
-    showErr("Live fetch failed ("+e.message+") — showing last-saved prices (W5, Jun 12).");
+    showErr("Live fetch failed ("+e.message+") — showing last-saved prices (W6, Jun 19).");
     render(FALLBACK,false);
   }
 }
