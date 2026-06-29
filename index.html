@@ -146,7 +146,7 @@
 
   <!-- THESIS GRID -->
   <section>
-    <h2><span class="bar"></span>Thesis Status &mdash; Latest (W6, June 19)</h2>
+    <h2><span class="bar"></span>Thesis Status &mdash; Latest (W7, June 26)</h2>
     <table>
       <thead><tr><th>Position</th><th>Status</th><th>Driver</th></tr></thead>
       <tbody id="thesisBody"></tbody>
@@ -163,7 +163,7 @@
   </section>
 
   <footer>
-    Live prices via Finnhub &middot; static thesis &amp; lesson data from weekly tracker (W6, June 19 2026)<br>
+    Live prices via Finnhub &middot; static thesis &amp; lesson data from weekly tracker (W7, June 26 2026)<br>
     Not financial advice &middot; $500 learning experiment &middot; <span id="updated"></span>
   </footer>
 
@@ -192,36 +192,37 @@ const SPY_ENTRY = 739.30, QQQ_ENTRY = 713.29;
 // cumulative dividends earned to date (Phase2 Dividend Ledger)
 const CUM_DIVIDENDS = 1.00;
 
-/* ---- Fallback prices = last saved (W6, June 19 2026) ---- */
-const FALLBACK = {MU:1151.80, LLY:1098.78, CEG:274.06, LMT:511.05, MA:489.79, SPY:746.93, QQQ:740.62};
+/* ---- Fallback prices = last saved (W7, June 26 2026) ---- */
+const FALLBACK = {MU:1132.33, LLY:1127.69, CEG:264.02, LMT:507.40, MA:499.02, SPY:728.99, QQQ:706.52};
 
 /* ---- Weekly history for the chart (% total return from entry) ---- */
-const WEEKS = ["W0","W1","W2","W3","W4","W5","W6"];
-const WK_DATES = ["May 11","May 15","May 23","May 30","Jun 5","Jun 12","Jun 19"];
+const WEEKS = ["W0","W1","W2","W3","W4","W5","W6","W7"];
+const WK_DATES = ["May 11","May 15","May 23","May 30","Jun 5","Jun 12","Jun 19","Jun 26"];
 const HIST = {
-  port: [0.00, -0.92, 1.14, 7.06, 2.76, 6.32, 10.00],
-  spy:  [0.00, -0.02, 0.87, 2.32, -0.24, 0.43, 1.03],
-  qqq:  [0.00, -0.46, 0.60, 3.13, -1.15, 0.54, 3.83],
+  port: [0.00, -0.92, 1.14, 7.06, 2.76, 6.32, 10.00, 9.71],
+  spy:  [0.00, -0.02, 0.87, 2.32, -0.24, 0.43, 1.03, -1.39],
+  qqq:  [0.00, -0.46, 0.60, 3.13, -1.15, 0.54, 3.83, -0.95],
 };
 
-/* ---- Thesis grid (W6) ---- */
+/* ---- Thesis grid (W7) ---- */
 const THESIS = [
-  {t:"MU",  s:"Intact",    d:"All-time high into June 24 earnings. Analyst PTs doubled+; Goldman cautious. Priced for perfection — the most important near-term event in Phase 2."},
-  {t:"LLY", s:"Intact",    d:"Cooled from $1,166 ATH to $1,098. Pipeline catalysts landing. Still the true diversifier (low beta, healthcare-specific drivers)."},
-  {t:"CEG", s:"Pressured", d:"Bouncing off lows (+2.58% June 19). FERC win + dilution digesting. Mean analyst target ~$366 vs ~$274 — thesis intact, recovering."},
-  {t:"LMT", s:"Intact",    d:"-4% on US-Iran peace deal. Geopolitical de-escalation ≠ thesis break (explicitly excluded in criteria). Backlog and budgets unchanged."},
-  {t:"MA",  s:"Intact",    d:"Interchange settlement ($38B) received prelim approval June 9, lifting a long-standing overhang. Still flat near 52-week lows — quality compounder out of favor."},
+  {t:"MU",  s:"Intact",    d:"FY Q3 BLOWOUT — EPS $25.11 vs $20.86 est, rev $41.46B, $50B Q4 guide. Hit ATH $1,255 June 25 then -6.7% Friday on a quarter-end tech rotation. Thesis validated; the dip is froth, not a break. Still +42.9% from entry."},
+  {t:"LLY", s:"Intact",    d:"Rotation's biggest winner — up ~6-7% Friday on an EU drug win (CHMP positive for Jaypirca) plus a haven bid as money fled tech into healthcare. The true diversifier, accelerating. +19.5% from entry."},
+  {t:"CEG", s:"Pressured", d:"15-yr Walmart nuclear PPA (their first ever) + NY license renewal to 2049; Morgan Stanley target to $364. Business case strengthening, but price still lags at $264 — the only underwater position. Confirmed thesis is not price."},
+  {t:"LMT", s:"Intact",    d:"$35B THAAD interceptor award (4x production) confirms the backlog thesis. First green week (+1.4%). Still digesting peace-deal sentiment vs an actual procurement surge."},
+  {t:"MA",  s:"Intact",    d:"Finally green (+0.8%) — first positive reading in weeks. $38B interchange settlement overhang cleared; caught the defensive/value rotation bid. Slow-burn quality compounder playing out as designed."},
 ];
 
 /* ---- Lessons (Concepts & Lessons ledger) ---- */
 const LESSONS = [
   {type:"carry",  tag:"Lesson Carried Forward", wk:"Phase 1", title:"Sizing matters more than picking", body:"Phase 1's smallest allocation (AMD) was the biggest winner; the largest (NVDA) the smallest gainer. Equal-weighting in Phase 2 removes sizing as a variable."},
-  {type:"carry",  tag:"Lesson Carried Forward", wk:"Phase 1", title:"One stock can mask a bad portfolio", body:"Phase 1 returned +16.5% — strip out AMD and the rest returned ~3%. Watch for one theme carrying everything (MU now ~91% of W6 total gains)."},
+  {type:"carry",  tag:"Lesson Carried Forward", wk:"Phase 1", title:"One stock can mask a bad portfolio", body:"Phase 1 returned +16.5% — strip out AMD and the rest returned ~3%. MU is ~90% of W7's price gains — but on Friday's down day MU FELL and the book still beat the indices by ~11pp, so breadth showed up exactly when it mattered. Both true at once."},
   {type:"concept",tag:"Concept", wk:"W2", title:"Selling on Good News", body:"Stocks can fall on earnings beats when expectations were set higher than delivered. Ask: did the business underperform, or did the price underperform expectations?"},
   {type:"concept",tag:"Concept", wk:"W3", title:"The Multiple Re-Rating", body:"MU surged 29% in a week as analysts repriced it from cyclical (8–15x) to secular AI (30–50x). Re-ratings can reverse violently — is the new profile durable?"},
   {type:"concept",tag:"Concept", wk:"W4", title:"Correlation Hiding Inside Diversification", body:"MU and CEG both cratered on the June 5 rate spike — both valued on long-dated cash flows. Test diversification: what single macro event makes both fall at once?"},
   {type:"concept",tag:"Concept", wk:"W5", title:"Catalyst Resolves Right, Stock Doesn't Move", body:"CEG's FERC waiver resolved in our favor yet the stock stayed down ~19%, outweighed by dilution + rates. Separate 'was I right?' from 'did it go up?'"},
   {type:"concept",tag:"Concept", wk:"W6", title:"Beta Cuts Both Ways", body:"LMT fell 4% on a market-up day because the rally's cause — a US-Iran peace deal — softens defense sentiment. 'Defensive' is relative to a specific risk factor. Before calling anything defensive, finish the sentence: defensive against what?"},
+  {type:"concept",tag:"Concept", wk:"W7", title:"A 'Perfect' Earnings Report Is Priced Before It Prints", body:"MU posted a blowout, validated the thesis, hit an ATH the next day — then fell 6.7%. The harder a stock runs into an event, the less a good outcome helps it: a perfect quarter was the base case (limited upside) while any blemish was a downside surprise. Hold and don't flinch; don't trade the one-day reaction."},
 ];
 
 /* ============================================================
@@ -304,7 +305,7 @@ function render(prices, live){
   if(live){
     $("statusLine").innerHTML = `<span class="dot live"></span>Live prices · ${now.toLocaleString()}`;
   } else {
-    $("statusLine").innerHTML = `<span class="dot stale"></span>Last-saved data (W6, Jun 19)`;
+    $("statusLine").innerHTML = `<span class="dot stale"></span>Last-saved data (W7, Jun 26)`;
   }
   $("updated").textContent = "Rendered " + now.toLocaleString();
 
@@ -359,7 +360,7 @@ function drawChart(curPort, curSpy, curQqq, live){
 async function fetchPrices(){
   const tickers = ["MU","LLY","CEG","LMT","MA","SPY","QQQ"];
   if(!FINNHUB_KEY || FINNHUB_KEY==="PASTE_YOUR_FINNHUB_KEY_HERE"){
-    showErr("No API key set — showing last-saved prices (W6, Jun 19). Add a free Finnhub key in the file to enable live prices.");
+    showErr("No API key set — showing last-saved prices (W7, Jun 26). Add a free Finnhub key in the file to enable live prices.");
     render(FALLBACK,false); return;
   }
   try{
@@ -373,7 +374,7 @@ async function fetchPrices(){
     const prices = Object.fromEntries(results);
     render(prices, true);
   }catch(e){
-    showErr("Live fetch failed ("+e.message+") — showing last-saved prices (W6, Jun 19).");
+    showErr("Live fetch failed ("+e.message+") — showing last-saved prices (W7, Jun 26).");
     render(FALLBACK,false);
   }
 }
