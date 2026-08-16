@@ -146,7 +146,7 @@
 
   <!-- THESIS GRID -->
   <section>
-    <h2><span class="bar"></span>Thesis Status &mdash; Latest (W13, August 7)</h2>
+    <h2><span class="bar"></span>Thesis Status &mdash; Latest (W14, August 14)</h2>
     <table>
       <thead><tr><th>Position</th><th>Status</th><th>Driver</th></tr></thead>
       <tbody id="thesisBody"></tbody>
@@ -163,7 +163,7 @@
   </section>
 
   <footer>
-    Live prices via Finnhub &middot; static thesis &amp; lesson data from weekly tracker (W13, August 7 2026)<br>
+    Live prices via Finnhub &middot; static thesis &amp; lesson data from weekly tracker (W14, August 14 2026)<br>
     Not financial advice &middot; $500 learning experiment &middot; <span id="updated"></span>
   </footer>
 
@@ -189,28 +189,28 @@ const POS = [
 ];
 const SPY_ENTRY = 739.30, QQQ_ENTRY = 713.29;
 
-// cumulative dividends earned to date (Phase2 Dividend Ledger, through W13 — no new ex-divs in W13; next are LLY Aug 14 and CEG Aug 18, both confirmed, taking the total to ~$1.52)
-const CUM_DIVIDENDS = 1.1981;
+// cumulative dividends earned to date (Phase2 Dividend Ledger, through W14 — LLY ex-div Aug 14 added $0.1831; next is CEG Aug 18 ($0.4265), taking the total to ~$1.52 in W15)
+const CUM_DIVIDENDS = 1.3812;
 
-/* ---- Fallback prices = last saved (W13, August 7 2026) ---- */
-const FALLBACK = {MU:877.57, LLY:1185.71, CEG:269.89, LMT:587.95, MA:562.95, SPY:773.26, QQQ:723.03};
+/* ---- Fallback prices = last saved (W14, August 14 2026) ---- */
+const FALLBACK = {MU:971.66, LLY:1180.16, CEG:282.50, LMT:608.68, MA:569.29, SPY:776.34, QQQ:731.07};
 
 /* ---- Weekly history for the chart (% total return from entry) ---- */
-const WEEKS = ["W0","W1","W2","W3","W4","W5","W6","W7","W8","W9","W10","W11","W12","W13"];
-const WK_DATES = ["May 11","May 15","May 23","May 30","Jun 5","Jun 12","Jun 19","Jun 26","Jul 2","Jul 9","Jul 17","Jul 24","Jul 31","Aug 7"];
+const WEEKS = ["W0","W1","W2","W3","W4","W5","W6","W7","W8","W9","W10","W11","W12","W13","W14"];
+const WK_DATES = ["May 11","May 15","May 23","May 30","Jun 5","Jun 12","Jun 19","Jun 26","Jul 2","Jul 9","Jul 17","Jul 24","Jul 31","Aug 7","Aug 14"];
 const HIST = {
-  port: [0.00, -0.96, 1.10, 7.03, 5.45, 6.32, 10.00, 9.71, 9.17, 8.65, 4.76, 11.15, 8.30, 10.70],
-  spy:  [0.00, -0.02, 0.87, 2.32, -0.24, 0.43, 1.03, -1.39, 0.74, 1.68, 0.54, -0.05, 1.05, 4.59],
-  qqq:  [0.00, -0.46, 0.60, 3.13, -1.15, 0.54, 3.83, -0.95, -0.10, 1.40, -2.52, -4.07, -3.55, 1.37],
+  port: [0.00, -0.96, 1.10, 7.03, 5.45, 6.32, 10.00, 9.71, 9.17, 8.65, 4.76, 11.15, 8.30, 10.70, 14.88],
+  spy:  [0.00, -0.02, 0.87, 2.32, -0.24, 0.43, 1.03, -1.39, 0.74, 1.68, 0.54, -0.05, 1.05, 4.59, 5.01],
+  qqq:  [0.00, -0.46, 0.60, 3.13, -1.15, 0.54, 3.83, -0.95, -0.10, 1.40, -2.52, -4.07, -3.55, 1.37, 2.49],
 };
 
-/* ---- Thesis grid (W13, August 7) ---- */
+/* ---- Thesis grid (W14, August 14) ---- */
 const THESIS = [
-  {t:"MU",  s:"Intact",    d:"The biggest dollar gain in the book (+6.63%), recovering most of W12's damage on a +7.62% Tuesday as the memory trade firmed on Samsung/SK Hynix/Micron capex commentary. But the risk changed shape late in the week: Citi cut its price target 18% warning that 'memory prices will peak next year,' and SK Hynix unveiled a $38B factory plan. For most of Phase 2 the bear case was about demand — which Apple and Amazon publicly confirmed last week. It is now about supply. Track capacity announcements, not demand headlines. +10.73% from entry."},
-  {t:"LLY", s:"Intact",    d:"A genuine blowout the market shrugged at. Q2 on Aug 5: adjusted EPS $8.38 vs $6.01 consensus, revenue $23.0B vs $20.73B (+48% YoY), Mounjaro +91% to $9.9B, FY26 sales guidance raised to $85–87B from $82–85B, plus $4.5B more for Indiana manufacturing — clearing outright the guidance-raise bar Goldman set publicly in W12. Targets followed within 48 hours: Morgan Stanley $1,419, Cantor $1,410, BMO $1,400, Truist $1,376, Wells Fargo $1,330, with stock-split chatter. The stock rose 4.86% on the day and 3.21% on the week — less than QQQ. Largest cumulative contributor; the thesis is in its best shape all experiment. +25.49% from entry."},
-  {t:"CEG", s:"Pressured", d:"The deciding event arrived, came back clean, and the repricing did not happen. Q2 on Aug 5: adjusted EPS $2.55 vs $2.34 consensus (a 9.5% beat), FY26 guidance raised to $11.50–$12.50, ~920MW of new long-term nuclear PPAs, a path to 20% earnings growth through 2029, a gas-plant sale to LS Power, and the CEO adding the Chairman role. Revenue missed ($7.5B vs $7.94B). The stock opened Aug 6 at $277.92, ran to $283.43, reversed to close -1.52%, and finished the week +2.72% — behind QQQ's +5.09%, in a week when a rate-relief rally should independently have helped it. BMO nudged its target to $379; the street average is ~$353, roughly 30% above spot. Pressured now reflects price behaviour, not business doubt — and there is no longer an identified catalyst that reprices it. -14.33% from entry."},
-  {t:"LMT", s:"Intact",    d:"Quiet, and quietly the second-best position. +0.89% in its least eventful week in some time. The news flow was supply-chain rather than backlog: Reuters reported Lockheed negotiating domestic scandium and germanium supply after the administration's supply-chain push, with a NioCorp MOU for scandium oxide, plus a Gravitics selection for a Department of War contract and Skunk Works progress on sensor-driven AI fighter intercept. Nothing demanding a repricing, nothing concerning. Doing exactly what the boring-quality-anchor slot was designed to do. +16.71% from entry."},
-  {t:"MA",  s:"Intact",    d:"The week's only decliner (-1.77%), including -2.26% on Friday — a down move on the best day the index had all week. The actual news was uniformly constructive: Mastercard completed its acquisition of BVNK, a crypto/stablecoin infrastructure platform, announced a Borderless.xyz cross-border stablecoin partnership and a Fiserv Commerce Hub integration, and drew target raises from Truist ($554→$633) and Cantor ($650→$695). The 'good ratings, weak price' pattern from W9–W11 returned one week after earnings interrupted it. Note the strategic angle: BVNK is Mastercard buying into the stablecoin rails the W4 thesis-break criterion flagged as its disintermediation risk — the bear case being addressed directly, and the stock fell anyway. +13.73% from entry."},
+  {t:"MU",  s:"Intact",    d:"Now the top position in the book. +10.72% on the week to $971.66 across four consecutive up days — its best weekly close since W8 (July 2) — as the memory squeeze tightened again: Micron signalled 'very tight' supply-demand conditions persisting beyond 2027, demonstrated a PCIe Gen 6 NVMe SSD with Microchip for AI and data-center workloads, and launched a $250M Micron Ventures Paradigm Fund. UBS reiterated Buy at a $1,625 target against a street mean near $1,568, while Citi cut its target $1,400 → $1,150 on valuation and a 2027 DRAM/NAND price peak, keeping its Buy. Note precisely what happened: W13 named the supply cycle as the new live risk, and this week the market repriced tightness rather than pricing that risk — which defers the question rather than resolving it. Still ~23% below the late-June ATH, so this is recovery, not breakout. +22.60% from entry."},
+  {t:"LLY", s:"Intact",    d:"The week's only decliner, and the decline is roughly its own dividend. Lilly closed $1,180.16, down $5.55, having gone ex-dividend Aug 14 at $1.73/share — the ex-div mechanically accounts for about a third of the move and the rest is noise. News flow was constructive on balance: UK approval for Foundayo on Aug 10–11, its first regulatory authorization outside the United States; and on Aug 12 Lilly sued six companies over black-market sales of experimental retatrutide, publicly calling on platforms, payment companies and regulators to shut the trade down — an unusual step that signals how much it values that launch. Against that, Novo Nordisk's CEO defended his own suit against Lilly ('competition has to be fair') and said obesity 'won't be a winner-take-all battle.' BofA named LLY among knocked-down bargains. Second-largest cumulative contributor; it lost the top slot purely on MU's move. +24.90% from entry."},
+  {t:"CEG", s:"Pressured", d:"Pressured — improving. Best weekly close since W3 (May 30, $287.00) at $282.50, +4.67% on the week, with the drawdown cut to -10.32% from the -24.05% W8 trough. What is striking is the absence of company news: the move was +3.25% on Tuesday in a broad nuclear/AI-power bid, and the only stock-specific items were duelling Friday notes — BMO raising its target $376 → $379 (Outperform) and Argus cutting $350 → $325 (Buy) — alongside a WSJ piece titled 'Red-Hot Power Stocks Are Losing Steam.' What actually moved it was the soft CPI and benign PPI collapsing rate expectations, which is precisely the mechanism W13 identified as the thing suppressing the stock. This is not the repricing W11 and W12 predicted; it is the other thing — see this week's lesson. One week is not resolution and it remains the only underwater position, but the mechanism now looks understood rather than mysterious. -10.32% from entry."},
+  {t:"LMT", s:"Intact",    d:"A new Phase-2 high and now the third-best position. Lockheed closed $608.68, +3.53%, the highest close of the experiment, on steady product and program news rather than headline contracts: an Aug 10 successful static-fire test of the Next Generation Interceptor's Stage 2 motor, the launch of Strigo (a modular defense line of RF sensors and missile products), and an Aug 12 NetSense counter-drone demonstration with Verizon, Keysight and NVIDIA. The backdrop is the Aug 3 Pentagon framework agreement with Lockheed and Northrop to expand missile-interceptor component production over seven years. The boring quality anchor has compounded from +0.72% at W7 to +20.82% today — drifting up with a structurally larger budget rather than repricing on contracts, consistent with the W12 lesson. +20.82% from entry."},
+  {t:"MA",  s:"Intact",    d:"Steady, and it picked up a notable shareholder. Mastercard closed $569.29, +1.13%, recovering most of W13's give-back. On Aug 12 the BVNK stablecoin-infrastructure acquisition formally completed (announced W13, closed this week), and American Airlines and Citi announced premium travel and lifestyle upgrades to their co-branded Mastercard. On Aug 13 Bill Ackman's Pershing Square disclosed a new Mastercard position alongside Netflix and Visa in a portfolio overhaul. A concentrated activist buying both card networks is a vote on the rails surviving the stablecoin transition — the same question the W4 thesis-break criterion was written around — and it is worth noting the market's reaction was a 1.31% day, not a repricing. +15.01% from entry."},
 ];
 
 /* ---- Lessons (Concepts & Lessons ledger) ---- */
@@ -229,6 +229,7 @@ const LESSONS = [
   {type:"lesson", tag:"Lesson", wk:"W11", title:"Some Theses Only Reprice on the Scoreboard", body:"For three straight weeks LMT absorbed enormous, thesis-confirming contract news — a $35B THAAD award, a $10.53B USSOCOM award, Navy and ATACMS orders — and the stock went nowhere or fell, trading on defense-sector sentiment instead. Then Q2 landed July 23 with a beat and a raised 2026 forecast, and it gained 10.54% in a session and 14.51% on the week, with targets jumping to $600–700 inside a day. Nothing about the business changed; the backlog stopped being a press-release claim and became an audited number with guidance attached. Contract awards are inputs to a thesis, earnings are the audit of it — and markets discount the inputs until the audit confirms. If a position keeps generating confirming news with no price response, the answer is patience through the next earnings date, not doubt about the thesis. Applies directly to CEG, now in week eleven of the same pattern, with Q2 in early August."},
   {type:"lesson", tag:"Lesson", wk:"W12", title:"A Repricing Is an Event, Not a New Regime", body:"Last week's lesson said LMT's ignored contract awards would reprice once earnings audited them — and they did, +10.54% in a session. The tempting extrapolation was that the market had started paying attention to the backlog. One week later, on July 29, Lockheed received a $58.62B multiyear PAC-3 MSE award — the largest Patriot missile contract in history — plus a $107.29M Navy order, and the stock finished the week +0.02%. The earnings report did not convert LMT into a name that trades on contract news; it settled one accumulated gap between announced business and reflected price, then handed the stock back to defense-sector sentiment. A repricing is a discrete, one-time correction, not a change in the market's method. Do not extrapolate from 'the market finally noticed' to 'the market is now watching' — budget for one move per audit. Applied forward to CEG: if its ~Aug 6 report forces the repricing, expect a single re-rating and then the same pattern of ignored news flow, not a stock that suddenly responds to nuclear-power headlines."},
   {type:"lesson", tag:"Lesson", wk:"W13", title:"A Clean Audit Doesn't Guarantee a Repricing", body:"Lessons 12 and 13 built a model over two weeks and pointed it at CEG: awards are inputs, earnings are the audit, budget for one repricing move. Both treated the timing of CEG's repricing as the open question. Neither considered it might not come. On Aug 5 Constellation reported adjusted EPS $2.55 vs $2.34 consensus — a 9.5% beat — raised FY26 guidance to $11.50–$12.50, disclosed ~920MW of new nuclear PPAs and a path to 20% earnings growth through 2029. The stock finished the week +2.72%, behind QQQ's +5.09%, in a week a weak payrolls print delivered a rate-relief rally that should independently have favored a long-duration utility. The model failed at its first step, and the failure is more instructive than the two successes. The flaw was treating 'the market is ignoring good news' as a mechanism — it is a description. LMT's gap was an information gap: a real backlog, hard to size from press releases, resolvable by an audited income statement. CEG's gap is structural and valuational — the Calpine lock-up overhang (W8), PJM/ERCOT regulatory uncertainty (BMO, this week), and a multiple marked down in June and never marked back up. A quarterly report cannot fix any of those. The rule: an earnings audit resolves uncertainty about performance. If what's suppressing a price is uncertainty about share supply, regulatory regime, or the multiple the business deserves, the report will pass and the price will stay. Before adopting the patience-through-earnings posture, name the specific thing you believe the market is discounting and ask whether an income statement can answer it. If you can't name it, you don't have a catalyst — you have a hope."},
+  {type:"lesson", tag:"Lesson", wk:"W14", title:"If You Can Name the Suppressant, You Have Named the Catalyst", body:"Last week's entry closed with: 'there is no longer an identified catalyst that reprices it.' Seven days later CEG had its best week since the trough and its best close since May 30. The diagnosis in W13 was correct and should be kept: what held CEG down was not uncertainty about performance — the Q2 audit resolved that and changed nothing — but structural and valuational facts (the Calpine overhang, PJM/ERCOT regulatory uncertainty, and a multiple marked down in the June rate selloff and never marked back up), none of which a quarterly report can address. The conclusion drawn from it did not hold. 'No identified catalyst remains' only follows if catalyst means a scheduled company event that resolves uncertainty — earnings, an FERC ruling, a PPA signing. Under that definition, correctly diagnosing the suppressant as the discount rate does produce 'no catalyst,' because the discount rate is not on Constellation's calendar. But a suppressant and a catalyst are the same variable read in opposite directions: if the thing holding a price down is the rate environment, then the rate environment changing is the catalyst. On Aug 12 a soft July CPI and benign PPI collapsed tightening expectations, and CEG rose 4.67% on no company news. The rule: once you have diagnosed why a price is stuck, invert the diagnosis and write down what would unstick it. 'The catalyst is a change in rate expectations, which isn't on the company's calendar and can't be timed' is far more useful than 'no catalyst remains' — the first tells you what to watch, the second tells you to give up, and acting on it would have meant reconsidering the position at the exact low of the pessimism. Two caveats: one week is not resolution (CEG is still the only underwater position, and six confirmed business wins in fourteen weeks have still produced a loss), and the direction of this move was luck. The lesson is about how the question was framed. This is the mirror of W12 — that warned against extrapolating from one repricing to a new regime; this warns against extrapolating from a long stretch of nothing happening to the conclusion that nothing can happen."},
 ];
 
 /* ============================================================
@@ -311,7 +312,7 @@ function render(prices, live){
   if(live){
     $("statusLine").innerHTML = `<span class="dot live"></span>Live prices · ${now.toLocaleString()}`;
   } else {
-    $("statusLine").innerHTML = `<span class="dot stale"></span>Last-saved data (W13, Aug 7)`;
+    $("statusLine").innerHTML = `<span class="dot stale"></span>Last-saved data (W14, Aug 14)`;
   }
   $("updated").textContent = "Rendered " + now.toLocaleString();
 
@@ -366,7 +367,7 @@ function drawChart(curPort, curSpy, curQqq, live){
 async function fetchPrices(){
   const tickers = ["MU","LLY","CEG","LMT","MA","SPY","QQQ"];
   if(!FINNHUB_KEY || FINNHUB_KEY==="PASTE_YOUR_FINNHUB_KEY_HERE"){
-    showErr("No API key set — showing last-saved prices (W13, Aug 7). Add a free Finnhub key in the file to enable live prices.");
+    showErr("No API key set — showing last-saved prices (W14, Aug 14). Add a free Finnhub key in the file to enable live prices.");
     render(FALLBACK,false); return;
   }
   try{
@@ -380,7 +381,7 @@ async function fetchPrices(){
     const prices = Object.fromEntries(results);
     render(prices, true);
   }catch(e){
-    showErr("Live fetch failed ("+e.message+") — showing last-saved prices (W13, Aug 7).");
+    showErr("Live fetch failed ("+e.message+") — showing last-saved prices (W14, Aug 14).");
     render(FALLBACK,false);
   }
 }
