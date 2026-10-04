@@ -84,6 +84,10 @@
   .lesson .lbody{font-size:13px;color:#4a4944;}
   .lesson .wk{font-size:11px;color:var(--mid);font-family:'Poppins',sans-serif;margin-top:8px;}
   footer{margin-top:36px;text-align:center;font-size:11.5px;color:var(--mid);font-family:'Poppins',sans-serif;line-height:1.7;}
+  .links{display:flex;flex-wrap:wrap;gap:8px;margin:-6px 0 18px;}
+  .links a{font-family:'Poppins',Arial,sans-serif;font-size:13px;font-weight:500;color:var(--dark);background:var(--card);border:1px solid var(--lgray);border-radius:20px;padding:6px 14px;text-decoration:none;}
+  .links a:hover{border-color:var(--orange);}
+  .links a.primary{background:var(--dark);color:var(--light);border-color:var(--dark);}
   .err{background:#fbeae3;color:#a8462e;border:1px solid #f0c9bd;border-radius:10px;padding:10px 14px;font-size:12.5px;font-family:'Poppins',sans-serif;margin-bottom:14px;display:none;}
   @media(max-width:720px){
     .hero{grid-template-columns:1fr 1fr;}.hero .big{grid-column:1/-1;}
@@ -104,6 +108,12 @@
     </div>
     <div class="status-line" id="statusLine"><span class="dot stale"></span>Loading prices&hellip;</div>
   </header>
+
+  <nav class="links">
+    <a class="primary" href="review.html">This week's review &rarr;</a>
+    <a href="review.html#ledger">Lessons ledger</a>
+    <a href="review.html#weeks">All weeks</a>
+  </nav>
 
   <div class="err" id="errBox"></div>
 
@@ -163,7 +173,8 @@
   </section>
 
   <footer>
-    Live prices via Finnhub &middot; static thesis &amp; lesson data from weekly tracker (W21, October 2 2026)<br>
+    Live prices via Finnhub &middot; thesis &amp; lesson data from the weekly review log (W21, October 2 2026)<br>
+    Updated automatically every Saturday &middot; last published <span id="published"></span><br>
     Not financial advice &middot; $500 learning experiment &middot; <span id="updated"></span>
   </footer>
 
@@ -191,6 +202,9 @@ const SPY_ENTRY = 739.30, QQQ_ENTRY = 713.29;
 
 // cumulative dividends earned to date (Phase2 Dividend Ledger, through W21: no ex-dividends in W19, W20 or W21, total unchanged at $2.2014 since the LMT Sept 1 ex-div; next are MA $0.87/share ex-div ~Oct 9 and MU $0.15/share ex-div Oct 14, 2026)
 const CUM_DIVIDENDS = 2.20137074;
+
+/* ---- Date this weekly data was published (YYYY-MM-DD); the page warns if it goes stale ---- */
+const PUBLISHED = "2026-10-04";
 
 /* ---- Fallback prices = last saved (W21, October 2 2026) ---- */
 const FALLBACK = {MU:1074.89, LLY:1142.85, CEG:257.49, LMT:505.41, MA:552.26, SPY:769.64, QQQ:749.58};
@@ -386,8 +400,15 @@ async function fetchPrices(){
     render(FALLBACK,false);
   }
 }
-function showErr(msg){ const b=$("errBox"); b.textContent=msg; b.style.display="block"; }
+function checkPublished(){
+  const pub = new Date(PUBLISHED + "T12:00:00");
+  $("published").textContent = pub.toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"});
+  const days = Math.floor((Date.now() - pub) / 86400000);
+  if(days > 9) showErr(`Heads up: the weekly update has not published since ${$("published").textContent} (${days} days). Live prices below are current; the thesis grid, chart history, and lessons are not.`);
+}
+function showErr(msg){ const b=$("errBox"); b.textContent = b.textContent ? b.textContent + " " + msg : msg; b.style.display="block"; }
 
+checkPublished();
 fetchPrices();
 </script>
 </body>
