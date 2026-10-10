@@ -49,6 +49,7 @@
 | W19 | September 18, 2026 | $551.09 | +10.22% | $2.20 | +10.66% | +3.03% | +1.14% | +7.63pp | +9.52pp |
 | W20 | September 25, 2026 | $563.17 | +12.64% | $2.20 | +13.08% | +4.34% | +4.38% | +8.74pp | +8.70pp |
 | W21 | October 2, 2026 | $550.19 | +10.04% | $2.20 | +10.48% | +4.10% | +5.09% | +6.38pp | +5.39pp |
+| W22 | October 9, 2026 | $569.42 | +13.89% | $2.38 | +14.36% | +5.31% | +5.32% | +9.05pp | +9.04pp |
 
 *W1 MU/LLY/LMT/SPY confirmed; CEG/MA/QQQ estimated. W3 QQQ: May 28 confirmed close; May 29 close unconfirmed. W4 all closes confirmed (June 5, 2026). W5, W6, W7, and W8 all closes confirmed (July 3 was the Independence Day market holiday, so W8 reflects the July 2 close — the freshest data available). **Correction note (W8):** an earlier pass at this week's numbers used $236.50 for CEG, which was actually the July 1 close, not July 2. The confirmed July 2 close is $239.25. This has been corrected before appending — nothing above this line was affected. "Total Return %" includes dividends received; "vs. SPY/QQQ" columns compare total return against the benchmarks' price change. Cumulative dividends: CEG $0.14 (ex-div May 15) from W1 onward; LMT $0.68 (ex-div June 1) added in W4; LLY $0.18 (ex-div May 15) caught and added in W5 — total $1.00. MU/MA had no ex-dividend dates inside the holding period. See the Dividend Ledger below for the running record.*
 
@@ -83,6 +84,7 @@
 | W19 | September 18, 2026 | +28.17% | +22.02% | -19.14% | +5.88% | +14.19% |
 | W20 | September 25, 2026 | +36.56% | +25.25% | -16.43% | +3.13% | +14.68% |
 | W21 | October 2, 2026 | +35.63% | +20.95% | -18.26% | +0.32% | +11.57% |
+| W22 | October 9, 2026 | +29.84% | +24.80% | -5.38% | +1.15% | +19.02% |
 
 *W1 CEG and MA are estimated prices. W5–W8 all confirmed. (Position table shows price-only % return from entry; dividends are captured separately in the Dividend Ledger and the total-return columns of the Cumulative Performance Tracker.)*
 
@@ -102,14 +104,16 @@
 | August 14, 2026 | LLY | $1.73 | 0.10583 | $0.18 | Earned (held through ex-date) — second LLY dividend of Phase 2 |
 | August 18, 2026 | CEG | $0.4265 | 0.31744 | $0.14 | Earned (held through ex-date) — second CEG dividend of Phase 2 |
 | September 1, 2026 | LMT | $3.45 | 0.19849 | $0.68 | Earned (held through ex-date) — second LMT dividend of Phase 2 |
-| **Total to date** | | | | **$2.20** | |
+| October 9, 2026 | MA | $0.87 | 0.20202 | $0.18 | Earned (held through ex-date). second MA dividend of Phase 2 |
+| **Total to date** | | | | **$2.38** | |
 
 **Upcoming / expected** (confirm dates closer to time):
 - CEG: next quarterly ex-div **Aug 18, 2026** ($0.4265, record Aug 18, pay Sept 4) — declared and confirmed W13, falls in W15. Adds ~$0.14, taking cumulative to ~$1.52.
 - LMT: **Sept 1, 2026 ex-div earned** ($3.45, roughly $0.68) — added to the ledger in W17; cumulative $1.5166 → $2.2014. Next quarterly ex-div ~Dec 2026 ($3.45 est.).
 - LLY: **Aug 14, 2026 ex-div earned** ($1.730, record Aug 14, pay Sept 10) — added to the ledger in W14, +$0.1831; cumulative $1.1981 → $1.3812. Next quarterly ex-div ~Nov 2026 ($1.73 est.).
 - MU: first dividend earned this week (July 6 ex-div, $0.02); next ~Oct 2026. Yield negligible (~0.06% annualized); track but don't expect material contribution.
-- MA: first dividend earned this week (July 9 ex-div, $0.18); next quarterly ex-div ~Oct 2026 ($0.87 est.).
+- MA: **Oct 9, 2026 ex-div earned** ($0.87, record Oct 9, pay Nov 9), added in W22: +$0.1758, cumulative $2.2014 to $2.3771. Next quarterly ex-div ~Jan 2027 ($0.87 est.).
+- MU: $0.15 declared, record and ex-div **Oct 14, 2026** (pay Oct 29), falls in W23. About $0.02.
 
 **Note on scale:** Over a 6-month buy-and-hold, total dividends across the book will likely land around $4–6 — roughly 1% of invested capital, driven almost entirely by LMT and CEG. Small, but it's the correct way to measure, and for the "boring quality anchor" (LMT) it's part of the actual thesis (23+ years of dividend growth).
 
@@ -1646,6 +1650,75 @@ MU falling on a blowout report is Lesson 8 confirmed a second time, on a bigger 
 ---
 
 *Next check-in: ~October 9, 2026 (Week 22). MA ex-div about October 9; MU ex-div October 14 (falls in W23). LMT earnings October 22, MA October 29, CEG November 9.*
+
+### Week 22: October 9, 2026
+
+*Portfolio is 151 days old. All prices are Finnhub quotes stamped October 9, 2026 at the 16:00 ET close, on all seven symbols.*
+
+#### Prices Used
+
+| Ticker | Entry Price | Current Price | Current Value | Price P&L | Dividend | Total P&L | Total Return % |
+|--------|-------------|---------------|---------------|-----------|----------|-----------|----------------|
+| MU | $792.53 | $1,029.00 | $129.83 | +$29.84 | +$0.02 | +$29.86 | +29.86% |
+| LLY | $944.90 | $1,179.27 | $124.80 | +$24.80 | +$0.37 | +$25.17 | +25.17% |
+| CEG | $315.02 | $298.07 | $94.62 | -$5.38 | +$0.27 | -$5.11 | -5.11% |
+| LMT | $503.78 | $509.59 | $101.15 | +$1.15 | +$1.37 | +$2.52 | +2.52% |
+| MA | $495.00 | $589.14 | $119.02 | +$19.02 | +$0.36 | +$19.38 | +19.38% |
+| **Total** | | | **$569.42** | **+$69.43** | **+$2.38** | **+$71.80** | **+14.36%** |
+
+*Price-only return +13.89%; total return **+14.36%**, up 3.88 points from W21 and the second-highest reading of Phase 2 (W14 was +14.88%). One new ex-dividend: MA $0.87 x 0.20202 = $0.1758, ex-date October 9 (record date October 9, payable November 9, per Mastercard's September 29 announcement). Cumulative dividends rise from $2.2014 to $2.3771. MU's $0.15 goes ex October 14, in W23.*
+
+**Benchmarks:**
+- SPY: $739.30 to $778.57 = **+5.31%** (+1.16% on the week)
+- QQQ: $713.29 to $751.27 = **+5.32%** (+0.22% on the week)
+- Portfolio (total return) vs. SPY: **+9.05 pp ahead**
+- Portfolio (total return) vs. QQQ: **+9.04 pp ahead**
+
+*Both leads widened, from +6.38pp to +9.05pp against SPY and from +5.39pp to +9.04pp against QQQ. Lesson 10 says check which side moved. This week it was the portfolio: the benchmarks gained 0.22% to 1.16% while the book gained 3.88 points, almost all of it from CEG.*
+
+#### The Week's One Fact
+
+**Constellation Energy signed a 20-year deal with Google for 890 MW of new nuclear capacity on October 6, and the stock rose 15.77% on the week to $298.07.** CEG added about $12.9 of the book's $21.6 weekly price gain. MA added about $7.5, LLY about $4.0, and MU gave back about $5.8.
+
+#### What Moved and Why
+
+**MU (-4.27% WoW, +29.86% cumulative).** No company news turned up in my searches this week. The stock fell from $1,074.89 to $1,029.00, giving back part of its post-earnings level while the 10-year yield hit 5.365% midweek. Sector noise, not a thesis event: no oversupply, capex cut, or HBM share loss reported. $0.15 dividend goes ex October 14.
+
+**LLY (+3.18% WoW, +25.17% cumulative).** I found no Lilly-specific news dated this week to explain the move; the EASD data was last week's story. Retatrutide Phase 3 and orforglipron (Foundayo) data from the meeting remain the backdrop. Next earnings are listed as October 29, one source's date. Treat the cause of this week's gain as unexplained.
+
+**CEG (+15.77% WoW, -5.11% cumulative).** Google signed a 20-year agreement for 890 MW of new nuclear capacity plus a separate 15-year supply deal for 2,700 MW from the existing PJM fleet, with more than $4.3B of upgrades at 11 reactors and first new capacity in 2028. Pricing was not disclosed. Sources put the one-day jump between 12% and 15%. This is a company fact that bears on the thesis. Next earnings November 9.
+
+**LMT (+0.81% WoW, +2.52% cumulative).** Small gain on no company news that I could find. Price return is +1.15%, up from the Phase 2 low of +0.32%. Q3 earnings are October 20 per Earnings Whispers or October 22 per Unusual Whales; sources disagree, so confirm next week. The continuing-resolution flag stays until December 11.
+
+**MA (+6.68% WoW, +19.38% cumulative).** Best week since the July earnings run, on no company news that I could find. The $0.87 dividend went ex on October 9. Nothing touches the break criteria. Earnings October 29.
+
+#### Macro Context
+
+The 10-year Treasury touched 5.365% on October 7, the highest since April 2002, and the 30-year hit a 24-year high. September Fed minutes showed most participants saw another hike as likely appropriate by year-end, though odds of an October hike fell to about 17%, from 37.6% a week earlier. The S&P 500 hit a record on October 6 and closed at 7,801.77 on October 7, down 0.22%. SPY ended the week +1.16%. I could not find a wrap for the October 9 session itself, so the weekly index detail rests on the SPY and QQQ closes above.
+
+#### Lesson: None This Week
+
+CEG rising on a signed contract is a company fact moving a price, which is the normal case. MU falling after a record quarter is already Lesson 8. Nothing new.
+
+#### Thesis Status Check
+
+| Position | Thesis Status | Notes |
+|----------|--------------|-------|
+| MU | ✅ Intact | No company news found. Fell with a 5.365% 10-year; no oversupply, capex cut, or HBM share loss reported. |
+| LLY | ✅ Intact | No Lilly-specific news found for the week. EASD pipeline data from last week stands. |
+| CEG | ✅ Intact | Google 20-year nuclear deal (890 MW new, 2,700 MW existing) supports the AI-power demand thesis. Pricing undisclosed. |
+| LMT | ⚠️ Pressured | Price return +1.15%, off the Phase 2 low. No F-35 cancellation or budget reversal. CR flag stays until December 11. |
+| MA | ✅ Intact | No company news found. Stronger tape; no interchange action or volume migration. |
+
+#### Things to Watch Next Week
+- **MU ex-dividend October 14.** About $0.02; add to the ledger in W23.
+- **LMT earnings date.** Sources say October 20 or 22. Confirm and note the result; Lesson 12 and Lesson 15 frame what to look for.
+- **CEG follow-through.** The Google deal pricing was not disclosed. Watch whether analysts raise targets and whether the gain holds, without treating the price as the thesis.
+- **Four weeks to the November 11 review.** The lead over SPY is +9.05pp; the 6-month review is the next milestone.
+
+---
+
+*Next check-in: ~October 16, 2026 (Week 23). MU ex-div October 14. LMT earnings October 20 or 22, MA October 29, LLY October 29 (per one source), CEG November 9.*
 
 ---
 
