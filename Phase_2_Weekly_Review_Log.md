@@ -50,6 +50,7 @@
 | W20 | September 25, 2026 | $563.17 | +12.64% | $2.20 | +13.08% | +4.34% | +4.38% | +8.74pp | +8.70pp |
 | W21 | October 2, 2026 | $550.19 | +10.04% | $2.20 | +10.48% | +4.10% | +5.09% | +6.38pp | +5.39pp |
 | W22 | October 9, 2026 | $569.42 | +13.89% | $2.38 | +14.36% | +5.31% | +5.32% | +9.05pp | +9.04pp |
+| W23 | October 16, 2026 | $564.37 | +12.88% | $2.40 | +13.36% | +3.24% | -0.49% | +10.12pp | +13.85pp |
 
 *W1 MU/LLY/LMT/SPY confirmed; CEG/MA/QQQ estimated. W3 QQQ: May 28 confirmed close; May 29 close unconfirmed. W4 all closes confirmed (June 5, 2026). W5, W6, W7, and W8 all closes confirmed (July 3 was the Independence Day market holiday, so W8 reflects the July 2 close — the freshest data available). **Correction note (W8):** an earlier pass at this week's numbers used $236.50 for CEG, which was actually the July 1 close, not July 2. The confirmed July 2 close is $239.25. This has been corrected before appending — nothing above this line was affected. "Total Return %" includes dividends received; "vs. SPY/QQQ" columns compare total return against the benchmarks' price change. Cumulative dividends: CEG $0.14 (ex-div May 15) from W1 onward; LMT $0.68 (ex-div June 1) added in W4; LLY $0.18 (ex-div May 15) caught and added in W5 — total $1.00. MU/MA had no ex-dividend dates inside the holding period. See the Dividend Ledger below for the running record.*
 
@@ -85,6 +86,7 @@
 | W20 | September 25, 2026 | +36.56% | +25.25% | -16.43% | +3.13% | +14.68% |
 | W21 | October 2, 2026 | +35.63% | +20.95% | -18.26% | +0.32% | +11.57% |
 | W22 | October 9, 2026 | +29.84% | +24.80% | -5.38% | +1.15% | +19.02% |
+| W23 | October 16, 2026 | +10.89% | +33.03% | -13.86% | +9.58% | +24.73% |
 
 *W1 CEG and MA are estimated prices. W5–W8 all confirmed. (Position table shows price-only % return from entry; dividends are captured separately in the Dividend Ledger and the total-return columns of the Cumulative Performance Tracker.)*
 
@@ -105,7 +107,8 @@
 | August 18, 2026 | CEG | $0.4265 | 0.31744 | $0.14 | Earned (held through ex-date) — second CEG dividend of Phase 2 |
 | September 1, 2026 | LMT | $3.45 | 0.19849 | $0.68 | Earned (held through ex-date) — second LMT dividend of Phase 2 |
 | October 9, 2026 | MA | $0.87 | 0.20202 | $0.18 | Earned (held through ex-date). second MA dividend of Phase 2 |
-| **Total to date** | | | | **$2.38** | |
+| October 14, 2026 | MU | $0.15 | 0.12617 | $0.02 | Earned (held through ex-date). second MU dividend of Phase 2 |
+| **Total to date** | | | | **$2.40** | |
 
 **Upcoming / expected** (confirm dates closer to time):
 - CEG: next quarterly ex-div **Aug 18, 2026** ($0.4265, record Aug 18, pay Sept 4) — declared and confirmed W13, falls in W15. Adds ~$0.14, taking cumulative to ~$1.52.
@@ -113,7 +116,7 @@
 - LLY: **Aug 14, 2026 ex-div earned** ($1.730, record Aug 14, pay Sept 10) — added to the ledger in W14, +$0.1831; cumulative $1.1981 → $1.3812. Next quarterly ex-div ~Nov 2026 ($1.73 est.).
 - MU: first dividend earned this week (July 6 ex-div, $0.02); next ~Oct 2026. Yield negligible (~0.06% annualized); track but don't expect material contribution.
 - MA: **Oct 9, 2026 ex-div earned** ($0.87, record Oct 9, pay Nov 9), added in W22: +$0.1758, cumulative $2.2014 to $2.3771. Next quarterly ex-div ~Jan 2027 ($0.87 est.).
-- MU: $0.15 declared, record and ex-div **Oct 14, 2026** (pay Oct 29), falls in W23. About $0.02.
+- MU: **Oct 14, 2026 ex-div earned** ($0.15, record Oct 14, pay Oct 29, per Micron's September 30 8-K), added in W23: +$0.0189, cumulative $2.3771 to $2.3961. Next quarterly ex-div ~Jan 2027 ($0.15 est.).
 
 **Note on scale:** Over a 6-month buy-and-hold, total dividends across the book will likely land around $4–6 — roughly 1% of invested capital, driven almost entirely by LMT and CEG. Small, but it's the correct way to measure, and for the "boring quality anchor" (LMT) it's part of the actual thesis (23+ years of dividend growth).
 
@@ -1719,6 +1722,76 @@ CEG rising on a signed contract is a company fact moving a price, which is the n
 ---
 
 *Next check-in: ~October 16, 2026 (Week 23). MU ex-div October 14. LMT earnings October 20 or 22, MA October 29, LLY October 29 (per one source), CEG November 9.*
+
+### Week 23: October 16, 2026
+
+*Portfolio is 158 days old. All prices are Finnhub quotes stamped October 16, 2026 at the 16:00 ET close, on all seven symbols.*
+
+#### Prices Used
+
+| Ticker | Entry Price | Current Price | Current Value | Price P&L | Dividend | Total P&L | Total Return % |
+|--------|-------------|---------------|---------------|-----------|----------|-----------|----------------|
+| MU | $792.53 | $878.84 | $110.88 | +$10.89 | +$0.04 | +$10.93 | +10.93% |
+| LLY | $944.90 | $1,257.03 | $133.03 | +$33.03 | +$0.37 | +$33.40 | +33.40% |
+| CEG | $315.02 | $271.37 | $86.14 | -$13.86 | +$0.27 | -$13.59 | -13.59% |
+| LMT | $503.78 | $552.09 | $109.58 | +$9.58 | +$1.37 | +$10.95 | +10.95% |
+| MA | $495.00 | $617.42 | $124.73 | +$24.73 | +$0.35 | +$25.08 | +25.08% |
+| **Total** | | | **$564.37** | **+$64.38** | **+$2.40** | **+$66.78** | **+13.36%** |
+
+*Price-only return +12.88%; total return **+13.36%**, down 1.00 point from W22's +14.36%. One new ex-dividend: MU $0.15 x 0.12617 = $0.0189, ex-date October 14 (record date October 14, payable October 29, per Micron's September 30 8-K). Cumulative dividends rise from $2.3771 to $2.3961.*
+
+**Benchmarks:**
+- SPY: $739.30 to $763.25 = **+3.24%** (-1.97% on the week)
+- QQQ: $713.29 to $709.80 = **-0.49%** (-5.52% on the week)
+- Portfolio (total return) vs. SPY: **+10.12 pp ahead**
+- Portfolio (total return) vs. QQQ: **+13.85 pp ahead**
+
+*Both leads widened even though the book fell. Lesson 10 says check which side moved: both did. The book lost 1.00 point while SPY lost 1.97% and QQQ lost 5.52%. QQQ is now below its starting level.*
+
+#### The Week's One Fact
+
+**Micron fell 14.59% on the week to $878.84, and I could not find a company-specific reason.** MU cost the book about $19.0 of its $5.1 net weekly price loss. LLY (+$8.2), LMT (+$8.4) and MA (+$5.7) offset most of it, and CEG gave back $8.5 of last week's Google-deal gain.
+
+#### What Moved and Why
+
+**MU (-14.59% WoW, +10.89% price, +10.93% total).** No Micron news turned up in my searches for this week. With QQQ down 5.52% and long yields near multi-decade highs, this looks like semiconductor and growth selling rather than a memory-specific event. No oversupply, capex cut, or HBM share loss reported. Treat the cause as unexplained. The $0.15 dividend went ex October 14.
+
+**LLY (+6.59% WoW, +33.03% cumulative).** Highest return of Phase 2 for the position (prior high +32.86% in W15). I found no Lilly-specific news dated this week, so the cause is unexplained. A defensive healthcare name held up while growth fell. Next earnings are listed as October 29 by one source; unconfirmed.
+
+**CEG (-8.96% WoW, -13.59% total).** The stock returned most of last week's Google-deal gain (+15.77%) as Treasury yields rose again. One automated source ties the October 15 decline to yields; I found no company news. Same pattern as Lesson 14: rates, not results. Thesis is unchanged. Next earnings November 9.
+
+**LMT (+8.34% WoW, +9.58% price).** Largest weekly gain since the July earnings run, and the position is back near +10% after sitting at +0.32% two weeks ago. I found no contract or budget news to explain it, so the cause is unexplained. Q3 earnings date is still unconfirmed: sources give October 20, 22 or 27.
+
+**MA (+4.80% WoW, +24.73% cumulative).** Another gain on no company news that I could find. Mastercard's own release confirms Q3 earnings on October 29 at a 9:00 a.m. ET call. Consensus EPS is about $5.13. Nothing touches the break criteria.
+
+#### Macro Context
+
+The 30-year Treasury yield reached 5.732% on October 7, the highest since 2002, and long yields stayed under pressure this week. Markets priced roughly a 25% chance of an October hike as of early October; the next FOMC meeting is October 27 to 28. SPY closed the week at $763.25 and QQQ at $709.80. I could not find a market wrap for the October 16 session, so the explanation above rests on the index closes and not on a sourced account of the week's selling.
+
+#### Lesson: None This Week
+
+A rate-driven selloff hitting growth names while healthcare held is Lessons 5 and 14 again. Nothing new.
+
+#### Thesis Status Check
+
+| Position | Thesis Status | Notes |
+|----------|--------------|-------|
+| MU | ✅ Intact | -14.59% with no company news found. No oversupply, capex cut, or HBM share loss reported. |
+| LLY | ✅ Intact | No Lilly-specific news found. Position at its Phase 2 high. |
+| CEG | ✅ Intact | Gave back most of the Google-deal gain on yields. The 890 MW deal stands. |
+| LMT | ⚠️ Pressured | Price return +9.58%. No budget reversal found. Continuing-resolution flag stays until December 11. |
+| MA | ✅ Intact | No company news found. Q3 earnings October 29 confirmed by the company. |
+
+#### Things to Watch Next Week
+- **LMT earnings.** Date still unconfirmed: October 20, 22 or 27. Confirm and note the result; Lessons 12 and 15 frame what to look for.
+- **MU.** Check whether a company or sector cause for the 14.59% drop appears. Don't treat the price as a thesis signal.
+- **FOMC October 27 to 28 and the 10-year yield.** Rates drove the CEG round trip.
+- **Earnings:** MA and LLY October 29 (LLY per one source), CEG November 9.
+- **Three weeks to the November 11 review.** The lead over SPY is +10.12pp.
+
+---
+
+*Next check-in: ~October 23, 2026 (Week 24). LMT earnings October 20, 22 or 27 (unconfirmed), MA October 29, LLY October 29 (per one source), CEG November 9.*
 
 ---
 
