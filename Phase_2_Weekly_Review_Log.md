@@ -51,6 +51,7 @@
 | W21 | October 2, 2026 | $550.19 | +10.04% | $2.20 | +10.48% | +4.10% | +5.09% | +6.38pp | +5.39pp |
 | W22 | October 9, 2026 | $569.42 | +13.89% | $2.38 | +14.36% | +5.31% | +5.32% | +9.05pp | +9.04pp |
 | W23 | October 16, 2026 | $564.37 | +12.88% | $2.40 | +13.36% | +3.24% | -0.49% | +10.12pp | +13.85pp |
+| W24 | October 23, 2026 | $571.85 | +14.37% | $2.40 | +14.85% | +2.80% | -1.25% | +12.06pp | +16.10pp |
 
 *W1 MU/LLY/LMT/SPY confirmed; CEG/MA/QQQ estimated. W3 QQQ: May 28 confirmed close; May 29 close unconfirmed. W4 all closes confirmed (June 5, 2026). W5, W6, W7, and W8 all closes confirmed (July 3 was the Independence Day market holiday, so W8 reflects the July 2 close — the freshest data available). **Correction note (W8):** an earlier pass at this week's numbers used $236.50 for CEG, which was actually the July 1 close, not July 2. The confirmed July 2 close is $239.25. This has been corrected before appending — nothing above this line was affected. "Total Return %" includes dividends received; "vs. SPY/QQQ" columns compare total return against the benchmarks' price change. Cumulative dividends: CEG $0.14 (ex-div May 15) from W1 onward; LMT $0.68 (ex-div June 1) added in W4; LLY $0.18 (ex-div May 15) caught and added in W5 — total $1.00. MU/MA had no ex-dividend dates inside the holding period. See the Dividend Ledger below for the running record.*
 
@@ -87,6 +88,7 @@
 | W21 | October 2, 2026 | +35.63% | +20.95% | -18.26% | +0.32% | +11.57% |
 | W22 | October 9, 2026 | +29.84% | +24.80% | -5.38% | +1.15% | +19.02% |
 | W23 | October 16, 2026 | +10.89% | +33.03% | -13.86% | +9.58% | +24.73% |
+| W24 | October 23, 2026 | +10.73% | +34.77% | -19.54% | +19.93% | +25.98% |
 
 *W1 CEG and MA are estimated prices. W5–W8 all confirmed. (Position table shows price-only % return from entry; dividends are captured separately in the Dividend Ledger and the total-return columns of the Cumulative Performance Tracker.)*
 
@@ -117,6 +119,7 @@
 - MU: first dividend earned this week (July 6 ex-div, $0.02); next ~Oct 2026. Yield negligible (~0.06% annualized); track but don't expect material contribution.
 - MA: **Oct 9, 2026 ex-div earned** ($0.87, record Oct 9, pay Nov 9), added in W22: +$0.1758, cumulative $2.2014 to $2.3771. Next quarterly ex-div ~Jan 2027 ($0.87 est.).
 - MU: **Oct 14, 2026 ex-div earned** ($0.15, record Oct 14, pay Oct 29, per Micron's September 30 8-K), added in W23: +$0.0189, cumulative $2.3771 to $2.3961. Next quarterly ex-div ~Jan 2027 ($0.15 est.).
+- LMT: **W24 note.** Lockheed raised its quarterly dividend to $3.60 per share (24th straight annual increase), record date December 1, 2026, per GuruFocus. Confirm the ex-date before booking it (about $0.71 on 0.19849 shares).
 
 **Note on scale:** Over a 6-month buy-and-hold, total dividends across the book will likely land around $4–6 — roughly 1% of invested capital, driven almost entirely by LMT and CEG. Small, but it's the correct way to measure, and for the "boring quality anchor" (LMT) it's part of the actual thesis (23+ years of dividend growth).
 
@@ -1793,6 +1796,76 @@ A rate-driven selloff hitting growth names while healthcare held is Lessons 5 an
 
 *Next check-in: ~October 23, 2026 (Week 24). LMT earnings October 20, 22 or 27 (unconfirmed), MA October 29, LLY October 29 (per one source), CEG November 9.*
 
+### Week 24: October 23, 2026
+
+*Portfolio is 165 days old. All prices are Finnhub quotes stamped October 23, 2026 at the 16:00 ET close, on all seven symbols.*
+
+#### Prices Used
+
+| Ticker | Entry Price | Current Price | Current Value | Price P&L | Dividend | Total P&L | Total Return % |
+|--------|-------------|---------------|---------------|-----------|----------|-----------|----------------|
+| MU | $792.53 | $877.55 | $110.72 | +$10.72 | +$0.04 | +$10.76 | +10.76% |
+| LLY | $944.90 | $1,273.46 | $134.77 | +$34.77 | +$0.37 | +$35.14 | +35.14% |
+| CEG | $315.02 | $253.45 | $80.46 | -$19.54 | +$0.27 | -$19.27 | -19.27% |
+| LMT | $503.78 | $604.18 | $119.92 | +$19.92 | +$1.37 | +$21.29 | +21.29% |
+| MA | $495.00 | $623.60 | $125.98 | +$25.98 | +$0.35 | +$26.33 | +26.33% |
+| **Total** | | | **$571.85** | **+$71.86** | **+$2.40** | **+$74.26** | **+14.85%** |
+
+*Price-only return +14.37%; total return **+14.85%**, up 1.49 points from W23's +13.36%. No new ex-dividend this week. Cumulative dividends stay at $2.3961.*
+
+**Benchmarks:**
+- SPY: $739.30 to $759.97 = **+2.80%** (-0.43% on the week)
+- QQQ: $713.29 to $704.40 = **-1.25%** (-0.76% on the week)
+- Portfolio (total return) vs. SPY: **+12.06 pp ahead**
+- Portfolio (total return) vs. QQQ: **+16.10 pp ahead**
+
+*The book rose while both indexes fell, so the leads widened because of the book. LMT earned the gain.*
+
+#### The Week's One Fact
+
+**Lockheed Martin reported Q3 on October 22 and the stock rose 9.44% on the week to $604.18.** EPS was $7.97 against about $7.52 expected, backlog hit a record $292.0B, and 2026 guidance was raised for the second quarter running. LMT added $10.34 of value, more than the book's entire $7.49 net gain; CEG lost $5.68.
+
+#### What Moved and Why
+
+**MU (-0.15% WoW, +10.73% price).** Flat on the week after a 6.26% drop on October 22 and a 2.5% bounce on October 23. I found no company-specific cause. Talks with the Taoyuan union resume October 27 after about 70% of members rejected a profit-sharing offer; this is a labor item to watch, not a thesis item. The $0.15 dividend is payable October 29.
+
+**LLY (+1.31% WoW, +34.77% price).** New Phase 2 high for the position. Goldman raised its target to $1,413 from $1,371, and Lilly's valuation passed Berkshire Hathaway's. Q3 earnings are October 29, with consensus near $22.49B revenue and $7.11 EPS (Benzinga).
+
+**CEG (-6.60% WoW, -19.54% price).** Fell 5.74% on October 22 to $255.21. I found no company news for that day. Commentary points to profit-taking after the Google-deal jump and to debt of $24.7B at June 30 with negative free cash flow. Those are old facts, not new ones. Lowest return of the book since August. Earnings November 9.
+
+**LMT (+9.44% WoW, +19.93% price).** Q3 sales rose 11% to $20.7B, in line; EPS beat by about $0.45. Free cash flow guidance rose to $7.8B to $8.0B from $7.0B to $7.2B. Caveat: Lockheed said costs on the F-35 Lot 20 advance contract began exceeding funding, and results could suffer without more money. Sources disagree on the one-day move (about 7% to 9%).
+
+**MA (+1.00% WoW, +25.98% price).** No negative news. Mastercard announced stablecoin risk tools and a BVNK platform at Money20/20, which is stablecoin work, not volume migration. Q3 earnings October 29, 9:00 a.m. ET.
+
+#### Macro Context
+
+The S&P 500 closed at 7,623.68 on October 23 (-0.52%) and the Dow fell 1.23%, with oil up 3.8% to $103.27 on US-Iran tensions and the 10-year Treasury near 5.0%. The S&P 500 and Nasdaq lost for a second straight week. The Fed meets October 27 to 28 and is widely expected to hold. SPY ended at $759.97 and QQQ at $704.40. One outlier article gave very different index levels and was ignored.
+
+#### Lesson: None This Week
+
+LMT repriced on its earnings report after weeks of drifting, as Lesson 12 described. Nothing new.
+
+#### Thesis Status Check
+
+| Position | Thesis Status | Notes |
+|----------|--------------|-------|
+| MU | ✅ Intact | Flat on the week. No oversupply, capex cut, or HBM share loss reported. Union talks October 27. |
+| LLY | ✅ Intact | Phase 2 high. Q3 earnings October 29. |
+| CEG | ✅ Intact | -5.74% on October 22 with no company news. The 890 MW Google deal stands. |
+| LMT | ⚠️ Pressured | Beat and raise, record backlog. Flag stays: continuing resolution to December 11 and F-35 Lot 20 funding warning. |
+| MA | ✅ Intact | No interchange action or volume migration. Q3 earnings October 29. |
+
+#### Things to Watch Next Week
+- **FOMC October 27 to 28.** Rates drove the CEG round trip earlier this month.
+- **Earnings October 29:** MA and LLY. Check results against the break criteria, not the one-day price reaction.
+- **MU.** Taoyuan union talks October 27; SK hynix reports October 28 and Samsung October 29.
+- **LMT.** Confirm the ex-date for the new $3.60 dividend and whether F-35 Lot 20 funding is addressed.
+- **Two and a half weeks to the November 11 review.** The lead over SPY is +12.06pp.
+
+---
+
+*Next check-in: ~October 30, 2026 (Week 25). MA and LLY earnings October 29, CEG November 9, 6-Month Review November 11.*
+
 ---
 
 ## Quarterly Reviews
@@ -1987,6 +2060,7 @@ Specific items to carry forward:
 |---------|----------------|--------|
 | MU | June 24, 2026 (FY Q3) | ✅ **REPORTED — blowout beat (EPS $25.11 vs $20.86 est, rev $41.46B, Q4 guide $50B); next report ~Sept 22, 2026** |
 | LMT | **July 23, 2026 (Q2)** | ✅ **REPORTED — beat and raised 2026 guidance on Pentagon restocking; stock +10.54% that session, +14.51% on the week; PTs raised to $600–700 (Baird/MS/RBC). Note: reported July 23, five days earlier than the July 28 date carried in prior entries. Next report ~late Oct 2026** |
+| LMT (Q3) | October 22, 2026 | Q3 (W24): REPORTED October 22, 2026. EPS $7.97 vs about $7.52 consensus, sales $20.7B (+11%), record $292.0B backlog, 2026 guidance raised again (EPS $30.35 to $30.75, free cash flow $7.8B to $8.0B). Flagged F-35 Lot 20 advance-contract costs above funding. Stock +9.44% on the week. Next report ~late Jan 2027. |
 | MA | July 30, 2026 (Q2) | ✅ **REPORTED — Q2 beat; stock +2.49% that session, +6.20% on the week; PTs raised across the street (BofA $735, TD Cowen $667, UBS $670, Morgan Stanley $681, KeyBanc $680, RBC $642, Raymond James $632; Baird trimmed to $660). Next report ~late Oct 2026** |
 | LLY | August 5, 2026 (Q2) | ✅ **REPORTED — blowout beat: adjusted EPS $8.38 vs $6.01 consensus, revenue $23.0B vs $20.73B (+48% YoY), Mounjaro $9.9B (+91%); FY26 sales guidance raised to $85–87B from $82–85B, adjusted EPS $35.50–36.50; $4.5B added to Indiana manufacturing. Stock +4.86% that session, +3.21% on the week. PTs raised: Morgan Stanley $1,419, Cantor $1,410, BMO $1,400, Truist $1,376, Wells Fargo $1,330. Cleared the guidance-raise bar Goldman set in W12. Next report ~late Oct 2026** |
 | CEG | August 5–6, 2026 (Q2) | ✅ **REPORTED — adjusted EPS $2.55 vs $2.34 consensus (9.5% beat); FY26 guidance raised to $11.50–$12.50; ~920MW new long-term nuclear PPAs; path to 20% earnings growth through 2029; gas-plant sale to LS Power; CEO adding Chairman role. Revenue $7.5B missed $7.94B est. Stock opened Aug 6 at $277.92, hit $283.43, reversed to close -1.52%; +2.72% on the week, behind QQQ's +5.09%. BMO PT to $379. The anticipated repricing did not occur — see the W13 concept. Next report ~late Oct 2026** |
