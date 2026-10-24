@@ -66,22 +66,56 @@ log tables.
 
 ## 3. Research the week
 
-For each position: the week's company news, analyst moves, and anything that bears on
-its thesis. Earnings weeks get deeper treatment. Then the macro picture (rates, Fed,
-data releases) only as far as it explains what the book did.
+This is the step that decides whether the entry is worth reading. Do it before writing
+anything, and use the "extended" web search mode for it.
+
+**a. Start from the daily closes, not the weekly number.** Pull the week's daily closes
+for all five positions, SPY and QQQ (stockanalysis.com history pages,
+`https://stockanalysis.com/stocks/<ticker>/history/`). For each position, note its
+largest one-day move. Then line the five up by day: when two or more positions move
+sharply on the same day, the cause is probably shared, so look for it there first.
+
+**b. Get the market wrap for every session that mattered.** At minimum, the day of each
+position's largest move and the Friday close. Find what the indexes, yields and oil did
+and why. Last week's entry quoted only the Friday close and missed the day that
+decided the week.
+
+**c. Check each position against its peers and customers.** A stock that moves with its
+group moved on sector news; one that moves alone moved on company news.
+
+| Position | Peers and read-throughs to check |
+|----------|----------------------------------|
+| MU | SK hynix, Samsung, SanDisk, SMH or SOXX; hyperscaler capex (Microsoft, Alphabet, Amazon, Meta, Oracle); Nvidia; China memory (CXMT, YMTC) |
+| LLY | Novo Nordisk, XLV; FDA and drug-pricing news; GLP-1 competitors |
+| CEG | Vistra, Talen, GE Vernova, Vertiv, XLU; hyperscaler power deals and capex; PJM and FERC |
+| LMT | RTX, Northrop, General Dynamics, ITA; Pentagon budget and appropriations; the Iran conflict and oil |
+| MA | Visa, American Express, XLF; consumer spending data; interchange regulation; stablecoins |
+
+**d. Check the calendar for the week just ended.** Macro releases (CPI, PPI, jobs, PCE,
+retail sales), Fed meetings, minutes and speeches, and earnings from the peers above.
+A peer's earnings often explain a position's move better than its own news does.
+
+**e. Close out last week's open questions.** Re-read last week's entry. Anything it
+called unexplained or unconfirmed (a cause, an earnings date, a dividend date) gets
+another search now. If the answer changes what last week said, add a short
+"Correction to Week N" section to this week's entry. Never edit last week's entry.
+
+**f. Pass this test before writing.** For each position, write down the cause of its
+largest one-day move and the source. "Unexplained" is allowed only after steps a to d,
+and the entry must then name what was checked (for example: "no company news; peers
+flat; the market wrap names no cause"). Never write "unexplained" when the stock moved
+with its peer group on the same day.
+
+**g. Handling sources.** Prefer primary sources (company releases, SEC filings, the Fed,
+BLS) and reputable outlets. Some outlets (CNBC, Benzinga, Reuters) block page fetches;
+use their search snippets, or the same story from another outlet. Treat AI-generated
+"market mover" pages as leads, not sources. When two sources disagree on a number
+that matters, use stockanalysis.com closes to settle price moves, and say so in the
+entry when the conflict can't be settled.
 
 Load `thesis-criteria.md` only if a position is under real pressure (a bad report, a
 sharp drawdown, a specific news event). Status changes come from company facts tested
 against those criteria, never from price or rates alone (Lesson 14).
-
-Before calling any move "unexplained," pull the week's daily closes for all five
-positions (stockanalysis.com history pages) and search the news for the day of each
-position's largest one-day move, including its sector peers and the market wrap for
-that day. When two positions move together on the same day, look for the shared cause.
-W23 called four moves unexplained that this check would have explained.
-
-Prefer primary sources and reputable outlets. Get numbers right; if two sources
-disagree on a figure that matters, say so rather than picking one silently.
 
 ## 4. Write the log (`Phase_2_Weekly_Review_Log.md`)
 
@@ -173,7 +207,8 @@ the deploy: within about three minutes,
 End with a short plain-language summary: the week number and close date, total return
 and the spread to SPY and QQQ, one line per position, any thesis status change, the
 lesson (or "no lesson"), any new dividend, and anything flagged (price source
-fallback, split, verification repair, skipped week, unanswered question for Jake).
+fallback, split, verification repair, skipped week, unanswered question for Jake). Name
+any move still unexplained after step 3, and any correction made to last week.
 
 ## Milestones and phase changes
 
