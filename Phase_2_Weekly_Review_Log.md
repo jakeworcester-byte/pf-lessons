@@ -1823,48 +1823,54 @@ A rate-driven selloff hitting growth names while healthcare held is Lessons 5 an
 
 #### The Week's One Fact
 
-**Lockheed Martin reported Q3 on October 22 and the stock rose 9.44% on the week to $604.18.** EPS was $7.97 against about $7.52 expected, backlog hit a record $292.0B, and 2026 guidance was raised for the second quarter running. LMT added $10.34 of value, more than the book's entire $7.49 net gain; CEG lost $5.68.
+**On October 22 the book split in two.** MU fell 6.26% and CEG 5.74% in an AI-spending selloff, while LMT rose 6.96% on earnings, LLY 2.83% and MA 1.70%. The same split happened on October 14 after a hot inflation report: MU -4.08%, CEG -5.49%, LLY +3.62%, LMT +3.61%. Daily closes per stockanalysis.com.
 
 #### What Moved and Why
 
-**MU (-0.15% WoW, +10.73% price).** Flat on the week after a 6.26% drop on October 22 and a 2.5% bounce on October 23. I found no company-specific cause. Talks with the Taoyuan union resume October 27 after about 70% of members rejected a profit-sharing offer; this is a labor item to watch, not a thesis item. The $0.15 dividend is payable October 29.
+**MU (-0.15% WoW, +10.73% price).** Two hits, neither about demand. On October 22 (-6.26%), Meta's negative free cash flow and Nvidia CEO Jensen Huang saying AI cloud "capital is scarce" gave chip stocks their worst day since June. The same day, Micron's Taoyuan union in Taiwan held a 24-hour strike over profit-sharing; the Taichung union signed a deal. Talks resume October 27. No oversupply or pricing weakness reported.
 
-**LLY (+1.31% WoW, +34.77% price).** New Phase 2 high for the position. Goldman raised its target to $1,413 from $1,371, and Lilly's valuation passed Berkshire Hathaway's. Q3 earnings are October 29, with consensus near $22.49B revenue and $7.11 EPS (Benzinga).
+**LLY (+1.31% WoW, +34.77% price).** The safe side of the AI selloff. It rose 2.83% on October 22 to $1,306.69, its Phase 2 closing high, then gave back 2.54% on October 23. Goldman (to $1,413) and Bank of America raised targets ahead of Q3 on October 29, where consensus is about $22.49B revenue and $7.11 EPS (Benzinga). The options market implies a 6.6% move on the report (Investing.com).
 
-**CEG (-6.60% WoW, -19.54% price).** Fell 5.74% on October 22 to $255.21. I found no company news for that day. Commentary points to profit-taking after the Google-deal jump and to debt of $24.7B at June 30 with negative free cash flow. Those are old facts, not new ones. Lowest return of the book since August. Earnings November 9.
+**CEG (-6.60% WoW, -19.54% price).** CEG is trading with the AI-infrastructure group, not with utilities. It fell 5.74% on October 22 in the same selloff that hit MU, after a 5.49% drop on October 14 when hot inflation data hit AI power names (GE Vernova -11% and Vertiv -14% in the week to October 20). No Constellation news found on either day. Meta raised its capex range, so the scare was about funding, not cuts. Earnings November 9.
 
-**LMT (+9.44% WoW, +19.93% price).** Q3 sales rose 11% to $20.7B, in line; EPS beat by about $0.45. Free cash flow guidance rose to $7.8B to $8.0B from $7.0B to $7.2B. Caveat: Lockheed said costs on the F-35 Lot 20 advance contract began exceeding funding, and results could suffer without more money. Sources disagree on the one-day move (about 7% to 9%).
+**LMT (+9.44% WoW, +19.93% price).** Q3 on October 22: EPS $7.97 against about $7.52, sales up 11% to $20.7B, a record $292.0B backlog, and 2026 guidance raised again. The stock rose 6.96% that day and 2.42% on October 23. The backdrop helped: Houthi attacks on Saudi sites sent Brent to $113, and the New York Times reported US-Israeli plans for renewed strikes on Iran after the November 3 midterms. Caveat: F-35 Lot 20 costs now exceed funding.
 
-**MA (+1.00% WoW, +25.98% price).** No negative news. Mastercard announced stablecoin risk tools and a BVNK platform at Money20/20, which is stablecoin work, not volume migration. Q3 earnings October 29, 9:00 a.m. ET.
+**MA (+1.00% WoW, +25.98% price).** Rose 1.70% on October 22 as money moved to defensives, then fell 1.52% on October 23 when American Express dropped about 3% despite a Q3 beat. Payments have rallied all month: Visa hit a record on October 15, up 11% from September 30 with no change in earnings estimates (TIKR). Visa reports October 27, two days before Mastercard. Stablecoin product news only; no volume migration.
 
 #### Macro Context
 
-The S&P 500 closed at 7,623.68 on October 23 (-0.52%) and the Dow fell 1.23%, with oil up 3.8% to $103.27 on US-Iran tensions and the 10-year Treasury near 5.0%. The S&P 500 and Nasdaq lost for a second straight week. The Fed meets October 27 to 28 and is widely expected to hold. SPY ended at $759.97 and QQQ at $704.40. One outlier article gave very different index levels and was ignored.
+October 22 decided the week. The Nasdaq fell 2.6%, its worst day since June, after Meta reported its first negative quarterly free cash flow in more than a decade, raised its 2026 capex range to $135B to $145B, and announced new non-voting shares to help fund it (Investing.com, CNBC). Huang said neocloud demand is "off the charts" but capital is short; CoreWeave fell 10%. Brent rose 4% to $113.17, its highest since May 4, after Houthi attacks on Saudi targets including an Aramco site at Yanbu. On October 23 the S&P 500 fell 0.52% with the 10-year near 5.0%. The FOMC meets October 27 to 28. After the October 14 CPI, CME odds of an October hike were about 47% to 52%; an October 23 report says markets expect a hold. Sources conflict.
 
-#### Lesson: None This Week
+#### Correction to Week 23
 
-LMT repriced on its earnings report after weeks of drifting, as Lesson 12 described. Nothing new.
+W23 called MU's 14.59% drop, and the LLY, LMT and MA gains, unexplained. The causes were findable. On October 12 and 13, reports that China's CXMT had advanced a memory design sent SK hynix down more than 10% (CNBC), and MU fell 3.88% and 3.62%. On October 14, September CPI came in at 3.7% against 3.6% expected, with core up 0.33% on the month, and October hike odds roughly doubled to about 50%. Chip stocks then fell eight straight sessions through October 16, the longest streak since 2008 (Yahoo Finance). W23's "roughly 25% chance of an October hike" was stale by October 14. W23 stays as written; this note is the correction.
+
+#### Lesson: Amendment to Lesson 5
+
+Lesson 5 named interest rates as the hidden factor MU and CEG share. W23 and W24 show a second one: AI-spending sentiment. On October 14 and October 22, MU and CEG each fell 4% to 6% with no news at either company, while LLY and LMT rose both days. For the November 11 review, score the book as two baskets as well as five themes: MU and CEG move on rates and AI funding, and LLY, LMT and MA have moved against them. Added as an amendment under Lesson 5, not a new numbered lesson.
 
 #### Thesis Status Check
 
 | Position | Thesis Status | Notes |
 |----------|--------------|-------|
-| MU | ✅ Intact | Flat on the week. No oversupply, capex cut, or HBM share loss reported. Union talks October 27. |
-| LLY | ✅ Intact | Phase 2 high. Q3 earnings October 29. |
-| CEG | ✅ Intact | -5.74% on October 22 with no company news. The 890 MW Google deal stands. |
+| MU | ✅ Intact | AI-spending selloff and a 24-hour Taoyuan strike, not demand. No oversupply, capex cut, or HBM share loss reported. Watch the CXMT claims and the October 27 talks. |
+| LLY | ✅ Intact | Phase 2 closing high on October 22 as money rotated to defensives. Q3 earnings October 29. |
+| CEG | ✅ Intact | Fell with the AI-infrastructure group, not on company news. Meta raised capex; no hyperscaler walked back power commitments. The 890 MW Google deal stands. |
 | LMT | ⚠️ Pressured | Beat and raise, record backlog. Flag stays: continuing resolution to December 11 and F-35 Lot 20 funding warning. |
-| MA | ✅ Intact | No interchange action or volume migration. Q3 earnings October 29. |
+| MA | ✅ Intact | No interchange action or volume migration. Visa reports October 27, Mastercard October 29. |
 
 #### Things to Watch Next Week
-- **FOMC October 27 to 28.** Rates drove the CEG round trip earlier this month.
-- **Earnings October 29:** MA and LLY. Check results against the break criteria, not the one-day price reaction.
-- **MU.** Taoyuan union talks October 27; SK hynix reports October 28 and Samsung October 29.
-- **LMT.** Confirm the ex-date for the new $3.60 dividend and whether F-35 Lot 20 funding is addressed.
+- **Hyperscaler earnings.** Microsoft and Alphabet are expected October 28 and Amazon October 29 (dates unconfirmed). Their capex guidance is the most direct read on MU and CEG this month.
+- **FOMC October 27 to 28.** Hike odds were near 50% after the October 14 CPI.
+- **Earnings:** Visa October 27, SK hynix October 28, Samsung October 29, MA and LLY October 29. Check results against the break criteria, not the one-day price reaction.
+- **MU.** Taoyuan union talks resume October 27. Look for any independent check on CXMT's memory claims.
+- **Oil and Iran.** Brent at $113 and reported post-midterm strike plans. Supports LMT, pressures rates.
+- **LMT.** Confirm the ex-date for the new $3.60 dividend.
 - **Two and a half weeks to the November 11 review.** The lead over SPY is +12.06pp.
 
 ---
 
-*Next check-in: ~October 30, 2026 (Week 25). MA and LLY earnings October 29, CEG November 9, 6-Month Review November 11.*
+*Next check-in: ~October 30, 2026 (Week 25). Visa October 27, FOMC October 27 to 28, MA and LLY October 29, CEG November 9, 6-Month Review November 11.*
 
 ---
 

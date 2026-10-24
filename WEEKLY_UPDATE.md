@@ -74,6 +74,12 @@ Load `thesis-criteria.md` only if a position is under real pressure (a bad repor
 sharp drawdown, a specific news event). Status changes come from company facts tested
 against those criteria, never from price or rates alone (Lesson 14).
 
+Before calling any move "unexplained," pull the week's daily closes for all five
+positions (stockanalysis.com history pages) and search the news for the day of each
+position's largest one-day move, including its sector peers and the market wrap for
+that day. When two positions move together on the same day, look for the shared cause.
+W23 called four moves unexplained that this check would have explained.
+
 Prefer primary sources and reputable outlets. Get numbers right; if two sources
 disagree on a figure that matters, say so rather than picking one silently.
 
