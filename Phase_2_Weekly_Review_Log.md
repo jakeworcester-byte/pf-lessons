@@ -52,6 +52,7 @@
 | W22 | October 9, 2026 | $569.42 | +13.89% | $2.38 | +14.36% | +5.31% | +5.32% | +9.05pp | +9.04pp |
 | W23 | October 16, 2026 | $564.37 | +12.88% | $2.40 | +13.36% | +3.24% | -0.49% | +10.12pp | +13.85pp |
 | W24 | October 23, 2026 | $571.85 | +14.37% | $2.40 | +14.85% | +2.80% | -1.25% | +12.06pp | +16.10pp |
+| W25 | October 30, 2026 | $600.25 | +20.05% | $2.40 | +20.53% | +2.22% | -3.20% | +18.31pp | +23.73pp |
 
 *W1 MU/LLY/LMT/SPY confirmed; CEG/MA/QQQ estimated. W3 QQQ: May 28 confirmed close; May 29 close unconfirmed. W4 all closes confirmed (June 5, 2026). W5, W6, W7, and W8 all closes confirmed (July 3 was the Independence Day market holiday, so W8 reflects the July 2 close — the freshest data available). **Correction note (W8):** an earlier pass at this week's numbers used $236.50 for CEG, which was actually the July 1 close, not July 2. The confirmed July 2 close is $239.25. This has been corrected before appending — nothing above this line was affected. "Total Return %" includes dividends received; "vs. SPY/QQQ" columns compare total return against the benchmarks' price change. Cumulative dividends: CEG $0.14 (ex-div May 15) from W1 onward; LMT $0.68 (ex-div June 1) added in W4; LLY $0.18 (ex-div May 15) caught and added in W5 — total $1.00. MU/MA had no ex-dividend dates inside the holding period. See the Dividend Ledger below for the running record.*
 
@@ -89,6 +90,7 @@
 | W22 | October 9, 2026 | +29.84% | +24.80% | -5.38% | +1.15% | +19.02% |
 | W23 | October 16, 2026 | +10.89% | +33.03% | -13.86% | +9.58% | +24.73% |
 | W24 | October 23, 2026 | +10.73% | +34.77% | -19.54% | +19.93% | +25.98% |
+| W25 | October 30, 2026 | +11.63% | +50.02% | -16.71% | +26.43% | +28.89% |
 
 *W1 CEG and MA are estimated prices. W5–W8 all confirmed. (Position table shows price-only % return from entry; dividends are captured separately in the Dividend Ledger and the total-return columns of the Cumulative Performance Tracker.)*
 
@@ -120,6 +122,7 @@
 - MA: **Oct 9, 2026 ex-div earned** ($0.87, record Oct 9, pay Nov 9), added in W22: +$0.1758, cumulative $2.2014 to $2.3771. Next quarterly ex-div ~Jan 2027 ($0.87 est.).
 - MU: **Oct 14, 2026 ex-div earned** ($0.15, record Oct 14, pay Oct 29, per Micron's September 30 8-K), added in W23: +$0.0189, cumulative $2.3771 to $2.3961. Next quarterly ex-div ~Jan 2027 ($0.15 est.).
 - LMT: **W24 note.** Lockheed raised its quarterly dividend to $3.60 per share (24th straight annual increase), record date December 1, 2026, per GuruFocus. Confirm the ex-date before booking it (about $0.71 on 0.19849 shares).
+- LLY: **W25 note.** Lilly declared a $1.73 fourth-quarter dividend on October 26, record date November 13, payable December 10 (company release via PR Newswire). Ex-date expected November 13, so it should land in W27: about $0.18 on 0.10583 shares.
 
 **Note on scale:** Over a 6-month buy-and-hold, total dividends across the book will likely land around $4–6 — roughly 1% of invested capital, driven almost entirely by LMT and CEG. Small, but it's the correct way to measure, and for the "boring quality anchor" (LMT) it's part of the actual thesis (23+ years of dividend growth).
 
@@ -1872,6 +1875,77 @@ Lesson 5 named interest rates as the hidden factor MU and CEG share. W23 and W24
 
 *Next check-in: ~October 30, 2026 (Week 25). Visa October 27, FOMC October 27 to 28, MA and LLY October 29, CEG November 9, 6-Month Review November 11.*
 
+### Week 25: October 30, 2026
+
+*Portfolio is 172 days old. All prices are Finnhub quotes stamped October 30, 2026 at the 16:00 ET close, on all seven symbols, and match stockanalysis.com closes.*
+
+#### Prices Used
+
+| Ticker | Entry Price | Current Price | Current Value | Price P&L | Dividend | Total P&L | Total Return % |
+|--------|-------------|---------------|---------------|-----------|----------|-----------|----------------|
+| MU | $792.53 | $884.74 | $111.63 | +$11.63 | +$0.04 | +$11.67 | +11.67% |
+| LLY | $944.90 | $1,417.54 | $150.02 | +$50.02 | +$0.37 | +$50.39 | +50.39% |
+| CEG | $315.02 | $262.38 | $83.29 | -$16.71 | +$0.27 | -$16.44 | -16.44% |
+| LMT | $503.78 | $636.95 | $126.43 | +$26.43 | +$1.37 | +$27.80 | +27.80% |
+| MA | $495.00 | $638.01 | $128.89 | +$28.89 | +$0.35 | +$29.24 | +29.24% |
+| **Total** | | | **$600.25** | **+$100.26** | **+$2.40** | **+$102.66** | **+20.53%** |
+
+*Price-only return +20.05%; total return **+20.53%**, up 5.68 points from W24's +14.85% and the highest of Phase 2 (prior high +14.88% in W14). No new ex-dividend this week. Cumulative dividends stay at $2.3961.*
+
+**Benchmarks:**
+- SPY: $739.30 to $755.72 = **+2.22%** (-0.56% on the week)
+- QQQ: $713.29 to $690.49 = **-3.20%** (-1.97% on the week)
+- Portfolio (total return) vs. SPY: **+18.31 pp ahead**
+- Portfolio (total return) vs. QQQ: **+23.73 pp ahead**
+
+*Both leads are Phase 2 records, and the book did the moving: it rose 5.68 points while both indexes fell.*
+
+#### The Week's One Fact
+
+**Lilly's Q3 report on October 29 supplied $15.25 of the book's $28.40 weekly gain.** Revenue rose 39% to $24.4B against about $22.6B expected, and 2026 revenue guidance went to $91B to $92B from $85B to $87B. LLY rose 6.63% that day and 3.19% on October 30 to $1,417.54, while the Nasdaq fell 1.4% and 2.86% on the same two days. Daily closes per stockanalysis.com.
+
+#### What Moved and Why
+
+**MU (+0.82% WoW, +11.63% price).** A round trip. It rose 5.86% on October 28 after SK hynix posted record results and said its DRAM and HBM output is effectively sold out through 2029 (Motley Fool). It then fell 4.98% on October 29, when Alphabet fell about 12% and Microsoft trimmed its capex forecast (CNBC), and 5.30% on October 30 as Intel fell 28.6%. Samsung also said 2027 HBM capacity is sold out. No demand weakness reported.
+
+**LLY (+11.31% WoW, +50.02% price).** Q3 on October 29: non-GAAP EPS $7.48 against estimates of $6.26 to $6.67 (sources differ), Mounjaro revenue up 65% to $10.7B, volume up 53% against a 15% drop in realized prices (company 8-K). The 2026 EPS range fell to $35 to $36 only because of a $4.57 per share acquired research charge. Scotiabank raised its target to $1,605. Lilly also declared a $1.73 dividend, record date November 13.
+
+**CEG (+3.52% WoW, -16.71% price).** Largest move: +2.57% on October 27, when Constellation announced a conditional Department of Energy loan commitment of up to $5B for uprates adding about 1.1 GW at eight plants (company release). It is conditional and not yet funded. Unlike W24, CEG did not fall with chips: +2.52% on October 29 and -0.83% on October 30 while MU fell 10%. No company news found for October 29. Earnings November 9.
+
+**LMT (+5.42% WoW, +26.43% price).** Largest move: +5.13% on October 26, when Morgan Stanley upgraded it to overweight with an $835 target, up from $690, citing the 10-year F-35 framework announced October 22 (CNBC). The framework guarantees at least 850 US jets across Lots 21 to 30, but it is not a contract: it still needs congressional appropriations, and Lot 20 talks are ongoing (Breaking Defense). Four of five defense peers also rose that day.
+
+**MA (+2.31% WoW, +28.89% price).** Q3 on October 29: net revenue up 14% to $9.8B, adjusted EPS $5.31 against about $5.16, purchase volume up 9%, cross-border up 11%, value-added services up 19% (company 8-K, Investing.com). The stock rose 4.16% that day. Caveat: some services and network deals moved from Q4 into Q3. Visa beat on October 27, fell 0.6%, and MA slipped 0.59% the same day.
+
+#### Macro Context
+
+October 29 and 30 decided the week. On October 29 Alphabet fell about 12% on a revenue miss and a second quarter of negative free cash flow, and Microsoft cut its capex forecast to $170B from $175B; the Nasdaq fell 1.4% (CNBC, Yahoo Finance). On October 30 Intel fell 28.6%, its worst day since 1974, on weak guidance, and Amazon reported a second quarter of negative free cash flow; the S&P 500 fell 1.8%, its worst day since June and its third straight losing week (AP). The 10-year yield fell 4 basis points to 4.94% and Brent rose to about $113 after a tanker attack in the Strait of Hormuz. The Fed held at 3.75% to 4.00% on October 28 in a 10 to 2 vote, with Governor Cook and Cleveland Fed President Hammack voting to hike. CME odds of a December hike rose to about 83% after the meeting. This settles W24's conflicting reports: markets priced under a 10% chance of an October hike going in.
+
+#### Lesson: None This Week
+
+The book rose on LLY and MA earnings while tech fell, the same two-basket split recorded in the W24 amendment to Lesson 5. Nothing new.
+
+#### Thesis Status Check
+
+| Position | Thesis Status | Notes |
+|----------|--------------|-------|
+| MU | ✅ Intact | SK hynix and Samsung both report memory sold out into 2027 or later. Fell on hyperscaler capex and Intel, not demand. No Taoyuan strike update found. |
+| LLY | ✅ Intact | Q3 revenue up 39% to $24.4B; 2026 revenue guidance raised to $91B to $92B. Volume growth outran price cuts. Phase 2 closing high. |
+| CEG | ✅ Intact | Conditional DOE loan of up to $5B for 1.1 GW of uprates. Held up through the October 29 to 30 tech selloff. Earnings November 9. |
+| LMT | ⚠️ Pressured | F-35 framework and Morgan Stanley upgrade. Flag stays: continuing resolution to December 11, framework subject to appropriations, Lot 20 unsigned. |
+| MA | ✅ Intact | Q3 beat: revenue up 14%, cross-border up 11%. Some deals pulled forward from Q4. No interchange action or volume migration. |
+
+#### Things to Watch Next Week
+- **CEG earnings November 9.** The first report since the Google deal and the DOE loan. Judge it against the break criteria, not the one-day move.
+- **Midterms November 3.** The New York Times reported US-Israeli strike plans on Iran for after the vote. Brent is near $113.
+- **AI spending.** Alphabet, Microsoft and Amazon each raised doubts about capex funding this week. Watch whether Nvidia or the memory makers see order changes, not just price moves.
+- **MU.** No report found on the Taoyuan union talks that were due to resume October 27. Check again.
+- **Dividends.** LLY $1.73, record November 13 (W27). LMT $3.60, record December 1; confirm the ex-date.
+- **6-Month Review.** The November 11 milestone is written on the first run with a close on or after that date, expected to be the Week 27 run (November 13 close). The lead over SPY is +18.31pp.
+
+---
+
+*Next check-in: ~November 6, 2026 (Week 26). Midterms November 3, CEG earnings November 9, 6-Month Review November 11 (written in the Week 27 run), LLY dividend record date November 13.*
+
 ---
 
 ## Quarterly Reviews
@@ -2067,6 +2141,9 @@ Specific items to carry forward:
 | MU | June 24, 2026 (FY Q3) | ✅ **REPORTED — blowout beat (EPS $25.11 vs $20.86 est, rev $41.46B, Q4 guide $50B); next report ~Sept 22, 2026** |
 | LMT | **July 23, 2026 (Q2)** | ✅ **REPORTED — beat and raised 2026 guidance on Pentagon restocking; stock +10.54% that session, +14.51% on the week; PTs raised to $600–700 (Baird/MS/RBC). Note: reported July 23, five days earlier than the July 28 date carried in prior entries. Next report ~late Oct 2026** |
 | LMT (Q3) | October 22, 2026 | Q3 (W24): REPORTED October 22, 2026. EPS $7.97 vs about $7.52 consensus, sales $20.7B (+11%), record $292.0B backlog, 2026 guidance raised again (EPS $30.35 to $30.75, free cash flow $7.8B to $8.0B). Flagged F-35 Lot 20 advance-contract costs above funding. Stock +9.44% on the week. Next report ~late Jan 2027. |
+| LLY (Q3) | October 29, 2026 | Q3 (W25): REPORTED October 29, 2026. Revenue $24.4B (+39%) vs about $22.6B consensus, non-GAAP EPS $7.48 vs $6.26 to $6.67 (sources differ), Mounjaro $10.7B (+65%). 2026 revenue guidance raised to $91B to $92B; non-GAAP EPS range $35.00 to $36.00 after a $4.57 acquired IPR&D charge. Stock +6.63% that session, +11.31% on the week. Next report ~early Feb 2027. |
+| MA (Q3) | October 29, 2026 | Q3 (W25): REPORTED October 29, 2026. Net revenue $9.8B (+14%), adjusted EPS $5.31 vs about $5.16 consensus, purchase volume +9%, cross-border +11%, value-added services +19%. Some deals moved from Q4 into Q3. Stock +4.16% that session, +2.31% on the week. Next report ~late Jan 2027. |
+| CEG (Q3) | November 9, 2026 | Pending. |
 | MA | July 30, 2026 (Q2) | ✅ **REPORTED — Q2 beat; stock +2.49% that session, +6.20% on the week; PTs raised across the street (BofA $735, TD Cowen $667, UBS $670, Morgan Stanley $681, KeyBanc $680, RBC $642, Raymond James $632; Baird trimmed to $660). Next report ~late Oct 2026** |
 | LLY | August 5, 2026 (Q2) | ✅ **REPORTED — blowout beat: adjusted EPS $8.38 vs $6.01 consensus, revenue $23.0B vs $20.73B (+48% YoY), Mounjaro $9.9B (+91%); FY26 sales guidance raised to $85–87B from $82–85B, adjusted EPS $35.50–36.50; $4.5B added to Indiana manufacturing. Stock +4.86% that session, +3.21% on the week. PTs raised: Morgan Stanley $1,419, Cantor $1,410, BMO $1,400, Truist $1,376, Wells Fargo $1,330. Cleared the guidance-raise bar Goldman set in W12. Next report ~late Oct 2026** |
 | CEG | August 5–6, 2026 (Q2) | ✅ **REPORTED — adjusted EPS $2.55 vs $2.34 consensus (9.5% beat); FY26 guidance raised to $11.50–$12.50; ~920MW new long-term nuclear PPAs; path to 20% earnings growth through 2029; gas-plant sale to LS Power; CEO adding Chairman role. Revenue $7.5B missed $7.94B est. Stock opened Aug 6 at $277.92, hit $283.43, reversed to close -1.52%; +2.72% on the week, behind QQQ's +5.09%. BMO PT to $379. The anticipated repricing did not occur — see the W13 concept. Next report ~late Oct 2026** |
