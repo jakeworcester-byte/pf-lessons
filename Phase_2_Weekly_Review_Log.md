@@ -53,6 +53,7 @@
 | W23 | October 16, 2026 | $564.37 | +12.88% | $2.40 | +13.36% | +3.24% | -0.49% | +10.12pp | +13.85pp |
 | W24 | October 23, 2026 | $571.85 | +14.37% | $2.40 | +14.85% | +2.80% | -1.25% | +12.06pp | +16.10pp |
 | W25 | October 30, 2026 | $600.25 | +20.05% | $2.40 | +20.53% | +2.22% | -3.20% | +18.31pp | +23.73pp |
+| W26 | November 6, 2026 | $554.11 | +10.82% | $2.40 | +11.30% | -0.54% | -8.01% | +11.84pp | +19.31pp |
 
 *W1 MU/LLY/LMT/SPY confirmed; CEG/MA/QQQ estimated. W3 QQQ: May 28 confirmed close; May 29 close unconfirmed. W4 all closes confirmed (June 5, 2026). W5, W6, W7, and W8 all closes confirmed (July 3 was the Independence Day market holiday, so W8 reflects the July 2 close — the freshest data available). **Correction note (W8):** an earlier pass at this week's numbers used $236.50 for CEG, which was actually the July 1 close, not July 2. The confirmed July 2 close is $239.25. This has been corrected before appending — nothing above this line was affected. "Total Return %" includes dividends received; "vs. SPY/QQQ" columns compare total return against the benchmarks' price change. Cumulative dividends: CEG $0.14 (ex-div May 15) from W1 onward; LMT $0.68 (ex-div June 1) added in W4; LLY $0.18 (ex-div May 15) caught and added in W5 — total $1.00. MU/MA had no ex-dividend dates inside the holding period. See the Dividend Ledger below for the running record.*
 
@@ -91,6 +92,7 @@
 | W23 | October 16, 2026 | +10.89% | +33.03% | -13.86% | +9.58% | +24.73% |
 | W24 | October 23, 2026 | +10.73% | +34.77% | -19.54% | +19.93% | +25.98% |
 | W25 | October 30, 2026 | +11.63% | +50.02% | -16.71% | +26.43% | +28.89% |
+| W26 | November 6, 2026 | -12.88% | +43.39% | -20.73% | +12.51% | +31.84% |
 
 *W1 CEG and MA are estimated prices. W5–W8 all confirmed. (Position table shows price-only % return from entry; dividends are captured separately in the Dividend Ledger and the total-return columns of the Cumulative Performance Tracker.)*
 
@@ -123,6 +125,7 @@
 - MU: **Oct 14, 2026 ex-div earned** ($0.15, record Oct 14, pay Oct 29, per Micron's September 30 8-K), added in W23: +$0.0189, cumulative $2.3771 to $2.3961. Next quarterly ex-div ~Jan 2027 ($0.15 est.).
 - LMT: **W24 note.** Lockheed raised its quarterly dividend to $3.60 per share (24th straight annual increase), record date December 1, 2026, per GuruFocus. Confirm the ex-date before booking it (about $0.71 on 0.19849 shares).
 - LLY: **W25 note.** Lilly declared a $1.73 fourth-quarter dividend on October 26, record date November 13, payable December 10 (company release via PR Newswire). Ex-date expected November 13, so it should land in W27: about $0.18 on 0.10583 shares.
+- CEG: **W26 note.** Constellation declared a $0.4265 quarterly dividend on October 30, record date November 16, payable December 4 (company release). Ex-date expected November 16, so it should land in W28: about $0.14 on 0.31744 shares.
 
 **Note on scale:** Over a 6-month buy-and-hold, total dividends across the book will likely land around $4–6 — roughly 1% of invested capital, driven almost entirely by LMT and CEG. Small, but it's the correct way to measure, and for the "boring quality anchor" (LMT) it's part of the actual thesis (23+ years of dividend growth).
 
@@ -1945,6 +1948,77 @@ The book rose on LLY and MA earnings while tech fell, the same two-basket split 
 ---
 
 *Next check-in: ~November 6, 2026 (Week 26). Midterms November 3, CEG earnings November 9, 6-Month Review November 11 (written in the Week 27 run), LLY dividend record date November 13.*
+
+### Week 26: November 6, 2026
+
+*Portfolio is 179 days old. Prices are stockanalysis.com official closes for November 6, 2026, on all seven symbols. Finnhub quotes pulled at 4:23 p.m. ET differed by up to $0.85 (MU $690.00, LLY $1,354.00) and looked like last trades before the closing auction, so they were not used.*
+
+#### Prices Used
+
+| Ticker | Entry Price | Current Price | Current Value | Price P&L | Dividend | Total P&L | Total Return % |
+|--------|-------------|---------------|---------------|-----------|----------|-----------|----------------|
+| MU | $792.53 | $690.43 | $87.11 | -$12.88 | +$0.04 | -$12.84 | -12.84% |
+| LLY | $944.90 | $1,354.85 | $143.38 | +$43.38 | +$0.37 | +$43.75 | +43.75% |
+| CEG | $315.02 | $249.71 | $79.27 | -$20.73 | +$0.27 | -$20.46 | -20.46% |
+| LMT | $503.78 | $566.79 | $112.50 | +$12.50 | +$1.37 | +$13.87 | +13.87% |
+| MA | $495.00 | $652.62 | $131.84 | +$31.84 | +$0.35 | +$32.19 | +32.19% |
+| **Total** | | | **$554.11** | **+$54.12** | **+$2.40** | **+$56.51** | **+11.30%** |
+
+*Price-only return +10.82%; total return **+11.30%**, down 9.23 points from W25's record +20.53%. The largest one-week drop of Phase 2 (prior largest: W10, down 3.89 points). No new ex-dividend this week. Cumulative dividends stay at $2.3961.*
+
+**Benchmarks:**
+- SPY: $739.30 to $735.34 = **-0.54%** (-2.70% on the week)
+- QQQ: $713.29 to $656.19 = **-8.01%** (-4.97% on the week)
+- Portfolio (total return) vs. SPY: **+11.84 pp ahead**
+- Portfolio (total return) vs. QQQ: **+19.31 pp ahead**
+
+*Both sides fell, but the book fell harder (down 7.7% of its value against SPY's 2.7%), so both leads narrowed. MU and LMT did the damage.*
+
+#### The Week's One Fact
+
+**The two sessions after the November 3 midterms cost the book $48.04; the other three days added back $1.90, for a $46.14 weekly loss.** On November 4, Democrats won both chambers of Congress and LMT, CEG and MU fell 6.7% to 7.0% each, a $15.83 loss. On November 5, the S&P 500 fell 4.36%, its worst day since April 2025, and the book lost $32.21, of which MU's 17.46% drop was $17.52. Daily closes per stockanalysis.com.
+
+#### What Moved and Why
+
+**MU (-21.96% WoW, -12.88% price).** Largest move: -17.46% on November 5. Before the open, Bloomberg reported Micron had largely halted its planned Fab 11E in Taoyuan, Taiwan ($3B to $4.5B, due 2028) amid the union pay dispute; Micron says existing Taiwan operations are unaffected (TipRanks, Yahoo Finance). Peers fell the same day: SanDisk -22.3%, Western Digital -17.4%, AMD -17.3%, Nvidia -9.3% (StockTitan, Trefis). MU rose 5.19% on November 6 with the memory group. No pricing or demand cut reported.
+
+**LLY (-4.42% WoW, +43.39% price).** Largest move: -3.76% on November 5, the day the S&P 500 fell 4.36% and healthcare fell about 2.7% (TradingKey). No company news found; MarketBeat and TradingKey cite only valuation and profit-taking after the stock's 11% Q3 week. It moved with the market, not on Lilly news. Still 43% above entry.
+
+**CEG (-4.83% WoW, -20.73% price).** Largest move: -6.71% on November 4. Democrat Gina Hinojosa beat Texas Governor Greg Abbott after campaigning on a pause in new data-center approvals; Vistra fell about 10%, GE Vernova and Vertiv about 9% (TIKR, Stocktwits). CEG then rose 4.20% on November 6 as Vistra beat Q3 estimates and raised 2026 guidance (Vistra 8-K, MarketScreener). Peers moved with it both days. Earnings November 9.
+
+**LMT (-11.01% WoW, +12.51% price).** Largest move: -6.88% on November 4, after Democrats won both chambers. Analysts cited by Investing.com see extra defense funding nearer $60B than the $350B the White House sought; RTX and Northrop fell more than 3% (CNBC). Oil fell 8.7% the same day on hopes of an earlier end to the Iran war, which removes some of the conflict premium. LMT fell two more days. No company news.
+
+**MA (+2.29% WoW, +31.84% price).** The only gainer. Largest move: +3.94% on November 4, with Visa up 3.32% the same day (TradingKey). One report ties it to the election removing both Senate sponsors of the Credit Card Competition Act; Durbin is retiring, and the report says Kansas Senator Roger Marshall lost his seat. I could not confirm Marshall's loss in a second source. MA then fell 2.49% in the November 5 selloff.
+
+#### Macro Context
+
+November 4 and 5 decided the week. On November 4, Democrats won the House and Senate, and Brent fell 8.7% to $94.62, its biggest drop since April, on bets that a new Congress speeds an end to the Iran war (Bloomberg via Rigzone and NBC). SPY rose 1.65% that day while defense and AI-power stocks fell. On November 5, chip selling spread to the whole market: the Nasdaq fell 5.52% into a correction, the S&P 500 4.36% and the Dow 1,833 points, on fears of a slower data-center buildout after the election (CNBC via StockTitan). On November 6, October payrolls rose 165,000 against about 59,000 expected, unemployment fell to 4.1%, and yields rose (CNBC, Reuters). SPY gained 0.32%. CME odds of a December hike were about 83% after the October 28 FOMC; no newer reading checked.
+
+#### Lesson: None This Week
+
+LMT's drop is Lesson 15's appropriations risk, and MU and CEG falling together on AI-spending fears is the W24 amendment to Lesson 5. Nothing new.
+
+#### Thesis Status Check
+
+| Position | Thesis Status | Notes |
+|----------|--------------|-------|
+| MU | ⚠️ Pressured | Changed from Intact on a company fact: the Taoyuan labor dispute has halted Fab 11E. No break criterion met: no oversupply, no hyperscaler capex cut, no HBM share loss reported. Down 40% from its June high. |
+| LLY | ✅ Intact | Fell with the market on November 5. No company news. Dividend record date November 13. |
+| CEG | ✅ Intact | Fell on the Texas governor's proposed data-center pause, a proposal, not a law. No hyperscaler walked back power commitments. Earnings November 9. |
+| LMT | ⚠️ Pressured | Flag stays: Democratic Congress lowers the odds of the requested budget increase, continuing resolution to December 11, F-35 Lot 20 unsigned. No company news. |
+| MA | ✅ Intact | Rose on election day with Visa. No interchange action or volume migration. |
+
+#### Things to Watch Next Week
+- **CEG earnings November 9.** Look for any comment on Texas data-center demand and hyperscaler contracts. Judge it against the break criteria, not the one-day move.
+- **MU.** Whether the Fab 11E halt spreads to existing Taiwan output, and any union settlement.
+- **AI spending.** Whether the Nasdaq correction comes with real order or capex cuts, or only price moves.
+- **Defense budget.** Any lame-duck move on fiscal 2027 appropriations before the December 11 continuing resolution expires.
+- **Dividends.** LLY $1.73, record November 13 (W27). CEG $0.4265, record November 16, payable December 4 (company release, October 30): W28. LMT $3.60, record December 1.
+- **6-Month Review.** Written in the Week 27 run (November 13 close). The lead over SPY is +11.84pp, down from +18.31pp.
+
+---
+
+*Next check-in: ~November 13, 2026 (Week 27). CEG earnings November 9, 6-Month Review November 11 (written in the Week 27 run), LLY dividend record date November 13, CEG record date November 16.*
 
 ---
 
