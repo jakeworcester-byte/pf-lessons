@@ -54,6 +54,7 @@
 | W24 | October 23, 2026 | $571.85 | +14.37% | $2.40 | +14.85% | +2.80% | -1.25% | +12.06pp | +16.10pp |
 | W25 | October 30, 2026 | $600.25 | +20.05% | $2.40 | +20.53% | +2.22% | -3.20% | +18.31pp | +23.73pp |
 | W26 | November 6, 2026 | $554.11 | +10.82% | $2.40 | +11.30% | -0.54% | -8.01% | +11.84pp | +19.31pp |
+| W27 | November 13, 2026 | $591.79 | +18.36% | $2.58 | +18.88% | +2.04% | -4.68% | +16.84pp | +23.56pp |
 
 *W1 MU/LLY/LMT/SPY confirmed; CEG/MA/QQQ estimated. W3 QQQ: May 28 confirmed close; May 29 close unconfirmed. W4 all closes confirmed (June 5, 2026). W5, W6, W7, and W8 all closes confirmed (July 3 was the Independence Day market holiday, so W8 reflects the July 2 close — the freshest data available). **Correction note (W8):** an earlier pass at this week's numbers used $236.50 for CEG, which was actually the July 1 close, not July 2. The confirmed July 2 close is $239.25. This has been corrected before appending — nothing above this line was affected. "Total Return %" includes dividends received; "vs. SPY/QQQ" columns compare total return against the benchmarks' price change. Cumulative dividends: CEG $0.14 (ex-div May 15) from W1 onward; LMT $0.68 (ex-div June 1) added in W4; LLY $0.18 (ex-div May 15) caught and added in W5 — total $1.00. MU/MA had no ex-dividend dates inside the holding period. See the Dividend Ledger below for the running record.*
 
@@ -93,6 +94,7 @@
 | W24 | October 23, 2026 | +10.73% | +34.77% | -19.54% | +19.93% | +25.98% |
 | W25 | October 30, 2026 | +11.63% | +50.02% | -16.71% | +26.43% | +28.89% |
 | W26 | November 6, 2026 | -12.88% | +43.39% | -20.73% | +12.51% | +31.84% |
+| W27 | November 13, 2026 | -1.79% | +52.77% | -11.05% | +18.31% | +33.57% |
 
 *W1 CEG and MA are estimated prices. W5–W8 all confirmed. (Position table shows price-only % return from entry; dividends are captured separately in the Dividend Ledger and the total-return columns of the Cumulative Performance Tracker.)*
 
@@ -114,7 +116,8 @@
 | September 1, 2026 | LMT | $3.45 | 0.19849 | $0.68 | Earned (held through ex-date) — second LMT dividend of Phase 2 |
 | October 9, 2026 | MA | $0.87 | 0.20202 | $0.18 | Earned (held through ex-date). second MA dividend of Phase 2 |
 | October 14, 2026 | MU | $0.15 | 0.12617 | $0.02 | Earned (held through ex-date). second MU dividend of Phase 2 |
-| **Total to date** | | | | **$2.40** | |
+| November 13, 2026 | LLY | $1.73 | 0.10583 | $0.18 | Earned (held through ex-date). third LLY dividend of Phase 2 |
+| **Total to date** | | | | **$2.58** | |
 
 **Upcoming / expected** (confirm dates closer to time):
 - CEG: next quarterly ex-div **Aug 18, 2026** ($0.4265, record Aug 18, pay Sept 4) — declared and confirmed W13, falls in W15. Adds ~$0.14, taking cumulative to ~$1.52.
@@ -124,7 +127,7 @@
 - MA: **Oct 9, 2026 ex-div earned** ($0.87, record Oct 9, pay Nov 9), added in W22: +$0.1758, cumulative $2.2014 to $2.3771. Next quarterly ex-div ~Jan 2027 ($0.87 est.).
 - MU: **Oct 14, 2026 ex-div earned** ($0.15, record Oct 14, pay Oct 29, per Micron's September 30 8-K), added in W23: +$0.0189, cumulative $2.3771 to $2.3961. Next quarterly ex-div ~Jan 2027 ($0.15 est.).
 - LMT: **W24 note.** Lockheed raised its quarterly dividend to $3.60 per share (24th straight annual increase), record date December 1, 2026, per GuruFocus. Confirm the ex-date before booking it (about $0.71 on 0.19849 shares).
-- LLY: **W25 note.** Lilly declared a $1.73 fourth-quarter dividend on October 26, record date November 13, payable December 10 (company release via PR Newswire). Ex-date expected November 13, so it should land in W27: about $0.18 on 0.10583 shares.
+- LLY: **Nov 13, 2026 ex-div earned** ($1.73, record Nov 13, pay Dec 10), added in W27: +$0.1831, cumulative $2.3961 to $2.5791. Next quarterly ex-div ~Feb 2027 ($1.73 est.).
 - CEG: **W26 note.** Constellation declared a $0.4265 quarterly dividend on October 30, record date November 16, payable December 4 (company release). Ex-date expected November 16, so it should land in W28: about $0.14 on 0.31744 shares.
 
 **Note on scale:** Over a 6-month buy-and-hold, total dividends across the book will likely land around $4–6 — roughly 1% of invested capital, driven almost entirely by LMT and CEG. Small, but it's the correct way to measure, and for the "boring quality anchor" (LMT) it's part of the actual thesis (23+ years of dividend growth).
@@ -2020,12 +2023,87 @@ LMT's drop is Lesson 15's appropriations risk, and MU and CEG falling together o
 
 *Next check-in: ~November 13, 2026 (Week 27). CEG earnings November 9, 6-Month Review November 11 (written in the Week 27 run), LLY dividend record date November 13, CEG record date November 16.*
 
+### Week 27: November 13, 2026
+
+*Portfolio is 186 days old. All prices are Finnhub quotes stamped November 13, 2026, on all seven symbols, and match the stockanalysis.com closes to the cent.*
+
+#### Prices Used
+
+| Ticker | Entry Price | Current Price | Current Value | Price P&L | Dividend | Total P&L | Total Return % |
+|--------|-------------|---------------|---------------|-----------|----------|-----------|----------------|
+| MU | $792.53 | $778.31 | $98.20 | -$1.79 | +$0.04 | -$1.75 | -1.75% |
+| LLY | $944.90 | $1,443.50 | $152.77 | +$52.77 | +$0.55 | +$53.31 | +53.31% |
+| CEG | $315.02 | $280.20 | $88.95 | -$11.05 | +$0.27 | -$10.78 | -10.78% |
+| LMT | $503.78 | $596.04 | $118.31 | +$18.31 | +$1.37 | +$19.68 | +19.68% |
+| MA | $495.00 | $661.19 | $133.57 | +$33.57 | +$0.35 | +$33.93 | +33.93% |
+| **Total** | | | **$591.79** | **+$91.80** | **+$2.58** | **+$94.38** | **+18.88%** |
+
+*Price-only return +18.36%; total return **+18.88%**, up 7.58 points from W26's +11.30%. The largest one-week gain of Phase 2 (prior largest: W11, up 6.39 points). New ex-dividend: LLY $1.73 on November 13, +$0.1831 on 0.10583 shares. Cumulative dividends $2.5791.*
+
+**Benchmarks:**
+- SPY: $739.30 to $754.37 = **+2.04%** (+2.59% on the week)
+- QQQ: $713.29 to $679.89 = **-4.68%** (+3.61% on the week)
+- Portfolio (total return) vs. SPY: **+16.84 pp ahead**
+- Portfolio (total return) vs. QQQ: **+23.56 pp ahead**
+
+*Both sides rose, the book faster (up 6.8% of its value against SPY's 2.59%), so both leads widened. They sit just below the W25 records of +18.31pp and +23.73pp.*
+
+#### The Week's One Fact
+
+**Two sessions supplied $40.06 of the book's $37.68 weekly price gain; the other three lost $2.38.** On November 9 the book gained $24.69 as CEG rose 10.46% on its Q3 report and the S&P 500 had its best day since April. On November 11 it gained $15.37, of which MU's 11.89% jump after CoreWeave raised its outlook was $10.87. Daily closes per stockanalysis.com, valued at the book's share counts.
+
+#### What Moved and Why
+
+**MU (+12.73% WoW, -1.79% price).** Largest move: +11.89% on November 11, after CoreWeave, a Micron customer, raised its 2026 revenue outlook and reported a $132.5B backlog, easing AI-spending fears (Benzinga, FX Leaders). SMH rose 4.82% that day. MU then fell 1.59% and 2.52% after Nvidia CEO Jensen Huang resigned on November 12; chips fell again November 13 (AMD -8.75%, SK hynix -4.30%; CNBC, Seoul Economic Daily). No Taoyuan union settlement found.
+
+**LLY (+6.54% WoW, +52.77% price).** Largest move: +4.28% on November 9, when XLV rose 1.91% in the broad rally and Lilly reported Phase 3 results showing Foundayo cut sleep-apnea breathing interruptions by up to 44%, with an FDA filing planned by year end (Motley Fool). Jefferies raised its target to $1,700 the same day. Lilly also widened Zepbound and Foundayo access on Hims & Hers. Closed at a Phase 2 high of $1,443.50.
+
+**CEG (+12.21% WoW, -11.05% price).** Largest move: +10.46% on November 9, on Q3: adjusted EPS $5.06 against $3.72 to $3.90 expected (sources differ), revenue $9.55B, and the 2026 guidance midpoint raised a second time, to $12.50 to $12.80 (company release). Power peers rose with it: Vertiv 9.6%, Vistra 7.3%, GE Vernova 7.1% (Trefis). CEG gave back 3.02% on November 10 as the group took profits (24/7 Wall St.).
+
+**LMT (+5.16% WoW, +18.31% price).** Largest move: +3.72% on November 9, with ITA up 3.90% and industrials the best S&P sector that day (+3.79%). That was the market rally, not company news. It added 2.54% on November 10, when Lockheed reported a GMLRS production milestone and Pete Hegseth called the lame-duck session critical for Pentagon funding (Air & Space Forces). Analysts still expect a budget near $1.15T, not the $1.5T requested.
+
+**MA (+1.31% WoW, +33.57% price).** The book's quietest week. Largest move: +1.32% on November 13, with Visa up 1.30%; on November 12 both fell 1.23%. It moved with Visa on its two biggest days, so sector, not company news. Bernstein kept Outperform on both on November 12 but said most of the re-rating has happened. W26's open question is closed: Kansas Senator Roger Marshall did lose (CBS News, Ballotpedia).
+
+#### Macro Context
+
+November 9 decided the week. The S&P 500 rose 2.35% to 7,549.94, its best day since April, and all 11 sector ETFs gained, as Brent fell 5.2% to about $93 on hopes of US-Iran talks (Motley Fool, Yahoo Finance; the oil figure has one source). On November 10, October CPI rose 0.4% with core at 0.3%, each a tenth above forecast. On November 12 Jensen Huang resigned as Nvidia CEO after a New York Times report, with CFO Colette Kress as interim CEO; Nvidia fell 4.34% (CNBC). On November 13 chips fell again, October PPI landed, and the 10-year yield held near 5.14%, capping Treasuries' steepest weekly rise since April 2025 (CNBC). Markets price about an 88% chance of a December hike. Brent fell about 2.4% on the week (CNBC).
+
+#### Correction to Week 26
+
+W26 called its prices stockanalysis.com official closes and rejected Finnhub's MU $690.00 and LLY $1,354.00 as pre-auction trades. The settled stockanalysis.com history now shows November 6 closes of MU $690.00, LLY $1,354.00, CEG $249.95, LMT $567.08, MA $652.70, SPY $735.29 and QQQ $656.10, so Finnhub had the closes. Recomputed with the dashboard math, W26's value ($554.11) and total return (+11.30%) do not change; QQQ becomes -8.02% and the spreads +11.85pp and +19.32pp, and no position return moves more than 0.09 points. The W26 rows stay as logged. This week's WoW figures are measured from the logged W26 prices and differ from the corrected ones by 0.11 points or less.
+
+#### Lesson: None This Week
+
+CEG's 10.46% jump on an earnings beat is the one-time repricing on a report that Lessons 12 and 13 describe, and MU's rebound is the AI-spending factor in the W24 amendment to Lesson 5. Nothing new.
+
+#### Thesis Status Check
+
+| Position | Thesis Status | Notes |
+|----------|--------------|-------|
+| MU | ⚠️ Pressured | Fab 11E still halted; no union settlement found. No break criterion met: CoreWeave raised its outlook, and no hyperscaler capex cut, oversupply or HBM share loss reported. |
+| LLY | ✅ Intact | Phase 3 sleep-apnea win for Foundayo, FDA filing planned by year end. Wider Hims & Hers access. Phase 2 closing high. Dividend earned. |
+| CEG | ✅ Intact | Q3 EPS beat estimates by 30% to 36%, guidance midpoint raised a second time, Amazon and Google nuclear contracts in the release. No hyperscaler walked back power commitments. |
+| LMT | ⚠️ Pressured | Flag stays: continuing resolution to December 11, and analysts expect a budget near $1.15T, not $1.5T. Rose with the market, not on company news. |
+| MA | ✅ Intact | Moved with Visa. Both Credit Card Competition Act sponsors leave the Senate in January. No interchange action or volume migration. |
+
+#### Things to Watch Next Week
+- **Nvidia earnings November 17** (company date), the first report under interim CEO Colette Kress. Data-center guidance and order comments matter more for MU and CEG than the leadership news.
+- **MU.** Any Taoyuan union settlement or restart of Fab 11E. Micron's fiscal Q1 report is expected in December; confirm the date.
+- **Dividends.** CEG $0.4265, record and expected ex-date November 16 (W28), about $0.14. LMT $3.60, record December 1.
+- **Defense budget.** Lame-duck action before the December 11 continuing resolution expires.
+- **Rates.** The 10-year is above 5% and a December hike is about 88% priced.
+- **Phase 3.** The 6-Month Review is written below. Phase 3 is waiting on Jake; until then the weekly update keeps tracking these five.
+
+---
+
+*Next check-in: ~November 20, 2026 (Week 28). CEG ex-dividend November 16, Nvidia earnings November 17, LMT dividend record date December 1, continuing resolution expires December 11.*
+
 ---
 
 ## Quarterly Reviews
 
 - **3-Month Review:** August 11, 2026 — ✅ completed August 16, 2026 (see below)
-- **6-Month Review:** November 11, 2026 — pending
+- **6-Month Review:** November 11, 2026: completed November 14, 2026, data as of the November 13 close (see below)
 
 ---
 
@@ -2168,6 +2246,128 @@ Specific items to carry forward:
 
 ---
 
+## 6-Month Review: Phase 2
+
+**Scheduled:** November 11, 2026 · **Run:** November 14, 2026 · **Data as of:** November 13, 2026 close (Week 27)
+*Written by the Saturday routine on the first run with a close on or after November 11. Position returns use the logged W27 prices. Sector returns are stockanalysis.com unadjusted closes from May 11 to November 13, 2026, the same method as the 3-Month Review; its August 14 figures reproduce exactly from the same data.*
+
+---
+
+### Bottom line
+
+**The experiment passes its success criterion as written, with a caveat about where the money came from.**
+
+Four of five positions beat their sector benchmark, against a bar of three. The book returned **+18.88%** including dividends against SPY's **+2.04%** and QQQ's **-4.68%**, leads of +16.84pp and +23.56pp. Of the +16.32pp price-only lead over SPY, about **+10.27pp came from picking the stocks** and **+6.05pp from picking the themes**.
+
+The caveat: in dollars, **LLY and MA produced 94% of the $91.80 price gain.** MU's pass is relative only: it is down 1.79% and passes because semiconductors fell 15.54%. MA's pass over Visa is 2.11 points, small enough to flip in a week. So the sector-relative count says "breadth," and the dollar count says "two names." Both are true, and the review reports both.
+
+No holding changes come from this review. The five positions stay held and tracked weekly until Jake changes them. Phase 3 starts only when Jake sets it up.
+
+---
+
+### The scorecard
+
+| Theme | Position | Return | Sector benchmark | Sector return | Alpha | 3-month alpha | Verdict |
+|-------|----------|--------|------------------|---------------|-------|---------------|---------|
+| Defense / quality value | LMT | **+18.31%** | ITA | -5.07% | **+23.38pp** | +8.77pp | ✅ Pass |
+| Healthcare / GLP-1 | LLY | **+52.77%** | XLV | +32.03% | **+20.74pp** | +7.89pp | ✅ Pass |
+| AI/Semi (memory) | MU | **-1.79%** | SMH | -15.54% | **+13.75pp** | +20.61pp | ✅ Pass (relative only) |
+| Fintech / payments | MA | **+33.57%** | V (peer) | +31.46% | **+2.11pp** | +2.57pp | ✅ Pass (thin) |
+| Energy / AI power | CEG | **-11.05%** | XLU | -2.44% | **-8.61pp** | -8.48pp | ❌ Fail |
+
+*Returns are price-only from May 11 to November 13, 2026. Benchmarks are the ones the 3-Month Review chose. ITA's 5.07% fall flatters LMT's margin; LMT's absolute return is still third best in the book.*
+
+**Result: 4 of 5 beat their sector. Criterion required 3 of 5.** On absolute return the count is 3 of 5 (LLY, LMT, MA).
+
+---
+
+### Where the outperformance came from
+
+| Source | Contribution | What it means |
+|--------|-------------|---------------|
+| **Theme selection** | **+6.05 pp** | $100 each in SMH, XLV, XLU, ITA and V returned **+8.09%** against SPY's +2.04%. Healthcare (XLV +32.03%) and payments (V +31.46%) did that work; the other three themes lost money as index funds. |
+| **Stock selection** | **+10.27 pp** | MU, LLY, CEG, LMT and MA returned **+18.36%** against the sector basket's +8.09%. |
+| **Total** | **+16.32 pp** | Price-only vs SPY. Dividends of $2.58 add 0.52 points, for +16.84pp on total return. |
+
+At three months the split was +3.32pp themes and +6.27pp stocks, and MU alone supplied most of the stock-picking edge. Six months on, the edge is spread across three names: LMT +23.38pp, LLY +20.74pp, MU +13.75pp. That answers the 3-Month Review's main worry, that the edge was one lucky MU call.
+
+---
+
+### Is this Phase 1 again?
+
+Phase 1 returned +16.5%, and without AMD the rest returned about 3%. The same test now:
+
+| Remove | Remaining four return |
+|--------|----------------------|
+| without CEG | +25.72% |
+| without MU | +23.40% |
+| without LMT | +18.38% |
+| **all five** | **+18.36%** |
+| without MA | +14.56% |
+| without LLY | +9.76% |
+
+**No single name is load-bearing**: without LLY, the best performer, the other four still beat SPY by 7.72 points. **Two names together are**: without LLY and MA, the other three average +1.82%, slightly behind SPY's +2.04%. Contribution to the $91.80 price gain: LLY 57%, MA 37%, LMT 20%, MU -2%, CEG -12%.
+
+This is weaker breadth than the 3-Month Review found (four positions each contributing $15 to $25), and it is closer to the failure criterion "returns concentrated in one or two themes" than to a clean pass. It is not a Phase 1 repeat, because no single removal sinks the book.
+
+---
+
+### CEG: still the one failure
+
+CEG trailed utilities by 8.48 points at three months and trails them by 8.61 points now. The gap did not close.
+
+The business did not cause it. Q3 adjusted EPS was $5.06 against $3.04 a year earlier, the 2026 guidance midpoint was raised twice, and Constellation signed 20-year nuclear contracts with Amazon and Google and won a conditional DOE loan commitment of up to $5B. The stock fell instead on factors it shares with MU: AI-spending fear (October 14 and 22, November 4 and 5) and rates (W18), as the W18 and W24 amendments to Lesson 5 record. Lesson 14's sentence still fits: the theme was right, the business executed, and the multiple ate the return.
+
+The process held. CEG's weekly low was -24.05% (W8) and it was -20.73% at W26. No break criterion triggered either time, nothing was sold, and the Q3 report then lifted it 10.46% in a day.
+
+---
+
+### Risk actually carried
+
+- **Largest drawdown in total return: -9.23 points**, from +20.53% (W25) to +11.30% (W26), the midterm week. The 3-Month Review's figure was -5.24 points.
+- **Weeks ahead of SPY: 26 of 27.** The only miss is still Week 1.
+- **Worst single-position readings:** CEG -24.05% (W8). MU swung from +45.33% (W6) to -12.88% (W26), a 58-point range, and had the worst week, -21.96% in W26.
+- **Dividends: $2.58 on $499.99 = 0.52%** over six months, below the $4 to $6 the W4 note expected. CEG (November 16) and LMT (December 1) are next.
+
+MU and CEG supplied most of the volatility and none of the gain. They are the two AI-infrastructure positions, and they repeatedly fell on the same days.
+
+---
+
+### What the six months prove, and what they do not
+
+**Support:**
+
+1. Equal-weight sizing removed Phase 1's single-name dependency.
+2. Stock selection added more than theme selection (+10.27pp against +6.05pp), and the stock-picking edge now rests on three names, not one.
+3. The thesis-break rule kept the book from selling CEG at -24% and MU at -13%. Both have recovered part of the loss.
+
+**Do not prove:**
+
+1. **Twenty-seven weekly readings of one portfolio in one macro stretch are not a sample.** Nothing here separates skill from luck.
+2. **The themes were less independent than designed.** MU and CEG behaved as one AI-infrastructure bet, and both lost money. In practice the book held three company-driven names and one doubled AI bet.
+3. **Two passes are weak.** MU passes only because its sector fell more; MA's margin over Visa is 2.11 points. With either flipped, the count is 3 of 5, still a pass, but barely.
+4. **The picks were Claude's.** The result scores a recommendation process, not Jake's own picking.
+
+**On the hypothesis.** The pattern of what worked is clear: the three names with company-specific earnings drivers (Lilly's Mounjaro and guidance, Lockheed's backlog and guidance, Mastercard's steady volume growth) beat their sectors, and the two names priced on AI-spending sentiment and rates lagged or fell. That reads more like a lesson about which kinds of themes can be stock-picked than like proof of edge. The failure outcome ("fun money should be indexed") is not triggered by the criteria as written.
+
+---
+
+### The 3-Month Review's tests, checked
+
+- **Any thesis-break criterion triggered?** No. MU (Fab 11E labor dispute) and LMT (appropriations) are Pressured; none is Broken.
+- **Stock-selection alpha negative?** No: +10.27pp, up from +6.27pp.
+- **MU's alpha reversing while others fail to widen?** MU's absolute gain reversed (+22.60% to -1.79%), but LLY's and LMT's alphas widened sharply. Not met.
+- **Lead over SPY compressing on the book's own weakness?** No. It widened from +9.87pp to +16.84pp: the book's total return rose 4.00 points and SPY's fell 2.97.
+
+---
+
+### What happens next
+
+- **Holdings:** unchanged. The weekly update keeps tracking these five until Jake changes them, and from now on each weekly report notes that Phase 3 is waiting on Jake.
+- **Questions for Jake's Phase 3 setup** (design questions, not trades): whether two AI-infrastructure names count as two themes; whether to fix each position's sector benchmark at entry rather than at three months; and whether the success test should require a positive absolute return as well as a sector-relative one.
+
+---
+
 ---
 
 ## Concepts Learned Index
@@ -2217,7 +2417,7 @@ Specific items to carry forward:
 | LMT (Q3) | October 22, 2026 | Q3 (W24): REPORTED October 22, 2026. EPS $7.97 vs about $7.52 consensus, sales $20.7B (+11%), record $292.0B backlog, 2026 guidance raised again (EPS $30.35 to $30.75, free cash flow $7.8B to $8.0B). Flagged F-35 Lot 20 advance-contract costs above funding. Stock +9.44% on the week. Next report ~late Jan 2027. |
 | LLY (Q3) | October 29, 2026 | Q3 (W25): REPORTED October 29, 2026. Revenue $24.4B (+39%) vs about $22.6B consensus, non-GAAP EPS $7.48 vs $6.26 to $6.67 (sources differ), Mounjaro $10.7B (+65%). 2026 revenue guidance raised to $91B to $92B; non-GAAP EPS range $35.00 to $36.00 after a $4.57 acquired IPR&D charge. Stock +6.63% that session, +11.31% on the week. Next report ~early Feb 2027. |
 | MA (Q3) | October 29, 2026 | Q3 (W25): REPORTED October 29, 2026. Net revenue $9.8B (+14%), adjusted EPS $5.31 vs about $5.16 consensus, purchase volume +9%, cross-border +11%, value-added services +19%. Some deals moved from Q4 into Q3. Stock +4.16% that session, +2.31% on the week. Next report ~late Jan 2027. |
-| CEG (Q3) | November 9, 2026 | Pending. |
+| CEG (Q3) | November 9, 2026 | Q3 (W27): REPORTED November 9, 2026. Adjusted EPS $5.06 vs $3.72 to $3.90 consensus (sources differ), GAAP EPS $5.19, revenue $9.55B. 2026 adjusted EPS guidance narrowed to $12.50 to $12.80, midpoint raised for the second time this year. Agreed to buy the 609 MW Rhode Island State Energy Center for $715M. Stock +10.46% that session, +12.21% on the week. Next report ~late Feb 2027. |
 | MA | July 30, 2026 (Q2) | ✅ **REPORTED — Q2 beat; stock +2.49% that session, +6.20% on the week; PTs raised across the street (BofA $735, TD Cowen $667, UBS $670, Morgan Stanley $681, KeyBanc $680, RBC $642, Raymond James $632; Baird trimmed to $660). Next report ~late Oct 2026** |
 | LLY | August 5, 2026 (Q2) | ✅ **REPORTED — blowout beat: adjusted EPS $8.38 vs $6.01 consensus, revenue $23.0B vs $20.73B (+48% YoY), Mounjaro $9.9B (+91%); FY26 sales guidance raised to $85–87B from $82–85B, adjusted EPS $35.50–36.50; $4.5B added to Indiana manufacturing. Stock +4.86% that session, +3.21% on the week. PTs raised: Morgan Stanley $1,419, Cantor $1,410, BMO $1,400, Truist $1,376, Wells Fargo $1,330. Cleared the guidance-raise bar Goldman set in W12. Next report ~late Oct 2026** |
 | CEG | August 5–6, 2026 (Q2) | ✅ **REPORTED — adjusted EPS $2.55 vs $2.34 consensus (9.5% beat); FY26 guidance raised to $11.50–$12.50; ~920MW new long-term nuclear PPAs; path to 20% earnings growth through 2029; gas-plant sale to LS Power; CEO adding Chairman role. Revenue $7.5B missed $7.94B est. Stock opened Aug 6 at $277.92, hit $283.43, reversed to close -1.52%; +2.72% on the week, behind QQQ's +5.09%. BMO PT to $379. The anticipated repricing did not occur — see the W13 concept. Next report ~late Oct 2026** |
