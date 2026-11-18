@@ -1,7 +1,8 @@
-# Phase 2 Portfolio Experiment
+# Portfolio Experiments: Phase 2 and Phase 3
 
-This repo is the home of Jake Worcester's small stock-picking experiment and its
-public dashboard (GitHub Pages: https://jakeworcester-byte.github.io/pf-lessons/).
+This repo is the home of Jake Worcester's two small stock-picking experiments and their
+public dashboards (GitHub Pages: https://jakeworcester-byte.github.io/pf-lessons/ for
+Phase 2, `phase3.html` for Phase 3). Both run at the same time.
 A Claude Code cloud routine updates it every Saturday morning by following
 `WEEKLY_UPDATE.md`. Jake reads the results on the site; he does not review the
 work before it publishes, so the files have to be right on their own.
@@ -10,10 +11,12 @@ work before it publishes, so the files have to be right on their own.
 clone at `OneDrive/Documents/Claude/Projects/Investing/portfolio-site/` and must
 `git pull` before reading or changing anything.
 
-## The experiment
+## Phase 2 (continuing)
 
 - **Opened:** May 11, 2026 · **Invested:** $499.99 · 5 equal-weight positions, buy-and-hold
-- **Review date:** November 11, 2026 (6 months). A Phase 3 is expected after it.
+- **6-month review:** done November 14, 2026 (in the log). The positions are still
+  held, so the weekly update keeps tracking them until Jake changes the holdings. Its
+  12-month mark is May 11, 2027; whether it ends there is Jake's call.
 - **Benchmarks:** SPY baseline $739.30 · QQQ baseline $713.29
 
 | Ticker | Theme | Shares | Entry Price | Cost Basis |
@@ -34,6 +37,39 @@ and the pattern of which themes work will show whether there is edge or luck.
   random distribution with no pattern. Then the honest conclusion is that fun money
   should be indexed.
 
+## Phase 3 (opened November 18, 2026)
+
+- **Invested:** $500.00 · 5 equal-weight positions, buy-and-hold, fills about 10:04 AM CT
+- **Reviews:** 3-month February 18, 2027 · 6-month May 18, 2027
+- **Primary benchmark:** SPY baseline $730.13 (recorded at fill time)
+- **Diagnostic benchmarks:** one sector ETF per position, locked at entry, baselines are
+  the November 18 closes (`PHASES[3]["sector_base"]` in `tools/fetch_prices.py`, mirrored
+  in `SECTOR_BASE` in `phase3.html`)
+
+| Ticker | Price driver | Shares | Entry Price | Cost Basis | Sector ETF |
+|--------|--------------|--------|-------------|------------|------------|
+| PGR | Auto insurance pricing vs. claims | 0.44135 | $226.58 | $100.00 | KIE |
+| TJX | Off-price retail, trade-down | 0.69834 | $143.20 | $100.00 | XRT |
+| ISRG | Surgical procedure volumes | 0.23485 | $425.80 | $100.00 | IHI |
+| NFLX | Subscriptions, pricing, ads | 1.67538 | $59.69 | $100.00 | XLC |
+| MSFT | Azure cloud growth | 0.19805 | $504.90 | $100.00 | IGV |
+
+**Hypothesis:** stocks chosen for company-specific earnings drivers, with no two sharing
+a main price driver and no single name dominating risk, can outperform SPY over 6 to 12
+months, and will beat their own sector benchmarks more often than not.
+
+- **Goal:** total return beats SPY.
+- **Diagnostic:** at least 3 of 5 positions beat their sector ETF, each explained by the
+  company's own numbers.
+- **Failure:** the book trails SPY, or the result is explained by a shared factor rather
+  than company results. Then fun money should be indexed.
+- **Known tilt:** the book leans against the AI trade (equal-weight correlation with SMH
+  of -0.32 at entry). If AI rallies hard, it will likely trail SPY for factor reasons. Say
+  so whenever it explains a week.
+
+The full baseline (risk check, decision audit, entry note) is the "Baseline and Rules"
+section of `Phase_3_Weekly_Review_Log.md`.
+
 **Phase 1 (ended):** ASML, AMD, IONQ, NVDA, SNOW from Sept 29, 2025. Its lessons are
 the first entries in the Lessons Ledger.
 
@@ -42,13 +78,15 @@ the first entries in the Lessons Ledger.
 | File | What it is |
 |------|------------|
 | `WEEKLY_UPDATE.md` | The weekly procedure. Follow it exactly. |
-| `Phase_2_Weekly_Review_Log.md` | Append-only log: summary tables, one entry per week, quarterly reviews. The source of truth for every weekly number. |
-| `Phase_2_Lessons_Ledger.md` | Append-only ledger of durable, transferable lessons. |
-| `index.html` | The dashboard. Live prices load from Finnhub in the browser; the thesis grid, chart history, lessons, fallback prices, and `PUBLISHED` date are a static block updated each week. |
-| `review.html` | Renders the log and ledger as readable pages (latest week, all weeks, reviews, ledger). It reads the markdown files directly and never needs editing for a weekly update. |
-| `thesis-criteria.md` | Per-ticker thesis-break criteria. Load only when a position is under real pressure. |
-| `tools/fetch_prices.py` | Pulls closes from Finnhub and computes every figure with the dashboard's exact math. `--live` reads the key from `index.html`. |
-| `tools/verify.py` | The publish gate. Must print `VERIFY OK` before any commit. |
+| `Phase_2_Weekly_Review_Log.md` | Phase 2 append-only log: summary tables, one entry per week, quarterly reviews. The source of truth for every Phase 2 weekly number. |
+| `Phase_3_Weekly_Review_Log.md` | Phase 3 append-only log, same structure plus a Sector Scorecard table and a Baseline and Rules section. The source of truth for every Phase 3 number. |
+| `Phase_2_Lessons_Ledger.md` | Append-only ledger of durable, transferable lessons, shared by both phases (the file name is historical). |
+| `index.html` | The Phase 2 dashboard. Live prices load from Finnhub in the browser; the thesis grid, chart history, lessons, fallback prices, and `PUBLISHED` date are a static block updated each week. |
+| `phase3.html` | The Phase 3 dashboard. Same pattern as `index.html`: live Finnhub prices, and a static block (`FALLBACK`, `CUM_DIVIDENDS`, `PUBLISHED`, `WEEKS`, `WK_DATES`, `HIST`, `THESIS`, `LESSONS`, `SECTOR_BASE`) updated each week. |
+| `review.html` | Renders a log and the ledger as readable pages (latest week, all weeks, reviews, ledger). `review.html` is Phase 2; `review.html?phase=3` is Phase 3. It reads the markdown files directly and never needs editing for a weekly update. |
+| `thesis-criteria.md` | Per-ticker thesis-break criteria for both phases. Load only when a position is under real pressure. |
+| `tools/fetch_prices.py` | Pulls closes from Finnhub and computes every figure with the dashboards' exact math. `--phase 2` (default) or `--phase 3`; `--live` reads the key from `index.html`. |
+| `tools/verify.py` | The publish gate for both phases. Must print `VERIFY OK` for Phase 2 and Phase 3 before any commit. |
 
 ## Ground rules
 
@@ -99,4 +137,4 @@ finance professional. Call out sector noise versus a real thesis concern.
 
 ## Standard reminder
 
-Nothing here is financial advice. This is a $500 learning experiment.
+Nothing here is financial advice. These are two $500 learning experiments.

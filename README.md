@@ -1,8 +1,9 @@
-# Phase 2 Portfolio
+# Portfolio Experiments (Phase 2 and Phase 3)
 
-Dashboard and weekly review log for a $500 buy-and-hold stock-picking experiment.
+Dashboards and weekly review logs for two $500 buy-and-hold stock-picking experiments.
 
-- Dashboard: https://jakeworcester-byte.github.io/pf-lessons/
-- Weekly reviews: https://jakeworcester-byte.github.io/pf-lessons/review.html
+- Phase 2 dashboard: https://jakeworcester-byte.github.io/pf-lessons/
+- Phase 3 dashboard: https://jakeworcester-byte.github.io/pf-lessons/phase3.html
+- Weekly reviews: https://jakeworcester-byte.github.io/pf-lessons/review.html (Phase 3: `review.html?phase=3`)
 
 Updated every Saturday by a Claude Code cloud routine following `WEEKLY_UPDATE.md`. Not financial advice.

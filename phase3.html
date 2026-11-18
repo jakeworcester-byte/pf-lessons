@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Phase 3 Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root{
+    --dark:#141413; --light:#faf9f5; --mid:#b0aea5; --lgray:#e8e6dc;
+    --orange:#d97757; --blue:#6a9bcc; --green:#788c5d;
+    --red:#c0563f; --card:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--light); color:var(--dark);
+    font-family:'Lora',Georgia,serif;
+    line-height:1.55; -webkit-font-smoothing:antialiased;
+    padding:24px 16px 64px;
+  }
+  .wrap{max-width:1080px;margin:0 auto;}
+  h1,h2,h3,.num,.tag,.ticker,.stat-val,.stat-lbl,th,.pill,.benchname{font-family:'Poppins',Arial,sans-serif;}
+  /* Header */
+  header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px;margin-bottom:20px;}
+  h1{font-size:26px;font-weight:600;letter-spacing:-.01em;}
+  .sub{color:#6b6a63;font-size:14px;margin-top:2px;}
+  .status-line{font-size:12.5px;color:#6b6a63;font-family:'Poppins',Arial,sans-serif;text-align:right;}
+  .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:middle;}
+  .dot.live{background:var(--green);} .dot.stale{background:var(--orange);}
+  /* Headline hero */
+  .hero{
+    background:var(--dark);color:var(--light);border-radius:18px;
+    padding:28px 28px 24px;margin-bottom:18px;
+    display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:8px;
+  }
+  .hero .big .stat-val{font-size:46px;font-weight:700;letter-spacing:-.02em;line-height:1;}
+  .hero .stat-val{font-size:26px;font-weight:600;line-height:1.1;}
+  .hero .stat-lbl{font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--mid);margin-top:8px;}
+  .hero .stat-sub{font-size:12.5px;color:var(--mid);margin-top:3px;font-family:'Lora',serif;}
+  .pos{color:#9cc27e;} .neg{color:#e8917a;}
+  .posdark{color:var(--green);} .negdark{color:var(--red);}
+  /* Bench row */
+  .bench-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:18px;}
+  .bench{background:var(--card);border:1px solid var(--lgray);border-radius:14px;padding:14px 16px;}
+  .benchname{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#6b6a63;}
+  .bench .v{font-size:22px;font-weight:600;font-family:'Poppins',sans-serif;margin-top:4px;}
+  .bench .d{font-size:12.5px;color:#6b6a63;margin-top:2px;}
+  /* Section */
+  section{margin-top:28px;}
+  h2{font-size:18px;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+  h2 .bar{width:4px;height:18px;border-radius:2px;background:var(--orange);display:inline-block;}
+  /* Chart */
+  .chart-card{background:var(--card);border:1px solid var(--lgray);border-radius:16px;padding:18px;}
+  .chart-box{position:relative;height:300px;}
+  /* Position cards */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:12px;}
+  .card{background:var(--card);border:1px solid var(--lgray);border-radius:14px;padding:16px;position:relative;overflow:hidden;}
+  .card .accent{position:absolute;top:0;left:0;width:100%;height:4px;}
+  .card .ticker{font-size:18px;font-weight:600;}
+  .card .theme{font-size:11.5px;color:#6b6a63;margin-top:1px;min-height:30px;}
+  .card .price{font-size:24px;font-weight:600;font-family:'Poppins',sans-serif;margin-top:8px;}
+  .card .ret{font-size:14px;font-weight:500;font-family:'Poppins',sans-serif;margin-top:2px;}
+  .card .meta{font-size:11.5px;color:#6b6a63;margin-top:8px;border-top:1px solid var(--lgray);padding-top:8px;}
+  .pill{font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;padding:3px 8px;border-radius:20px;display:inline-block;margin-top:10px;}
+  .pill.intact{background:#e6efe0;color:#4f6138;}
+  .pill.pressured{background:#fbeae3;color:#a8462e;}
+  .pill.broken{background:#f4d5cd;color:#8f2d1a;}
+  /* Thesis grid */
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--lgray);border-radius:14px;overflow:hidden;font-size:13px;}
+  th{background:var(--dark);color:var(--light);font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;padding:10px 12px;text-align:left;font-weight:500;}
+  td{padding:9px 12px;border-top:1px solid var(--lgray);font-family:'Poppins',sans-serif;font-size:12.5px;}
+  td.note{font-family:'Lora',serif;color:#4a4944;font-size:12.5px;}
+  .s-intact{color:var(--green);font-weight:600;} .s-pressured{color:var(--orange);font-weight:600;} .s-broken{color:var(--red);font-weight:700;}
+  /* Lessons */
+  .lessons{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;}
+  .lesson{background:var(--card);border:1px solid var(--lgray);border-radius:14px;padding:16px;border-left:4px solid var(--blue);}
+  .lesson.carry{border-left-color:var(--mid);} .lesson.lesson-t{border-left-color:var(--orange);} .lesson.concept{border-left-color:var(--blue);}
+  .lesson .tag{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#6b6a63;font-weight:600;}
+  .lesson .ltitle{font-size:15px;font-weight:600;font-family:'Poppins',sans-serif;margin:4px 0 6px;}
+  .lesson .lbody{font-size:13px;color:#4a4944;}
+  .lesson .wk{font-size:11px;color:var(--mid);font-family:'Poppins',sans-serif;margin-top:8px;}
+  footer{margin-top:36px;text-align:center;font-size:11.5px;color:var(--mid);font-family:'Poppins',sans-serif;line-height:1.7;}
+  .links{display:flex;flex-wrap:wrap;gap:8px;margin:-6px 0 18px;}
+  .links a{font-family:'Poppins',Arial,sans-serif;font-size:13px;font-weight:500;color:var(--dark);background:var(--card);border:1px solid var(--lgray);border-radius:20px;padding:6px 14px;text-decoration:none;}
+  .links a:hover{border-color:var(--orange);}
+  .links a.primary{background:var(--dark);color:var(--light);border-color:var(--dark);}
+  .err{background:#fbeae3;color:#a8462e;border:1px solid #f0c9bd;border-radius:10px;padding:10px 14px;font-size:12.5px;font-family:'Poppins',sans-serif;margin-bottom:14px;display:none;}
+  @media(max-width:720px){
+    .hero{grid-template-columns:1fr 1fr;}.hero .big{grid-column:1/-1;}
+    .hero .big .stat-val{font-size:40px;}
+    .bench-row{grid-template-columns:1fr;}
+    .status-line{text-align:left;}
+    table{display:block;overflow-x:auto;white-space:nowrap;}
+  }
+
+  .card .vs{font-size:12px;font-family:'Poppins',sans-serif;margin-top:4px;color:#6b6a63;}
+  .hero.two{grid-template-columns:1.3fr 1fr 1fr;}
+  .note-line{font-size:11.5px;color:#6b6a63;margin-top:8px;font-family:'Poppins',sans-serif;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <h1>Phase 3 Portfolio</h1>
+      <div class="sub">Company-specific earnings drivers &middot; Opened November 18, 2026 &middot; $500.00 invested</div>
+    </div>
+    <div class="status-line" id="statusLine"><span class="dot stale"></span>Loading prices&hellip;</div>
+  </header>
+
+  <nav class="links">
+    <a class="primary" href="review.html?phase=3">This week's review &rarr;</a>
+    <a href="review.html?phase=3#baseline">Baseline and rules</a>
+    <a href="review.html?phase=3#ledger">Lessons ledger</a>
+    <a href="review.html?phase=3#weeks">All weeks</a>
+    <a href="index.html">Phase 2 dashboard</a>
+  </nav>
+
+  <div class="err" id="errBox"></div>
+
+  <div class="hero">
+    <div class="big">
+      <div class="stat-val" id="hTotalRet">&mdash;</div>
+      <div class="stat-lbl">Total Return (incl. dividends)</div>
+      <div class="stat-sub" id="hPL">&mdash;</div>
+    </div>
+    <div>
+      <div class="stat-val" id="hVsSpy">&mdash;</div>
+      <div class="stat-lbl">vs. SPY</div>
+      <div class="stat-sub">The goal</div>
+    </div>
+    <div>
+      <div class="stat-val" id="hSectors">&mdash;</div>
+      <div class="stat-lbl">Beating their sector</div>
+      <div class="stat-sub">The diagnostic (3 of 5 needed)</div>
+    </div>
+  </div>
+
+  <div class="bench-row">
+    <div class="bench"><div class="benchname">Portfolio Value</div><div class="v" id="bVal">&mdash;</div><div class="d" id="bValD">from $500.00</div></div>
+    <div class="bench"><div class="benchname">SPY Return</div><div class="v" id="bSpy">&mdash;</div><div class="d">since Nov 18, 2026 ($730.13)</div></div>
+    <div class="bench"><div class="benchname">Known tilt</div><div class="v" style="font-size:16px">Leans against AI</div><div class="d">Book correlation with SMH -0.32 at entry</div></div>
+  </div>
+
+  <section>
+    <h2><span class="bar"></span>Cumulative Return vs. SPY</h2>
+    <div class="chart-card"><div class="chart-box"><canvas id="chart"></canvas></div></div>
+  </section>
+
+  <section>
+    <h2><span class="bar"></span>Positions</h2>
+    <div class="cards" id="cards"></div>
+    <div class="note-line">Each position is scored against its own sector ETF, locked at entry: PGR vs KIE, TJX vs XRT, ISRG vs IHI, NFLX vs XLC, MSFT vs IGV.</div>
+  </section>
+
+  <section>
+    <h2><span class="bar"></span>Thesis Status: Latest (W0, Nov 18)</h2>
+    <table>
+      <thead><tr><th>Position</th><th>Status</th><th>Driver</th></tr></thead>
+      <tbody id="thesisBody"></tbody>
+    </table>
+    <div class="note-line">
+      Status reflects thesis-break criteria, <em>not</em> price. <span class="s-intact">Intact</span> = thesis holds &middot; <span class="s-pressured">Pressured</span> = yellow flag, no criteria broken &middot; <span class="s-broken">Broken</span> = a break criterion triggered.
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="bar"></span>Concepts &amp; Lessons</h2>
+    <div class="lessons" id="lessons"></div>
+  </section>
+
+  <footer>
+    Live prices via Finnhub &middot; thesis &amp; lesson data from the Phase 3 weekly review log (W0, Nov 18 2026)<br>
+    Updated automatically every Saturday &middot; last published <span id="published"></span><br>
+    Not financial advice &middot; $500 learning experiment &middot; <span id="updated"></span>
+  </footer>
+
+</div>
+
+<script>
+/* Finnhub key: same public key as the Phase 2 dashboard (index.html). */
+const FINNHUB_KEY = "d8nach9r01qvvn94s0lgd8nach9r01qvvn94s0m0";
+
+/* ---- Static experiment data (source: Phase_3_Weekly_Review_Log.md) ---- */
+const ENTRY_DATE = "November 18, 2026";
+const TOTAL_INVESTED = 500.00;
+
+const POS = [
+  {t:"PGR",  theme:"Auto insurance pricing vs. claims", shares:0.44135, entry:226.58, color:"var(--blue)"},
+  {t:"TJX",  theme:"Off-price retail, trade-down",       shares:0.69834, entry:143.20, color:"var(--orange)"},
+  {t:"ISRG", theme:"Surgical procedure volumes",         shares:0.23485, entry:425.80, color:"var(--green)"},
+  {t:"NFLX", theme:"Subscriptions, pricing, ads",        shares:1.67538, entry:59.69,  color:"var(--red)"},
+  {t:"MSFT", theme:"Azure cloud growth",                 shares:0.19805, entry:504.90, color:"var(--dark)"},
+];
+const SPY_ENTRY = 730.13;
+
+/* ---- Sector benchmarks, locked at entry. Baselines = November 18, 2026 closes (null = not yet recorded) ---- */
+const SECTORS = {PGR:"KIE", TJX:"XRT", ISRG:"IHI", NFLX:"XLC", MSFT:"IGV"};
+const SECTOR_BASE = {KIE:null, XRT:null, IHI:null, XLC:null, IGV:null};
+
+// cumulative dividends earned to date (Phase 3 Dividend Ledger, through W0: none yet; expected first are TJX, MSFT and PGR quarterly dividends)
+const CUM_DIVIDENDS = 0.00000000;
+
+/* ---- Date this weekly data was published (YYYY-MM-DD); the page warns if it goes stale ---- */
+const PUBLISHED = "2026-11-18";
+
+/* ---- Fallback prices = last saved (W0, Nov 18 2026 fills) ---- */
+const FALLBACK = {PGR:226.58, TJX:143.20, ISRG:425.80, NFLX:59.69, MSFT:504.90, SPY:730.13};
+
+/* ---- Weekly history for the chart (% total return from entry) ---- */
+const WEEKS = ["W0"];
+const WK_DATES = ["Nov 18"];
+const HIST = {
+  port: [0.00],
+  spy:  [0.00],
+};
+
+/* ---- Thesis grid (W0, Nov 18) ---- */
+const THESIS = [
+  {t:"PGR",  s:"Intact", d:"Bought at $226.58, about 11x earnings. Q3 missed slightly and premium growth is slowing; underwriting margins hold. Higher rates help its investment income."},
+  {t:"TJX",  s:"Intact", d:"Bought at $143.20 on its Q3 report day: comps +4%, above plan. About 27x earnings, the book's main valuation risk."},
+  {t:"ISRG", s:"Intact", d:"Bought at $425.80. Q3 procedures +15%, but the stock was down about 21% this year on planned pricing changes. Largest risk share in the book (30%)."},
+  {t:"NFLX", s:"Intact", d:"Bought at $59.69, about 18x earnings, after losing the Warner Bros bid. Ad outlook cut to $2.7B; record $4.8B buyback in Q3."},
+  {t:"MSFT", s:"Intact", d:"Bought at $504.90. Azure +48%, commercial backlog $677B (+73%). Capex doubled to $39.4B; cloud gross margin falling. The book's AI slot."},
+];
+
+/* ---- Lessons (Concepts & Lessons) ---- */
+const LESSONS = [
+  {type:"carry", tag:"Carried from Phase 2", wk:"Phase 2", title:"Size by risk, not just dollars", body:"In Phase 2, MU was 20% of the dollars and about 75% of the daily risk. Check each candidate's volatility before buying and report each position's share of risk at every review."},
+  {type:"carry", tag:"Carried from Phase 2", wk:"Phase 2", title:"Classify a stock by what moves it, not by its sector label", body:"CEG was labeled Energy but moved with semiconductors (0.45 correlation before purchase). Before buying, check each candidate against the main factors and treat two names with the same driver as one theme."},
+  {type:"carry", tag:"Carried from Phase 2", wk:"Phase 2", title:"Prefer names that move on their own earnings", body:"LLY, LMT and MA beat their sectors on company results; MU and CEG lagged on AI mood and rates. Phase 3 tests that pattern on purpose."},
+  {type:"carry", tag:"Carried from Phase 2", wk:"Lesson 4", title:"Check the earnings calendar before entry", body:"Phase 3 broke this one on day one: TJX was bought on its Q3 report day, after a jump. Recorded so the next entry checks the calendar first."},
+];
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+const $ = id => document.getElementById(id);
+const fmtPct = x => (x>=0?"+":"") + x.toFixed(2) + "%";
+const fmtPP  = x => (x>=0?"+":"") + x.toFixed(2) + " pp";
+const fmt$   = x => "$" + x.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+const cls    = x => x>=0?"pos":"neg";
+const clsD   = x => x>=0?"posdark":"negdark";
+
+function compute(prices){
+  let value = 0, scored = 0, beaten = 0;
+  const rows = POS.map(p=>{
+    const px = prices[p.t];
+    const ret = (px/p.entry - 1)*100;
+    const val = px * p.shares;
+    value += val;
+    const etf = SECTORS[p.t], base = SECTOR_BASE[etf];
+    let sret = null, vs = null;
+    if(base && prices[etf]){ sret = (prices[etf]/base - 1)*100; vs = ret - sret; scored++; if(ret > sret) beaten++; }
+    return {...p, px, ret, val, etf, sret, vs};
+  });
+  const priceVal = value;
+  const totalVal = value + CUM_DIVIDENDS;
+  const priceRet = (priceVal/TOTAL_INVESTED - 1)*100;
+  const totalRet = (totalVal/TOTAL_INVESTED - 1)*100;
+  const pl = totalVal - TOTAL_INVESTED;
+  const spyRet = (prices.SPY/SPY_ENTRY - 1)*100;
+  return {rows, totalVal, totalRet, priceRet, pl, spyRet, vsSpy: totalRet - spyRet, scored, beaten};
+}
+
+function render(prices, live){
+  const r = compute(prices);
+  $("hTotalRet").innerHTML = `<span class="${cls(r.totalRet)}">${fmtPct(r.totalRet)}</span>`;
+  $("hPL").textContent = `${fmt$(r.pl)} on $500.00 · value ${fmt$(r.totalVal)}`;
+  $("hVsSpy").innerHTML = `<span class="${cls(r.vsSpy)}">${fmtPP(r.vsSpy)}</span>`;
+  $("hSectors").innerHTML = r.scored ? `${r.beaten} of ${r.scored}` : `<span style="font-size:18px">Pending</span>`;
+
+  $("bVal").textContent = fmt$(r.totalVal);
+  $("bValD").textContent = `from $500.00 · ${fmtPct(r.totalRet)}`;
+  $("bSpy").innerHTML = `<span class="${clsD(r.spyRet)}">${fmtPct(r.spyRet)}</span>`;
+
+  $("cards").innerHTML = r.rows.map(p=>{
+    const th = THESIS.find(x=>x.t===p.t);
+    const pillClass = th ? th.s.toLowerCase() : "intact";
+    const vsLine = p.vs===null ? `vs ${p.etf}: baseline pending` : `<span class="${clsD(p.vs)}">${fmtPP(p.vs)}</span> vs ${p.etf} (${fmtPct(p.sret)})`;
+    return `<div class="card">
+      <div class="accent" style="background:${p.color}"></div>
+      <div class="ticker">${p.t}</div>
+      <div class="theme">${p.theme}</div>
+      <div class="price">${fmt$(p.px)}</div>
+      <div class="ret ${clsD(p.ret)}">${fmtPct(p.ret)}</div>
+      <div class="vs">${vsLine}</div>
+      <div class="meta">${p.shares.toFixed(5)} sh · ${fmt$(p.val)} · entry ${fmt$(p.entry)}</div>
+      <span class="pill ${pillClass}">${th?th.s:""}</span>
+    </div>`;
+  }).join("");
+
+  $("thesisBody").innerHTML = THESIS.map(x=>{
+    const sc = "s-"+x.s.toLowerCase();
+    return `<tr><td><strong>${x.t}</strong></td><td class="${sc}">${x.s}</td><td class="note">${x.d}</td></tr>`;
+  }).join("");
+
+  $("lessons").innerHTML = LESSONS.map(l=>`
+    <div class="lesson ${l.type==='carry'?'carry':l.type==='concept'?'concept':'lesson-t'}">
+      <div class="tag">${l.tag}</div>
+      <div class="ltitle">${l.title}</div>
+      <div class="lbody">${l.body}</div>
+      <div class="wk">${l.wk}</div>
+    </div>`).join("");
+
+  const now = new Date();
+  if(live){
+    $("statusLine").innerHTML = `<span class="dot live"></span>Live prices · ${now.toLocaleString()}`;
+  } else {
+    $("statusLine").innerHTML = `<span class="dot stale"></span>Last-saved data (W0, Nov 18)`;
+  }
+  $("updated").textContent = "Rendered " + now.toLocaleString();
+  drawChart(r.totalRet, r.spyRet, live);
+}
+
+let chartInstance = null;
+function drawChart(curPort, curSpy, live){
+  const labels = [...WK_DATES];
+  const port = [...HIST.port];
+  const spy  = [...HIST.spy];
+  if(live){ labels.push("Now"); port.push(+curPort.toFixed(2)); spy.push(+curSpy.toFixed(2)); }
+  const ctx = document.getElementById("chart").getContext("2d");
+  if(chartInstance) chartInstance.destroy();
+  const mk = (label,data,color,width)=>({
+    label, data, borderColor:color, backgroundColor:color,
+    borderWidth:width, tension:.3, pointRadius:3, pointHoverRadius:5, fill:false
+  });
+  chartInstance = new Chart(ctx,{
+    type:"line",
+    data:{labels, datasets:[ mk("Portfolio", port, "#d97757", 3), mk("SPY", spy, "#6a9bcc", 2) ]},
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      interaction:{mode:"index",intersect:false},
+      plugins:{
+        legend:{labels:{font:{family:"Poppins",size:12},color:"#141413",usePointStyle:true,pointStyle:"circle"}},
+        tooltip:{callbacks:{label:c=>`${c.dataset.label}: ${c.parsed.y>=0?"+":""}${c.parsed.y.toFixed(2)}%`},
+          titleFont:{family:"Poppins"},bodyFont:{family:"Poppins"}}
+      },
+      scales:{
+        y:{ticks:{font:{family:"Poppins",size:11},callback:v=>v+"%",color:"#6b6a63"},
+           grid:{color:"#e8e6dc"},
+           title:{display:true,text:"Total return from Nov 18",font:{family:"Poppins",size:11},color:"#6b6a63"}},
+        x:{ticks:{font:{family:"Poppins",size:11},color:"#6b6a63"},grid:{display:false}}
+      }
+    }
+  });
+}
+
+async function quote(t){
+  const res = await fetch(`https://finnhub.io/api/v1/quote?symbol=${t}&token=${FINNHUB_KEY}`);
+  if(!res.ok) throw new Error(t+" "+res.status);
+  const j = await res.json();
+  if(!j.c || j.c===0) throw new Error(t+" no price");
+  return [t, j.c];
+}
+
+/* ---- Fetch live prices, fall back gracefully. Sector ETFs are best-effort. ---- */
+async function fetchPrices(){
+  const core = [...POS.map(p=>p.t), "SPY"];
+  const etfs = Object.keys(SECTOR_BASE).filter(k=>SECTOR_BASE[k]);
+  if(!FINNHUB_KEY){
+    showErr("No API key set: showing last-saved prices (W0, Nov 18).");
+    render(FALLBACK,false); return;
+  }
+  try{
+    const prices = Object.fromEntries(await Promise.all(core.map(quote)));
+    const extra = await Promise.allSettled(etfs.map(quote));
+    extra.forEach(x=>{ if(x.status==="fulfilled") prices[x.value[0]] = x.value[1]; });
+    render(prices, true);
+  }catch(e){
+    showErr("Live fetch failed ("+e.message+"): showing last-saved prices (W0, Nov 18).");
+    render(FALLBACK,false);
+  }
+}
+function checkPublished(){
+  const pub = new Date(PUBLISHED + "T12:00:00");
+  $("published").textContent = pub.toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"});
+  const days = Math.floor((Date.now() - pub) / 86400000);
+  if(days > 9) showErr(`Heads up: the weekly update has not published since ${$("published").textContent} (${days} days). Live prices below are current; the thesis grid, chart history, and lessons are not.`);
+}
+function showErr(msg){ const b=$("errBox"); b.textContent = b.textContent ? b.textContent + " " + msg : msg; b.style.display="block"; }
+
+checkPublished();
+fetchPrices();
+</script>
+</body>
+</html>

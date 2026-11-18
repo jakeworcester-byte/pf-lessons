@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Phase 2 Weekly Review</title>
+<title>Weekly Review</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -78,7 +78,7 @@
 </head>
 <body>
 <div class="wrap">
-  <div class="crumb"><a href="./">&larr; Dashboard</a></div>
+  <div class="crumb"><a href="./" id="dashLink">&larr; Dashboard</a> &middot; <a href="#" id="otherPhase"></a></div>
   <header>
     <div>
       <h1 id="title">Loading&hellip;</h1>
@@ -89,11 +89,17 @@
   <div id="kpis"></div>
   <div id="content"></div>
   <div class="nav" id="nav"></div>
-  <footer>Phase 2 portfolio experiment &middot; updated automatically every Saturday &middot; not financial advice</footer>
+  <footer><span id="footPhase">Phase 2</span> portfolio experiment &middot; updated automatically every Saturday &middot; not financial advice</footer>
 </div>
 
 <script>
 const $ = id => document.getElementById(id);
+const PHASE = new URLSearchParams(location.search).get("phase") === "3" ? 3 : 2;
+const CFG = {
+  2: {log:"Phase_2_Weekly_Review_Log.md", dash:"./", start:"May 11, 2026", kpis:[["total","%","Total return"],["vsSpy"," pp","vs. SPY"],["vsQqq"," pp","vs. QQQ"]]},
+  3: {log:"Phase_3_Weekly_Review_Log.md", dash:"phase3.html", start:"November 18, 2026", kpis:[["total","%","Total return"],["vsSpy"," pp","vs. SPY"],["beaten","","Beating their sector"]]},
+}[PHASE];
+let BASELINE = "";
 let WEEKS = [];      // [{n, date, md}]
 let REVIEWS = [];    // [{id, title, md}]
 let TRACKER = {};    // n -> {total, spy, qqq, vsSpy, vsQqq}
@@ -134,24 +140,39 @@ function parseLog(log){
     REVIEWS.push({id:"review-" + title.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,""),
                   title, md:p.slice(m[0].length).replace(/\n-{3,}\s*$/,"").trim()});
   }
-  // Cumulative tracker rows for the KPI strip and the week list
+  // Cumulative tracker rows for the KPI strip and the week list (columns found by header name)
+  const num = s => parseFloat(String(s||"").replace(/[^0-9.+-]/g,""));
   const tr = sectionBetween(log, "\n## Cumulative Performance Tracker", "\n## ");
+  let hdr = null;
   for(const line of tr.split("\n")){
     const c = line.split("|").map(s => s.trim());
+    if(!hdr && c[1] === "Week"){ hdr = c; continue; }
     const wm = (c[1]||"").match(/^W(\d+)$/);
-    if(!wm || c.length < 11) continue;
-    const num = s => parseFloat(s.replace(/[^0-9.+-]/g,""));
-    TRACKER[+wm[1]] = {total:num(c[6]), spy:num(c[7]), qqq:num(c[8]), vsSpy:num(c[9]), vsQqq:num(c[10])};
+    if(!wm || !hdr) continue;
+    const col = name => c[hdr.indexOf(name)];
+    TRACKER[+wm[1]] = {total:num(col("Total Return %")), spy:num(col("SPY %")), qqq:num(col("QQQ %")),
+                       vsSpy:num(col("vs. SPY")), vsQqq:num(col("vs. QQQ"))};
   }
+  // Phase 3: sector scorecard "Beaten" column (e.g. "3 of 5")
+  const sc = sectionBetween(log, "\n## Sector Scorecard by Week", "\n## ");
+  for(const line of sc.split("\n")){
+    const c = line.split("|").map(s => s.trim());
+    const wm = (c[1]||"").match(/^W(\d+)$/);
+    if(wm && TRACKER[+wm[1]]) TRACKER[+wm[1]].beaten = c[c.length-2];
+  }
+  BASELINE = sectionBetween(log, "\n## Baseline and Rules", "\n## ").replace(/\n-{3,}\s*$/,"").trim();
 }
 
 const sign = (x, unit) => isNaN(x) ? "&mdash;" : `${x>=0?"+":""}${x.toFixed(2)}${unit}`;
-const kpi = (x, unit, label) => `<div class="kpi"><div class="v ${x>=0?"pos":"neg"}">${sign(x,unit)}</div><div class="l">${label}</div></div>`;
+const kpi = (x, unit, label) => typeof x === "string"
+  ? `<div class="kpi"><div class="v">${esc(x)}</div><div class="l">${label}</div></div>`
+  : `<div class="kpi"><div class="v ${x>=0?"pos":"neg"}">${sign(x,unit)}</div><div class="l">${label}</div></div>`;
+const kpiStrip = t => `<div class="kpis">${CFG.kpis.map(([k,u,l]) => kpi(t[k] ?? "pending", u, l)).join("")}</div>`;
 
 function setHeader(title, sub){
   $("title").textContent = title;
   $("subtitle").textContent = sub || "";
-  document.title = /Phase/.test(title) ? title : title + " · Phase 2";
+  document.title = /Phase/.test(title) ? title : title + " · Phase " + PHASE;
 }
 
 function showWeek(n){
@@ -159,9 +180,9 @@ function showWeek(n){
   if(i < 0) return showWeek(WEEKS[WEEKS.length-1].n);
   const w = WEEKS[i];
   const latest = i === WEEKS.length - 1;
-  setHeader(`Week ${w.n} Review`, `${w.date}${latest ? " · latest" : ""}`);
+  setHeader(`Phase ${PHASE} · Week ${w.n} Review`, `${w.date}${latest ? " · latest" : ""}`);
   const t = TRACKER[w.n];
-  $("kpis").innerHTML = t ? `<div class="kpis">${kpi(t.total,"%","Total return")}${kpi(t.vsSpy," pp","vs. SPY")}${kpi(t.vsQqq," pp","vs. QQQ")}</div>` : "";
+  $("kpis").innerHTML = t ? kpiStrip(t) : "";
   $("content").innerHTML = `<article>${renderMd(w.md)}</article>`;
   const prev = WEEKS[i-1], next = WEEKS[i+1];
   $("nav").innerHTML = (prev ? `<a href="#w${prev.n}">&larr; Week ${prev.n}</a>` : "") +
@@ -172,25 +193,40 @@ function showLedger(){
   setHeader("Lessons Ledger", "Durable lessons only, append-only");
   $("kpis").innerHTML = "";
   $("content").innerHTML = `<article>${renderMd(LEDGER.replace(/^# .*\n/, ""))}</article>`;
-  $("nav").innerHTML = `<a href="#weeks">All weeks</a><span class="spacer"></span><a href="./">Dashboard &rarr;</a>`;
+  $("nav").innerHTML = `<a href="#weeks">All weeks</a><span class="spacer"></span><a href="${CFG.dash}">Dashboard &rarr;</a>`;
 }
 
 function showReview(r){
   setHeader(r.title, "Periodic review");
   $("kpis").innerHTML = "";
   $("content").innerHTML = `<article>${renderMd(r.md)}</article>`;
-  $("nav").innerHTML = `<a href="#weeks">All weeks</a><span class="spacer"></span><a href="#w${WEEKS[WEEKS.length-1].n}">Latest week &rarr;</a>`;
+  $("nav").innerHTML = `<a href="#weeks">All weeks</a><span class="spacer"></span>` + (WEEKS.length ? `<a href="#w${WEEKS[WEEKS.length-1].n}">Latest week &rarr;</a>` : "");
+}
+
+function showBaseline(){
+  setHeader(`Phase ${PHASE} · Baseline and Rules`, `Opened ${CFG.start}`);
+  $("kpis").innerHTML = "";
+  $("content").innerHTML = `<article>${renderMd(BASELINE || "No baseline section in this log.")}</article>`;
+  $("nav").innerHTML = `<a href="#weeks">All weeks</a><span class="spacer"></span><a href="${CFG.dash}">Dashboard &rarr;</a>`;
+}
+
+function showEmpty(){
+  setHeader(`Phase ${PHASE} · No weekly entries yet`, `Opened ${CFG.start}. The first entry publishes with the next Saturday update.`);
+  $("kpis").innerHTML = "";
+  $("content").innerHTML = BASELINE ? `<article>${renderMd(BASELINE)}</article>` : "";
+  $("nav").innerHTML = `<a href="#ledger">Lessons ledger</a><span class="spacer"></span><a href="${CFG.dash}">Dashboard &rarr;</a>`;
 }
 
 function showList(){
-  setHeader("All Weekly Reviews", `${WEEKS.length} weeks since May 11, 2026`);
+  setHeader(`Phase ${PHASE} · All Weekly Reviews`, `${WEEKS.length} weeks since ${CFG.start}`);
   $("kpis").innerHTML = "";
   const rows = [...WEEKS].reverse().map(w => {
     const t = TRACKER[w.n] || {};
     return `<a class="wk-row" href="#w${w.n}"><span class="w">W${w.n}</span><span class="d">${esc(w.date)}</span>
       <span class="r ${t.total>=0?"posd":"negd"}">${sign(t.total,"%")}</span><span class="s">${sign(t.vsSpy," pp")} vs SPY</span></a>`;
   }).join("");
-  const revs = REVIEWS.map(r => `<a class="wk-row" href="#${r.id}"><span class="w">&#9733;</span><span class="d">${esc(r.title)}</span><span></span><span></span></a>`).join("");
+  const base = BASELINE ? `<a class="wk-row" href="#baseline"><span class="w">&#9670;</span><span class="d">Baseline and rules</span><span></span><span></span></a>` : "";
+  const revs = base + REVIEWS.map(r => `<a class="wk-row" href="#${r.id}"><span class="w">&#9733;</span><span class="d">${esc(r.title)}</span><span></span><span></span></a>`).join("");
   $("content").innerHTML = (revs ? `<div class="section-label">Periodic reviews</div><div class="wk-list">${revs}</div>` : "") +
     `<div class="section-label">Weeks</div><div class="wk-list">${rows}</div>`;
   $("nav").innerHTML = "";
@@ -198,6 +234,7 @@ function showList(){
 
 function buildPicker(){
   const opts = [...WEEKS].reverse().map(w => `<option value="w${w.n}">Week ${w.n} · ${esc(w.date)}</option>`);
+  if(BASELINE) opts.push(`<option value="baseline">Baseline and rules</option>`);
   REVIEWS.forEach(r => opts.push(`<option value="${r.id}">${esc(r.title)}</option>`));
   opts.push(`<option value="ledger">Lessons Ledger</option>`, `<option value="weeks">All weeks</option>`);
   $("picker").innerHTML = opts.join("");
@@ -207,22 +244,29 @@ function buildPicker(){
 function route(){
   const h = location.hash.slice(1);
   if(h === "ledger") showLedger();
+  else if(h === "baseline") showBaseline();
+  else if(!WEEKS.length && h !== "weeks") showEmpty();
   else if(h === "weeks") showList();
   else if(h.startsWith("review-") && REVIEWS.find(r => r.id === h)) showReview(REVIEWS.find(r => r.id === h));
   else if(/^w\d+$/.test(h)) showWeek(+h.slice(1));
   else showWeek(WEEKS[WEEKS.length-1].n);
-  const cur = h || `w${WEEKS[WEEKS.length-1].n}`;
+  const cur = h || (WEEKS.length ? `w${WEEKS[WEEKS.length-1].n}` : "");
   if([...$("picker").options].some(o => o.value === cur)) $("picker").value = cur;
   window.scrollTo(0, 0);
 }
 
 (async () => {
   try{
-    const [log, ledger] = await Promise.all(["Phase_2_Weekly_Review_Log.md","Phase_2_Lessons_Ledger.md"]
+    $("dashLink").href = CFG.dash;
+    $("dashLink").innerHTML = `&larr; Phase ${PHASE} dashboard`;
+    $("otherPhase").href = PHASE === 3 ? "review.html" : "review.html?phase=3";
+    $("otherPhase").textContent = PHASE === 3 ? "Phase 2 reviews" : "Phase 3 reviews";
+    $("footPhase").textContent = "Phase " + PHASE;
+    const [log, ledger] = await Promise.all([CFG.log,"Phase_2_Lessons_Ledger.md"]
       .map(f => fetch(f, {cache:"no-cache"}).then(r => { if(!r.ok) throw new Error(f + " " + r.status); return r.text(); })));
     parseLog(log);
     LEDGER = ledger.replace(/\r\n/g, "\n");
-    if(!WEEKS.length) throw new Error("no weekly entries found in the log");
+    if(!WEEKS.length && !BASELINE) throw new Error("no weekly entries found in the log");
     buildPicker();
     window.addEventListener("hashchange", route);
     route();
