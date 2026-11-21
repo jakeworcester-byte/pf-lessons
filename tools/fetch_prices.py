@@ -59,7 +59,7 @@ PHASES = {
         # Sector benchmark per position, locked at entry. Baselines are the
         # November 18, 2026 closes. None = not yet recorded (see WEEKLY_UPDATE.md).
         "sectors": {"PGR": "KIE", "TJX": "XRT", "ISRG": "IHI", "NFLX": "XLC", "MSFT": "IGV"},
-        "sector_base": {"KIE": None, "XRT": None, "IHI": None, "XLC": None, "IGV": None},
+        "sector_base": {"KIE": 64.74, "XRT": 90.30, "IHI": 56.89, "XLC": 105.58, "IGV": 96.94},
         "total_invested": 500.00,
         "entry_date": "November 18, 2026",
         # Offline self-test = entry prices; total return should be +0.00%.
